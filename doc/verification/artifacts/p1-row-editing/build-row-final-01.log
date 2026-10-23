@@ -1,0 +1,26 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(104,13): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(104,13): warning CS8604: 'RowShellVisualEvidence.RowShellVisualEvidence(string Label, double ClientWidth, double ClientHeight, string HandleDescriptor, long Handle, BoundsRecord ScrollViewerBounds, BoundsRecord EditorBounds, BoundsRecord VisibleEditorBounds, NamedBounds[] ToolbarBounds, string PngFile, string PngSha256)'의 매개 변수 'HandleDescriptor'에 대한 가능한 null 참조 인수입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(194,49): error CS0117: 'PhysicalKey'에는 'KeyZ'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(197,49): error CS0117: 'PhysicalKey'에는 'KeyY'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(237,49): error CS0117: 'PhysicalKey'에는 'KeyZ'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(240,49): error CS0117: 'PhysicalKey'에는 'KeyY'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(266,24): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(271,40): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(274,39): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(104,13): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(104,13): warning CS8604: 'RowShellVisualEvidence.RowShellVisualEvidence(string Label, double ClientWidth, double ClientHeight, string HandleDescriptor, long Handle, BoundsRecord ScrollViewerBounds, BoundsRecord EditorBounds, BoundsRecord VisibleEditorBounds, NamedBounds[] ToolbarBounds, string PngFile, string PngSha256)'의 매개 변수 'HandleDescriptor'에 대한 가능한 null 참조 인수입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(194,49): error CS0117: 'PhysicalKey'에는 'KeyZ'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(197,49): error CS0117: 'PhysicalKey'에는 'KeyY'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(237,49): error CS0117: 'PhysicalKey'에는 'KeyZ'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(240,49): error CS0117: 'PhysicalKey'에는 'KeyY'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(266,24): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(271,40): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs(274,39): error CS0103: 'AutomationProperties' 이름이 현재 컨텍스트에 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 2개
+    오류 7개
+
+경과 시간: 00:00:01.96

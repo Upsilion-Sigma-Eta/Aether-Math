@@ -1,0 +1,9 @@
+PASS PIN-APPLY 분수 scope pin 및 부분 텍스트 역할·스타일 통합 적용·되돌리기·초기화
+PASS PIN-DRAFT pin 초안의 no-op·무효·stale 보존과 분수 문맥 분리
+PASS DFRAC-LATEX 분수 자체의 명시 Display만 dfrac로 직렬화
+PASS DFRAC-IO 분수 pin·역할·식별자·복제본의 파일 및 recovery 왕복
+PASS DFRAC-LAYOUT-PREVIEW pin geometry·Inline 투영·동일 frozen Layout SVG 소비
+PASS DFRAC-PIN-UI
+PASS DFRAC-PIN-UI 분수의 Display pin 의도, 통합 적용·실행 취소, 범위 제한과 LaTeX dfrac 안내를 Headless 검증
+RESULT 전체=6 합격=6 실패=0
+QA_RESULT exit=0

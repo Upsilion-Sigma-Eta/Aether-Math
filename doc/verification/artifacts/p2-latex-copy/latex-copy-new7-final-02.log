@@ -1,0 +1,21 @@
+PASS LATEX-COPY-SUCCESS 성공 복사와 편집 상태·경로·미리보기 보존
+PASS LATEX-COPY-GATES 차단 진단·행 간격 안내·sink 사용 불가 경계
+PASS LATEX-COPY-BUSY 복사 대기 중 재진입 차단과 이전 메시지 정리
+PASS LATEX-COPY-SNAPSHOT 호출 시점 코드와 편집·Undo·세션 교체·선택 이동 경계
+PASS LATEX-COPY-FAIL-CANCEL 동기·비동기 실패와 취소 후 재시도
+PASS LATEX-COPY-NOTIFY-ORDER 코드·진단 상태 알림의 원자성 및 재진입 복사 차단
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-initial-collapsed-minimum-1060x700-20261022T234342196Z-33d07f24ca1243558fad9c3d7f05ed67\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-initial-collapsed-default-1360x880-20261022T234342241Z-5d299c5bf14e4fc6a9194587c1b15dba\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-expanded-minimum-1060x700-20261022T234342302Z-873313c2b0554ae89563d576b7d1d121\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-success-expanded-minimum-1060x700-20261022T234342459Z-ebf2c27185604dd090fb877963759eba\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-success-collapsed-minimum-1060x700-20261022T234342580Z-ca6b46b19fb541bea0e6d3d6c26e1eda\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-failure-expanded-minimum-1060x700-20261022T234342696Z-a791707a344f463c9c10bb2e9491760b\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-retry-expanded-minimum-1060x700-20261022T234342809Z-a58197fd88474306b823250de2234fd5\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-busy-expanded-minimum-1060x700-20261022T234342929Z-4282d8a01b0c46a3a2e0287fa848fc36\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-previous-snapshot-expanded-minimum-1060x700-20261022T234343058Z-34b9606bac4743ec9c125cfab2c80ac0\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-unavailable-expanded-minimum-1060x700-20261022T234343085Z-e343c3f3b70342dabe9b080d2b8cbe59\bounds.json
+LATEX-COPY-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-copy\latex-copy-blocked-expanded-minimum-1060x700-20261022T234343220Z-bd113dfcfa3c4743a77c1566efcad455\bounds.json
+PASS LATEX-COPY-UI
+PASS LATEX-COPY-UI 전체 LaTeX 복사의 실제 UI 바인딩·fake sink·문서 상태 보존을 Headless에서 검증
+RESULT 전체=7 합격=7 실패=0
+ACTUAL_EXIT_CODE=0

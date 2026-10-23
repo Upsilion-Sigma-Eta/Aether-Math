@@ -1,0 +1,35 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-control-click-overlay-minimum-bottom",
+  "scenario": {
+    "selectedSpaceId": "9f2c9b6b-ffa0-4bc1-8b10-5afa6fbe42fb",
+    "selectedBounds": "x=35.71875; y=28.319999999999993; width=4; height=23.04",
+    "overlay": true
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 3,
+  "stateId": "d3c0849f-da06-425b-825b-0305656bc388",
+  "dirty": true,
+  "caret": {
+    "NodeId": "aadfae03-7157-4e06-aae2-f6f57940c001",
+    "TextElementOffset": 1
+  },
+  "selection": null,
+  "selectedNodeId": "9f2c9b6b-ffa0-4bc1-8b10-5afa6fbe42fb",
+  "isNodeSelected": true,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u002229f48088-3546-4080-8ba8-84ad31ef0348\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uC218\\uD559 \\uACF5\\uBC31 UI fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u0022e84efe64-d220-4a44-95a0-cd3ec9d8763c\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00226fc1ebae-c259-4284-903f-bcfab4d06b87\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002236ed3492-020a-4a62-bf3e-a331e1332a9b\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022aadfae03-7157-4e06-aae2-f6f57940c001\u0022,\u0022Text\u0022:\u0022a\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}},{\u0022Kind\u0022:\u0022mathSpace\u0022,\u0022Id\u0022:\u00229f2c9b6b-ffa0-4bc1-8b10-5afa6fbe42fb\u0022,\u0022SpaceKind\u0022:0,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00224225c8f0-f11c-4775-872b-1bc5645e58b5\u0022,\u0022Text\u0022:\u0022b\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}}]}}]}]}",
+  "mathSpaceIds": [
+    "9f2c9b6b-ffa0-4bc1-8b10-5afa6fbe42fb"
+  ],
+  "outputState": "Empty",
+  "outputRevision": null,
+  "png": "main-window.png"
+}

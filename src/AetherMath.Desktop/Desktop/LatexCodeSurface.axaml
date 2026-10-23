@@ -1,0 +1,15 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AetherMath.Desktop.LatexCodeSurface"
+             AutomationProperties.Name="자동 생성된 LaTeX 코드">
+  <ScrollViewer x:Name="InnerScrollViewer"
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Disabled"
+                AutomationProperties.AutomationId="LatexCodeScrollViewer"
+                AutomationProperties.Name="선택 가능한 LaTeX 코드 스크롤">
+    <SelectableTextBlock x:Name="InnerTextSurface" Classes="code-view"
+                         Margin="16,12"
+                         TextWrapping="Wrap"
+                         AutomationProperties.Name="선택 가능한 LaTeX 원문" />
+  </ScrollViewer>
+</UserControl>

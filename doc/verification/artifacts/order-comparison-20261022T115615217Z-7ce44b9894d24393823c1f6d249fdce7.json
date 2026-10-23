@@ -1,0 +1,79 @@
+{
+  "reports": [
+    {
+      "order": "normal-first",
+      "initializationPhase": "after-normal-face-warmup",
+      "directory": "D:\\_UserLibrary\\_Programming\\Aether-Math\\doc\\verification\\artifacts\\font-probe\\font-normal-first-20261022T115611732Z-ffbe2f21a4674411b46a2e32e67d046a",
+      "pngSha256": "D124836D7CC348E1AC972EC534F613E22579BB5FBAE8A12E251D62937C7E16DE",
+      "svgSha256": "67703AF7F6BEF87D4C3DE97930D4576D2909195D8B2DDD43EA7DEBFFFAF18952",
+      "externalSvgPngSha256": "033014FABC6DA9070AFB8DF7F5CE06238B0CA435AD4B6B40A9A86C4037FBBEC8"
+    },
+    {
+      "order": "italic-first",
+      "initializationPhase": "after-normal-face-warmup",
+      "directory": "D:\\_UserLibrary\\_Programming\\Aether-Math\\doc\\verification\\artifacts\\font-probe\\font-italic-first-20261022T115613050Z-7104cd3a496041d986708852f693144a",
+      "pngSha256": "D124836D7CC348E1AC972EC534F613E22579BB5FBAE8A12E251D62937C7E16DE",
+      "svgSha256": "67703AF7F6BEF87D4C3DE97930D4576D2909195D8B2DDD43EA7DEBFFFAF18952",
+      "externalSvgPngSha256": "033014FABC6DA9070AFB8DF7F5CE06238B0CA435AD4B6B40A9A86C4037FBBEC8"
+    },
+    {
+      "order": "oblique-first",
+      "initializationPhase": "after-normal-face-warmup",
+      "directory": "D:\\_UserLibrary\\_Programming\\Aether-Math\\doc\\verification\\artifacts\\font-probe\\font-oblique-first-20261022T115614325Z-edd2cea00a8443f5ad3453c07f8ab409",
+      "pngSha256": "D124836D7CC348E1AC972EC534F613E22579BB5FBAE8A12E251D62937C7E16DE",
+      "svgSha256": "67703AF7F6BEF87D4C3DE97930D4576D2909195D8B2DDD43EA7DEBFFFAF18952",
+      "externalSvgPngSha256": "033014FABC6DA9070AFB8DF7F5CE06238B0CA435AD4B6B40A9A86C4037FBBEC8"
+    }
+  ],
+  "probeSignatures": [
+    {
+      "key": "System/Normal",
+      "signaturesByOrder": {
+        "normal-first": "F44F53A7BECBD8A717F571C4A8AFD60E0F451C26AAC76F4599B0C63B32645A51",
+        "italic-first": "F44F53A7BECBD8A717F571C4A8AFD60E0F451C26AAC76F4599B0C63B32645A51",
+        "oblique-first": "F44F53A7BECBD8A717F571C4A8AFD60E0F451C26AAC76F4599B0C63B32645A51"
+      }
+    },
+    {
+      "key": "System/Italic",
+      "signaturesByOrder": {
+        "normal-first": "107EB1ABE82826556DADC4ABF5E73AFB07F393C7E25070BDA907D57F4113D808",
+        "italic-first": "107EB1ABE82826556DADC4ABF5E73AFB07F393C7E25070BDA907D57F4113D808",
+        "oblique-first": "107EB1ABE82826556DADC4ABF5E73AFB07F393C7E25070BDA907D57F4113D808"
+      }
+    },
+    {
+      "key": "System/Oblique",
+      "signaturesByOrder": {
+        "normal-first": "92E87B32F5C7D64DD3B7B06049A6062BA0571DBB40CCAF3A8FFA85AEF1745054",
+        "italic-first": "92E87B32F5C7D64DD3B7B06049A6062BA0571DBB40CCAF3A8FFA85AEF1745054",
+        "oblique-first": "92E87B32F5C7D64DD3B7B06049A6062BA0571DBB40CCAF3A8FFA85AEF1745054"
+      }
+    },
+    {
+      "key": "ProductResolver/Normal",
+      "signaturesByOrder": {
+        "normal-first": "EC01E06A0DD7391850CE7291A4CA186D5F1B8E88E5350EE04E5E12AC8C5F7E59",
+        "italic-first": "EC01E06A0DD7391850CE7291A4CA186D5F1B8E88E5350EE04E5E12AC8C5F7E59",
+        "oblique-first": "EC01E06A0DD7391850CE7291A4CA186D5F1B8E88E5350EE04E5E12AC8C5F7E59"
+      }
+    },
+    {
+      "key": "ProductResolver/Italic",
+      "signaturesByOrder": {
+        "normal-first": "5A6132BEAED1EF3755894B91DA0A1452140542EE9FFE3D39DDB0FD9078E39BF9",
+        "italic-first": "5A6132BEAED1EF3755894B91DA0A1452140542EE9FFE3D39DDB0FD9078E39BF9",
+        "oblique-first": "5A6132BEAED1EF3755894B91DA0A1452140542EE9FFE3D39DDB0FD9078E39BF9"
+      }
+    },
+    {
+      "key": "ProductResolver/Oblique",
+      "signaturesByOrder": {
+        "normal-first": "37E480FFA88DCB12F256EA0578621E12C69A9F15176CB3F29D90384EE7C446F1",
+        "italic-first": "37E480FFA88DCB12F256EA0578621E12C69A9F15176CB3F29D90384EE7C446F1",
+        "oblique-first": "37E480FFA88DCB12F256EA0578621E12C69A9F15176CB3F29D90384EE7C446F1"
+      }
+    }
+  ],
+  "systemRouteSignaturesAreDiagnosticOnly": true
+}

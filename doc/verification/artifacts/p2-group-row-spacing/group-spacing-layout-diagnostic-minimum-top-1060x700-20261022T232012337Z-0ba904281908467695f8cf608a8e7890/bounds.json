@@ -1,0 +1,118 @@
+{
+  "caseId": "GROUP-ROW-SPACING-UI",
+  "label": "group-spacing-layout-diagnostic-minimum-top",
+  "evidencePurpose": "\uD655\uC7A5\uB41C LaTeX \uD328\uB110\uC5D0\uC11C \uD589 \uAC04\uACA9 \uBBF8\uBCF4\uC874 \uC548\uB0B4\uB97C \uC77D\uC744 \uC218 \uC788\uB294\uC9C0 \uD655\uC778\uD558\uB294 Headless UI \uCEA1\uCC98\uC774\uBA70 \uC81C\uD488 \uCD9C\uB825\uBB3C\uC774 \uC544\uB2D9\uB2C8\uB2E4.",
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "codeExpanderExpanded": true,
+  "codeGridBounds": {
+    "X": 259,
+    "Y": 475,
+    "Width": 484,
+    "Height": 160
+  },
+  "codeGridHeight": 160,
+  "editorViewportBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 516,
+    "Height": 64
+  },
+  "editorViewportHeight": 64,
+  "diagnosticViewerBounds": {
+    "X": 259,
+    "Y": 475,
+    "Width": 484,
+    "Height": 58
+  },
+  "diagnosticViewportBounds": {
+    "X": 259,
+    "Y": 475,
+    "Width": 484,
+    "Height": 58
+  },
+  "diagnosticViewport": {
+    "width": 484,
+    "height": 58
+  },
+  "diagnosticExtent": {
+    "width": 484,
+    "height": 102
+  },
+  "diagnosticOffset": {
+    "x": 0,
+    "y": 0
+  },
+  "diagnosticVerticalScroll": "Auto",
+  "layoutBannerVisible": true,
+  "layoutBannerBounds": {
+    "X": 265,
+    "Y": 480,
+    "Width": 472,
+    "Height": 97
+  },
+  "layoutTitleBounds": {
+    "X": 272,
+    "Y": 484,
+    "Width": 458,
+    "Height": 14
+  },
+  "layoutIntroductionBounds": {
+    "X": 272,
+    "Y": 501,
+    "Width": 458,
+    "Height": 21
+  },
+  "layoutDiagnosticMessages": [
+    "LaTeX \uCF54\uB4DC\uC5D0\uB294 \uC774 \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uC0AC\uC774 \uCD94\uAC00 \uAC04\uACA9(68 px)\uC774 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.",
+    "LaTeX \uCF54\uB4DC\uC5D0\uB294 \uC774 \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uC0AC\uC774 \uCD94\uAC00 \uAC04\uACA9(24 px)\uC774 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.",
+    "LaTeX \uCF54\uB4DC\uC5D0\uB294 \uC774 \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uC0AC\uC774 \uCD94\uAC00 \uAC04\uACA9(23 px)\uC774 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.",
+    "LaTeX \uCF54\uB4DC\uC5D0\uB294 \uC774 \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uC0AC\uC774 \uCD94\uAC00 \uAC04\uACA9(31 px)\uC774 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+  ],
+  "renderedDiagnosticMessageBounds": [
+    {
+      "X": 13,
+      "Y": 50,
+      "Width": 458,
+      "Height": 12
+    },
+    {
+      "X": 13,
+      "Y": 62,
+      "Width": 458,
+      "Height": 12
+    },
+    {
+      "X": 13,
+      "Y": 74,
+      "Width": 458,
+      "Height": 12
+    },
+    {
+      "X": 13,
+      "Y": 86,
+      "Width": 458,
+      "Height": 12
+    }
+  ],
+  "sourceBounds": {
+    "X": 259,
+    "Y": 533,
+    "Width": 484,
+    "Height": 102
+  },
+  "sourceHeight": 102,
+  "sourceVerticalScroll": "Auto",
+  "totalGridHeight": 160,
+  "canExportLatex": true,
+  "blockingCodeDiagnosticVisible": false,
+  "png": "main-window.png",
+  "pngSha256": "2218CC7BE050E61E121FDE52310E10CC505E768C08F6F98B0054F9159DDD129C"
+}

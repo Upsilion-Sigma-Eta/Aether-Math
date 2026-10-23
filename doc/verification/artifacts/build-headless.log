@@ -1,0 +1,26 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs(15,34): error CS0246: 'AvaloniaHeadlessPlatformOptions' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs(15,18): error CS1061: 'AppBuilder'에는 'UseHeadless'에 대한 정의가 포함되어 있지 않고, 'AppBuilder' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'UseHeadless'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OffscreenRenderCases.cs(55,13): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(203,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(213,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(211,9): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(222,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(220,9): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\FontProbeCases.cs(137,9): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OffscreenRenderCases.cs(55,13): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(211,9): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(220,9): warning CS8602: null 가능 참조에 대한 역참조입니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\FontProbeCases.cs(137,9): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs(15,34): error CS0246: 'AvaloniaHeadlessPlatformOptions' 형식 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs(15,18): error CS1061: 'AppBuilder'에는 'UseHeadless'에 대한 정의가 포함되어 있지 않고, 'AppBuilder' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'UseHeadless'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(203,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(213,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(222,26): error CS0122: '보호 수준 때문에 'Visual.VisualRoot'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 4개
+    오류 5개
+
+경과 시간: 00:00:00.54

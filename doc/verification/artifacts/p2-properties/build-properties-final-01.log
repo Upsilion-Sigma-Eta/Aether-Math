@@ -1,0 +1,18 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(143,77): error CS1061: 'PropertiesCases.SessionState'에는 'Workspace'에 대한 정의가 포함되어 있지 않고, 'PropertiesCases.SessionState' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'Workspace'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(684,18): error CS1503: 1 인수: 'void'에서 'bool'(으)로 변환할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(697,18): error CS1503: 1 인수: 'void'에서 'bool'(으)로 변환할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(416,17): error CS0136: 이름이 'scrollViewer'인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(143,77): error CS1061: 'PropertiesCases.SessionState'에는 'Workspace'에 대한 정의가 포함되어 있지 않고, 'PropertiesCases.SessionState' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'Workspace'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(684,18): error CS1503: 1 인수: 'void'에서 'bool'(으)로 변환할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesCases.cs(697,18): error CS1503: 1 인수: 'void'에서 'bool'(으)로 변환할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs(416,17): error CS0136: 이름이 'scrollViewer'인 지역 또는 매개 변수는 이 범위에서 선언될 수 없습니다. 해당 이름이 지역 또는 매개 변수를 정의하기 위해 바깥쪽 지역 범위에서 사용되었습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 0개
+    오류 4개
+
+경과 시간: 00:00:03.71
+
+EXIT_CODE=1

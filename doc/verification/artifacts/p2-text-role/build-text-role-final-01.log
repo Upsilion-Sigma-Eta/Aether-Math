@@ -1,0 +1,13 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleCases.cs(335,50): warning CS8629: Nullable 값 형식이 null일 수 있습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+  AetherMath.LogicQA -> D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\bin\Debug\net10.0\AetherMath.LogicQA.dll
+
+빌드했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleCases.cs(335,50): warning CS8629: Nullable 값 형식이 null일 수 있습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 1개
+    오류 0개
+
+경과 시간: 00:00:04.34
+
+ACTUAL_EXIT_CODE=0

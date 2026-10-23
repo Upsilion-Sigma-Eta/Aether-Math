@@ -1,0 +1,87 @@
+{
+  "caseId": "TYPESETTING-UI",
+  "evidencePurpose": "\uAC19\uC740 \uC2E4\uC81C \uC218\uC2DD\uC758 \uC870\uD310 \uAE30\uC900 \uBE44\uAD50\uC6A9 \uC624\uD504\uC2A4\uD06C\uB9B0 \uCEA1\uCC98\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30 \uCD9C\uB825\uC774 \uC544\uB2D9\uB2C8\uB2E4.",
+  "windowSize": {
+    "Width": 1360,
+    "Height": 880
+  },
+  "baselineWorkspaceStyle": {
+    "FontSize": 30,
+    "FontFamily": "Cambria Math",
+    "Foreground": "#25364D",
+    "TypesettingStyle": 0
+  },
+  "fixtureFileName": "typesetting-operator-comparison.aethermath",
+  "fixtureStorage": "\uBE44\uAD50 \uD45C\uBCF8\uC740 \uC804\uC6A9 TempDirectory\uC758 .aethermath \uC791\uC5C5 \uD30C\uC77C\uB85C \uC800\uC7A5\uB418\uBA70 \uC774\uBBF8\uC9C0\uB294 \uAC80\uD1A0\uC6A9 \uC624\uD504\uC2A4\uD06C\uB9B0 \uB80C\uB354\uC785\uB2C8\uB2E4.",
+  "expressionFingerprint": "30ACD3FE297D2BE04631DCF7165EA6B2A87F55A23EB3630F2EBF4F86B478E6F0",
+  "fixtureStructures": {
+    "fractions": 1,
+    "scripts": 1,
+    "summations": 1,
+    "integrals": 1,
+    "limits": 1
+  },
+  "expressionRows": 5,
+  "captures": [
+    {
+      "TypesettingStyle": "Display",
+      "PngFile": "equation-display.png",
+      "PngSha256": "8CE61A5482326FEB62374F93C117588A8E1681F20AFB2AFBD72600E8ED13A035",
+      "PixelWidth": 293,
+      "PixelHeight": 546,
+      "EditorBoundsInWindow": {
+        "X": 273,
+        "Y": 322,
+        "Width": 293,
+        "Height": 546
+      },
+      "EquationFingerprint": "30ACD3FE297D2BE04631DCF7165EA6B2A87F55A23EB3630F2EBF4F86B478E6F0",
+      "Purpose": "MathEditorControl.Render\uC758 \uC2E4\uC81C Session \uAE30\uBC18 \uC624\uD504\uC2A4\uD06C\uB9B0 \uAC80\uD1A0 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "TypesettingStyle": "Text",
+      "PngFile": "equation-text.png",
+      "PngSha256": "26D170EE91230225C3C0778305317FA43492D294CFF2D133772FF007A2D9ADB2",
+      "PixelWidth": 277,
+      "PixelHeight": 440,
+      "EditorBoundsInWindow": {
+        "X": 273,
+        "Y": 322,
+        "Width": 277,
+        "Height": 440
+      },
+      "EquationFingerprint": "30ACD3FE297D2BE04631DCF7165EA6B2A87F55A23EB3630F2EBF4F86B478E6F0",
+      "Purpose": "MathEditorControl.Render\uC758 \uC2E4\uC81C Session \uAE30\uBC18 \uC624\uD504\uC2A4\uD06C\uB9B0 \uAC80\uD1A0 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "TypesettingStyle": "Script",
+      "PngFile": "equation-script.png",
+      "PngSha256": "628D8FF90ECDA9E70C9A3D0A14A58FBC874619F719E2C4F24D932A216AC7CA6A",
+      "PixelWidth": 211,
+      "PixelHeight": 360,
+      "EditorBoundsInWindow": {
+        "X": 273,
+        "Y": 322,
+        "Width": 211,
+        "Height": 360
+      },
+      "EquationFingerprint": "30ACD3FE297D2BE04631DCF7165EA6B2A87F55A23EB3630F2EBF4F86B478E6F0",
+      "Purpose": "MathEditorControl.Render\uC758 \uC2E4\uC81C Session \uAE30\uBC18 \uC624\uD504\uC2A4\uD06C\uB9B0 \uAC80\uD1A0 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "TypesettingStyle": "ScriptScript",
+      "PngFile": "equation-scriptscript.png",
+      "PngSha256": "03002FE23FBFDA544D1A0AAB7CAAFCDAF4D0817B6844C10935862878366E0792",
+      "PixelWidth": 164,
+      "PixelHeight": 360,
+      "EditorBoundsInWindow": {
+        "X": 273,
+        "Y": 322,
+        "Width": 164,
+        "Height": 360
+      },
+      "EquationFingerprint": "30ACD3FE297D2BE04631DCF7165EA6B2A87F55A23EB3630F2EBF4F86B478E6F0",
+      "Purpose": "MathEditorControl.Render\uC758 \uC2E4\uC81C Session \uAE30\uBC18 \uC624\uD504\uC2A4\uD06C\uB9B0 \uAC80\uD1A0 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-tree-selection-minimum-bottom",
+  "scenario": {
+    "selectedSpaceId": "ed664c69-6d42-405f-ac06-d6b4d556404d",
+    "isNodeSelected": true
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 3,
+  "stateId": "3a0045aa-fb67-4f85-a892-14f8f310bc48",
+  "dirty": true,
+  "caret": {
+    "NodeId": "9b94e88f-314c-4969-aa45-09d440097354",
+    "TextElementOffset": 0
+  },
+  "selection": null,
+  "selectedNodeId": "ed664c69-6d42-405f-ac06-d6b4d556404d",
+  "isNodeSelected": true,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u0022db4a3581-5271-4390-aa6f-eeda5b00e40c\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uC218\\uD559 \\uACF5\\uBC31 UI fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u0022e8d699e1-ebac-4be5-abc9-a528d038faf0\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00226e1316de-e2d2-4b38-8178-62bc0e376a4a\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002225adef99-2f7a-4db6-adc9-bd1fb1eb5b93\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00223958eee9-4373-4e90-98bd-245fb0ca07f9\u0022,\u0022Text\u0022:\u0022a\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}},{\u0022Kind\u0022:\u0022mathSpace\u0022,\u0022Id\u0022:\u0022ed664c69-6d42-405f-ac06-d6b4d556404d\u0022,\u0022SpaceKind\u0022:0,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00229b94e88f-314c-4969-aa45-09d440097354\u0022,\u0022Text\u0022:\u0022b\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}}]}}]}]}",
+  "mathSpaceIds": [
+    "ed664c69-6d42-405f-ac06-d6b4d556404d"
+  ],
+  "outputState": "Empty",
+  "outputRevision": null,
+  "png": "main-window.png"
+}

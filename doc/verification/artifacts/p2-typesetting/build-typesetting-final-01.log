@@ -1,0 +1,11 @@
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\MathPropertiesPanelViewModel.cs(385,32): error CS0173: 'MathTypesettingStyle'과(와) '<null>' 사이에 암시적 변환이 없으므로 조건식의 형식을 확인할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\MathPropertiesPanelViewModel.cs(385,32): error CS0173: 'MathTypesettingStyle'과(와) '<null>' 사이에 암시적 변환이 없으므로 조건식의 형식을 확인할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+    경고 0개
+    오류 1개
+
+경과 시간: 00:00:01.95
+
+ACTUAL_EXIT_CODE=1

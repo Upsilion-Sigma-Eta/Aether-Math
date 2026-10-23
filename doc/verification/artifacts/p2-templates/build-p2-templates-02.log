@@ -1,0 +1,12 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs(104,58): error CS0833: 익명 형식에는 동일한 이름의 속성을 여러 개 사용할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs(104,58): error CS0833: 익명 형식에는 동일한 이름의 속성을 여러 개 사용할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 0개
+    오류 1개
+
+경과 시간: 00:00:02.32
+
+QA_EXIT_CODE=1

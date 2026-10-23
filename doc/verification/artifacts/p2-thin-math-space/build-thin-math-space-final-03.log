@@ -1,0 +1,12 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceCases.cs(143,22): error CS4007: 'await' 또는 'yield' 경계를 넘어 'System.ReadOnlySpan<byte>' 형식의 인스턴스를 보존할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceCases.cs(143,22): error CS4007: 'await' 또는 'yield' 경계를 넘어 'System.ReadOnlySpan<byte>' 형식의 인스턴스를 보존할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 0개
+    오류 1개
+
+경과 시간: 00:00:01.58
+
+ACTUAL_EXIT_CODE=1

@@ -1,0 +1,26 @@
+PASS THIN-JSON-VALIDATOR 얇은 수학 공백 JSON 왕복과 필수 콘텐츠 검증
+PASS THIN-INSERT-SEMANTICS 텍스트 caret·정역 선택 삽입과 독립 편집 이력
+PASS THIN-ANCHOR-SELECTION 빈 슬롯·전체 치환·끝 caret anchor 보존
+PASS THIN-DELETE-NAVIGATION spacer 단일 삭제와 인접 텍스트 편집 경계
+PASS THIN-CLEAR-SEMANTIC-EMPTY 의미상 빈 spacer의 네 Clear 범위 처리
+PASS THIN-LAYOUT-GAPS 명시 간격 폭과 인접 자동 간격의 분리
+PASS THIN-LATEX-OUTPUT 명시 공백 LaTeX와 U+2009 원문 분리
+PASS THIN-PREVIEW-SVG 세 출력 모드 frozen layout과 실제 SVG 소비
+PASS THIN-CLONE-IO-RECOVERY 다른 행 caret의 복제·파일·복구 왕복
+RESULT 전체=10 합격=9 실패=1
+FAIL THIN-MATH-SPACE-UI 얇은 수학 공백의 삽입·선택·삭제·간격·SVG 경계를 실제 App Headless에서 확인
+System.InvalidOperationException: 얇은 수학 공백 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL THIN-MATH-SPACE-UI
+System.InvalidOperationException: MathEditorSurface의 보이는 viewport 교집합이 유효하지 않습니다: BoundsRecord { X = 273, Y = 322, Width = 73, Height = 227 }.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 181
+   at AetherMath.LogicQA.ThinMathSpaceUiInteractionCases.CaptureStructureShellAsync(MainWindow window, ScrollViewer scroll, String prefix) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceUiInteractionCases.cs:line 690
+   at AetherMath.LogicQA.ThinMathSpaceUiInteractionCases.RunWindowChecksAsync(TempDirectory fixtureDirectory) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceUiInteractionCases.cs:line 159
+   at AetherMath.LogicQA.ThinMathSpaceUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceUiInteractionCases.cs:line 55
+
+   at AetherMath.LogicQA.ThinMathSpaceUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\ThinMathSpaceUiInteractionCases.cs:line 112
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 238
+
+ACTUAL_EXIT_CODE=1

@@ -1,0 +1,2 @@
+PASS FONT-PROBE-ORDERS 신선한 프로세스의 글꼴 resolve·shaping 순서 비교
+RESULT 전체=1 합격=1 실패=0

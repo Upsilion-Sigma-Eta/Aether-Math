@@ -1,0 +1,11 @@
+PASS VM-STATE-INIT 저장 기반 초기화와 상태 서비스를 쓰지 않는 기존 VM 격리
+PASS AUTO-RECOVERY-TICK 실제 자동 tick의 dirty snapshot·ID·스타일과 편집 상태 보존
+PASS AUTO-RECOVERY-CLEANUP 성공 저장 뒤 복구본 정리 및 저장 실패 때 원본 보존
+PASS AUTO-RECOVERY-STALE 정지·세션 교체와 겹친 복구 저장 drain 및 늦은 결과 차단
+PASS RECOVERY-RESTORE 재시작 복구 후보의 명시 복원과 새 dirty Session 생성
+PASS RECOVERY-DIRTY-GUARD dirty 작업에서 복원 Cancel·Save·Discard 확인
+PASS RECENT-SUCCESS 성공한 Save/Open만 recent 목록에 기록
+PASS RECENT-MISSING-RELINK 누락·metadata 상태, 명시 경로 재연결, pin·remove와 원본 보존
+PASS LIBRARY-UI
+PASS LIBRARY-UI 실제 App의 최근 작업·복구본 작업 탭, 명시 동작과 두 크기 셸을 Headless로 검증
+RESULT 전체=9 합격=9 실패=0

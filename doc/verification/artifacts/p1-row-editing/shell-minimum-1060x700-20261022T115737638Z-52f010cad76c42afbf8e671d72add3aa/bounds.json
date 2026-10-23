@@ -1,0 +1,83 @@
+{
+  "Label": "shell-minimum",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 183,
+    "Y": 247,
+    "Width": 576,
+    "Height": 302
+  },
+  "EditorBounds": {
+    "X": 213,
+    "Y": 277,
+    "Width": 285,
+    "Height": 360
+  },
+  "VisibleEditorBounds": {
+    "X": 213,
+    "Y": 277,
+    "Width": 285,
+    "Height": 272
+  },
+  "ToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 195,
+        "Y": 207,
+        "Width": 108,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 311,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 350,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 389,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 428,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 467,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "PngFile": "main-window.png",
+  "PngSha256": "A7674F654D34B16E3544C6B2FA54B51C1D7616A052610E43E0EDE89B0D238054"
+}

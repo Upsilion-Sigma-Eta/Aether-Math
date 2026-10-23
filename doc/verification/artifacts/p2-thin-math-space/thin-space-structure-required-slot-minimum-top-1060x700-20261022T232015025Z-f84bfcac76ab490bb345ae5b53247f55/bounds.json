@@ -1,0 +1,417 @@
+{
+  "Label": "thin-space-structure-required-slot-minimum-top",
+  "ArtifactScope": "p2-thin-math-space",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 516,
+    "Height": 257
+  },
+  "EditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 76,
+    "Height": 360
+  },
+  "VisibleEditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 76,
+    "Height": 227
+  },
+  "MinimumVisibleEditorWidth": 76,
+  "HeaderActionBounds": [
+    {
+      "Name": "NewWorkspaceButton",
+      "Bounds": {
+        "X": 542,
+        "Y": 16,
+        "Width": 89,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "OpenWorkspaceButton",
+      "Bounds": {
+        "X": 639,
+        "Y": 16,
+        "Width": 72,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SaveWorkspaceButton",
+      "Bounds": {
+        "X": 719,
+        "Y": 16,
+        "Width": 71,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UndoButton",
+      "Bounds": {
+        "X": 813,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "RedoButton",
+      "Bounds": {
+        "X": 857,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ExportSvgButton",
+      "Bounds": {
+        "X": 906,
+        "Y": 16,
+        "Width": 132,
+        "Height": 36
+      },
+      "IsVisible": true
+    }
+  ],
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 207,
+        "Width": 75,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 338,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 377,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 416,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 455,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 494,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 252,
+        "Width": 108,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 371,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 410,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 449,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 488,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 527,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "LifecycleDialogBounds": null,
+  "LifecycleTargetCardBounds": null,
+  "LifecycleTargetBounds": null,
+  "LifecycleChoiceBounds": null,
+  "LifecycleErrorText": null,
+  "LifecycleErrorBounds": null,
+  "LibraryViewportBounds": null,
+  "LibraryHeaderBounds": null,
+  "LibraryRecentActionsVisibleBounds": null,
+  "LibraryRecoveryActionsVisibleBounds": null,
+  "LibraryPreviewVisibleBounds": null,
+  "LibraryPreviewNameBounds": null,
+  "LibraryPreviewPathBounds": null,
+  "LibraryPreviewStatusBounds": null,
+  "LibraryPreviewModifiedBounds": null,
+  "LibraryVerticalOffset": null,
+  "PalettePanelBounds": {
+    "X": 18,
+    "Y": 88,
+    "Width": 210,
+    "Height": 564
+  },
+  "PaletteModeTabsBounds": {
+    "X": 30,
+    "Y": 167,
+    "Width": 186,
+    "Height": 375
+  },
+  "PaletteActiveScrollBounds": {
+    "X": 30,
+    "Y": 217,
+    "Width": 186,
+    "Height": 325
+  },
+  "PaletteControlBounds": [
+    {
+      "Name": "InsertFractionButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 217,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertRootButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 292,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertSuperscriptButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 367,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertMatrixButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 442,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertSubscriptButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 517,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertIntegralButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 592,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertSummationButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 667,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertLimitButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 742,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertBracketsButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 817,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertCasesButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 892,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "InsertThinSpaceButton",
+      "Bounds": {
+        "X": 30,
+        "Y": 1007,
+        "Width": 176,
+        "Height": 66
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ThinSpaceNotice",
+      "Bounds": {
+        "X": 30,
+        "Y": 1082,
+        "Width": 176,
+        "Height": 63
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ThinSpaceHelpText",
+      "Bounds": {
+        "X": 30,
+        "Y": 1154,
+        "Width": 176,
+        "Height": 63
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ThinSpaceDisabledReason",
+      "Bounds": {
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0
+      },
+      "IsVisible": false
+    }
+  ],
+  "PaletteVerticalOffset": 0,
+  "PaletteCaptureMode": "structure-top",
+  "TemplatePanelBounds": null,
+  "TemplateScrollViewerBounds": null,
+  "TemplateButtonBounds": null,
+  "TemplateVerticalOffset": null,
+  "TemplateCaptureEdge": null,
+  "StructureInspectorBounds": null,
+  "StructureClearPanelBounds": null,
+  "StructureTreeBounds": null,
+  "StructureScrollViewerBounds": null,
+  "StructureEffectiveViewportBounds": null,
+  "StructureHeaderScrollViewerBounds": null,
+  "StructureScrollMetrics": null,
+  "StructureSelectedItemBounds": null,
+  "StructureSelectedItemIsSelected": null,
+  "StructureSelectionMode": null,
+  "StructureHorizontalScrollVisibility": null,
+  "StructureControlBounds": null,
+  "StructureSelectedNodeId": null,
+  "StructureActivePath": null,
+  "StructureClearDescription": null,
+  "StructureClearDisabledReason": null,
+  "StructureClearAffectedRows": null,
+  "StructureCanClear": null,
+  "Properties": null,
+  "PngFile": "main-window.png",
+  "PngSha256": "425794C90549778C57A267130D30586604F03981B2FF2252D4F8235ACEF34BAF"
+}

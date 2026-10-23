@@ -1,0 +1,55 @@
+# .NET 빌드 산출물
+**/bin/
+**/obj/
+
+# 테스트·커버리지·벤치마크 결과
+**/TestResults/
+**/coverage/
+**/BenchmarkDotNet.Artifacts/
+*.coverage
+*.coveragexml
+
+# 저장소 루트의 생성형 패키지·배포 산출물
+/artifacts/
+/packages/
+/publish/
+*.nupkg
+*.snupkg
+
+# Visual Studio 및 Rider 개인 캐시·사용자 상태
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.rsuser
+*.sln.docstates
+*.DotSettings.user
+*.iml
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/**/usage.statistics.xml
+**/.idea/**/shelf/
+**/.idea/**/httpRequests/
+**/.idea/**/dataSources/
+
+# 로컬 환경변수·개인 비밀 설정
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# 임시 편집 파일과 운영체제 잡파일
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+._*

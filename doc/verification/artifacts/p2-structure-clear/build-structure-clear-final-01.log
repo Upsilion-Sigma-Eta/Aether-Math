@@ -1,0 +1,13 @@
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Themes/AetherTheme.axaml(274,13,274,13): Avalonia error AVLN2000: Unable to resolve suitable regular or attached property HorizontalContentAlignment on type Avalonia.Controls:Avalonia.Controls.TreeViewItem Line 274, position 13. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Themes/AetherTheme.axaml(274,51,274,51): Avalonia error AVLN2200: Unable to convert property value to :.{Unknown type} Line 274, position 51. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Themes/AetherTheme.axaml(274,13,274,13): Avalonia error AVLN2000: Unable to resolve suitable regular or attached property HorizontalContentAlignment on type Avalonia.Controls:Avalonia.Controls.TreeViewItem Line 274, position 13. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Themes/AetherTheme.axaml(274,51,274,51): Avalonia error AVLN2200: Unable to convert property value to :.{Unknown type} Line 274, position 51. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+    경고 0개
+    오류 2개
+
+경과 시간: 00:00:02.51
+
+ACTUAL_EXIT_CODE=1

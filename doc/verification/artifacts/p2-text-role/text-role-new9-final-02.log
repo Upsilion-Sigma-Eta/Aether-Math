@@ -1,0 +1,14 @@
+PASS TEXT-ROLE-SCHEMA schema v1 역할 왕복·legacy 기본값·복구 왕복·손상 원본 보존
+PASS TEXT-ROLE-LAYOUT 역할별 italic과 명시 역할 shaping run·caret 폭
+PASS TEXT-ROLE-LATEX 역할 macro·공백/예약 문자 escaping·Unicode 및 제어 진단
+PASS TEXT-ROLE-ALIGN-SVG 역할 한정 등호 정렬과 같은 layout의 SVG 소비
+PASS TEXT-ROLE-APPLY 다섯 필드 원자 Apply·stale/no-op/범위 거절·reset 보존
+PASS TEXT-ROLE-EDIT-PRESERVE 문자 편집·분할·붙이기 경로와 부분선택 감싸기의 역할 보존
+PASS TEXT-ROLE-TEMPLATE-CLONE 빈 템플릿 내용·복제·undo에서 역할·ID 보존
+PASS TEXT-ROLE-VM-DIAGNOSTIC 속성 패널 범위 안내와 MainVM의 진단/외부 재사용 차단
+TEXT-ROLE-UI 비교 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\text-role-comparison-20261022T201403735Z-d581b5e7414a44d9906c612eda7bfc98\text-role-comparison.json
+TEXT-ROLE-UI LaTeX 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\latex-diagnostic-20261022T201404901Z-dca22a9a254a4c9ca36613b7df45fe27
+PASS TEXT-ROLE-UI
+PASS TEXT-ROLE-UI 수식 텍스트 역할의 실제 바인딩·범위·통합 적용/실행 취소와 LaTeX 진단 패널을 Headless 검증
+RESULT 전체=9 합격=9 실패=0
+ACTUAL_EXIT_CODE=0

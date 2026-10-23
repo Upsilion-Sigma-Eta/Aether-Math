@@ -1,0 +1,477 @@
+{
+  "Label": "palette-unicode-disabled-default-disabled-bottom",
+  "ArtifactScope": "p2-symbol-palette",
+  "ClientWidth": 1360,
+  "ClientHeight": 880,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 816,
+    "Height": 437
+  },
+  "EditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 293,
+    "Height": 360
+  },
+  "VisibleEditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 293,
+    "Height": 360
+  },
+  "MinimumVisibleEditorWidth": 120,
+  "HeaderActionBounds": [
+    {
+      "Name": "NewWorkspaceButton",
+      "Bounds": {
+        "X": 842,
+        "Y": 16,
+        "Width": 89,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "OpenWorkspaceButton",
+      "Bounds": {
+        "X": 939,
+        "Y": 16,
+        "Width": 72,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SaveWorkspaceButton",
+      "Bounds": {
+        "X": 1019,
+        "Y": 16,
+        "Width": 71,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UndoButton",
+      "Bounds": {
+        "X": 1113,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "RedoButton",
+      "Bounds": {
+        "X": 1157,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ExportSvgButton",
+      "Bounds": {
+        "X": 1206,
+        "Y": 16,
+        "Width": 132,
+        "Height": 36
+      },
+      "IsVisible": true
+    }
+  ],
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 207,
+        "Width": 75,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 338,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 377,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 416,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 455,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 494,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 252,
+        "Width": 108,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 371,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 410,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 449,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 488,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 527,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "LifecycleDialogBounds": null,
+  "LifecycleTargetCardBounds": null,
+  "LifecycleTargetBounds": null,
+  "LifecycleChoiceBounds": null,
+  "LifecycleErrorText": null,
+  "LifecycleErrorBounds": null,
+  "LibraryViewportBounds": null,
+  "LibraryHeaderBounds": null,
+  "LibraryRecentActionsVisibleBounds": null,
+  "LibraryRecoveryActionsVisibleBounds": null,
+  "LibraryPreviewVisibleBounds": null,
+  "LibraryPreviewNameBounds": null,
+  "LibraryPreviewPathBounds": null,
+  "LibraryPreviewStatusBounds": null,
+  "LibraryPreviewModifiedBounds": null,
+  "LibraryVerticalOffset": null,
+  "PalettePanelBounds": {
+    "X": 18,
+    "Y": 88,
+    "Width": 210,
+    "Height": 744
+  },
+  "PaletteModeTabsBounds": {
+    "X": 30,
+    "Y": 167,
+    "Width": 186,
+    "Height": 555
+  },
+  "PaletteActiveScrollBounds": {
+    "X": 30,
+    "Y": 217,
+    "Width": 186,
+    "Height": 505
+  },
+  "PaletteControlBounds": [
+    {
+      "Name": "CharacterModeSelector",
+      "Bounds": {
+        "X": 31,
+        "Y": -30,
+        "Width": 175,
+        "Height": 32
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeBrowserPanel",
+      "Bounds": {
+        "X": 31,
+        "Y": 10,
+        "Width": 175,
+        "Height": 704
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeQueryBox",
+      "Bounds": {
+        "X": 31,
+        "Y": 80,
+        "Width": 133,
+        "Height": 32
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeLookupButton",
+      "Bounds": {
+        "X": 170,
+        "Y": 81,
+        "Width": 36,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeModeButton",
+      "Bounds": {
+        "X": 31,
+        "Y": -30,
+        "Width": 72,
+        "Height": 32
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "EmojiModeButton",
+      "Bounds": {
+        "X": 109,
+        "Y": -30,
+        "Width": 87,
+        "Height": 32
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeLookupError",
+      "Bounds": {
+        "X": 31,
+        "Y": 119,
+        "Width": 175,
+        "Height": 14
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MathUnicodeRangeButton",
+      "Bounds": {
+        "X": 31,
+        "Y": 140,
+        "Width": 36,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "GreekUnicodeRangeButton",
+      "Bounds": {
+        "X": 72,
+        "Y": 140,
+        "Width": 46,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "HangulUnicodeRangeButton",
+      "Bounds": {
+        "X": 123,
+        "Y": 140,
+        "Width": 36,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodePreviousPageButton",
+      "Bounds": {
+        "X": 31,
+        "Y": 177,
+        "Width": 36,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodePageIndicator",
+      "Bounds": {
+        "X": 100,
+        "Y": 186,
+        "Width": 37,
+        "Height": 12
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeNextPageButton",
+      "Bounds": {
+        "X": 142,
+        "Y": 177,
+        "Width": 36,
+        "Height": 30
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodePageCount",
+      "Bounds": {
+        "X": 87,
+        "Y": 214,
+        "Width": 63,
+        "Height": 12
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeResultsList",
+      "Bounds": {
+        "X": 31,
+        "Y": 233,
+        "Width": 175,
+        "Height": 252
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SelectedUnicodeCodePoint",
+      "Bounds": {
+        "X": 40,
+        "Y": 500,
+        "Width": 157,
+        "Height": 18
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SelectedUnicodeDetails",
+      "Bounds": {
+        "X": 31,
+        "Y": 492,
+        "Width": 175,
+        "Height": 109
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UnicodeDisabledReason",
+      "Bounds": {
+        "X": 40,
+        "Y": 536,
+        "Width": 157,
+        "Height": 27
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SelectedUnicodeGlyphStatus",
+      "Bounds": {
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0
+      },
+      "IsVisible": false
+    },
+    {
+      "Name": "UnicodeInsertButton",
+      "Bounds": {
+        "X": 31,
+        "Y": 678,
+        "Width": 175,
+        "Height": 36
+      },
+      "IsVisible": true
+    }
+  ],
+  "PaletteVerticalOffset": 249,
+  "PaletteCaptureMode": "unicode-bottom",
+  "TemplatePanelBounds": null,
+  "TemplateScrollViewerBounds": null,
+  "TemplateButtonBounds": null,
+  "TemplateVerticalOffset": null,
+  "TemplateCaptureEdge": null,
+  "StructureInspectorBounds": null,
+  "StructureClearPanelBounds": null,
+  "StructureTreeBounds": null,
+  "StructureScrollViewerBounds": null,
+  "StructureEffectiveViewportBounds": null,
+  "StructureHeaderScrollViewerBounds": null,
+  "StructureScrollMetrics": null,
+  "StructureSelectedItemBounds": null,
+  "StructureSelectedItemIsSelected": null,
+  "StructureSelectionMode": null,
+  "StructureHorizontalScrollVisibility": null,
+  "StructureControlBounds": null,
+  "StructureSelectedNodeId": null,
+  "StructureActivePath": null,
+  "StructureClearDescription": null,
+  "StructureClearDisabledReason": null,
+  "StructureClearAffectedRows": null,
+  "StructureCanClear": null,
+  "Properties": null,
+  "PngFile": "main-window.png",
+  "PngSha256": "6CDA6B390ED7903F920B7CB4AB93E76F4C96B2FEA27F9DDB3707E577C23AF0F2"
+}

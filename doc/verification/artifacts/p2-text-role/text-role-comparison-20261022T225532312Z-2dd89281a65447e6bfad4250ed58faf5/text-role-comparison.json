@@ -1,0 +1,80 @@
+{
+  "caseId": "TEXT-ROLE-UI",
+  "evidencePurpose": "\uAC19\uC740 \uC2E4\uC81C TextNode\uC758 Automatic\u00B7Number\u00B7Identifier \uD654\uBA74 \uCC28\uC774 \uAC80\uD1A0\uC6A9 \uC624\uD504\uC2A4\uD06C\uB9B0 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4.",
+  "targetNodeId": "50b57b93-0109-4f56-96ea-488742ab882a",
+  "targetText": "A1V",
+  "captures": [
+    {
+      "Role": "Automatic",
+      "FileName": "equation-Automatic.png",
+      "PngSha256": "7C34573CF1A94756090592670EADF9CFF43E5B71043CF5EE3CB76660A0687C32",
+      "PixelWidth": 294,
+      "PixelHeight": 360,
+      "EditorBounds": {
+        "X": 273,
+        "Y": 292,
+        "Width": 294,
+        "Height": 360
+      },
+      "NodeId": "50b57b93-0109-4f56-96ea-488742ab882a",
+      "NodeText": "A1V",
+      "StoredRole": "Automatic",
+      "WorkspaceFingerprint": "{\u0022Id\u0022:\u002251f956cc-c032-4cab-9790-70b3b1188f02\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00220110dbf7-d558-46c0-b52d-92b38518a928\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022cf6f3375-8e79-4a19-8a27-f654f1788f13\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002243dff415-9a73-4996-ab55-3ee4089213e1\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002250b57b93-0109-4f56-96ea-488742ab882a\u0022,\u0022Text\u0022:\u0022A1V\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002299487b3b-2169-4a7a-9abe-26fac3971dc2\u0022,\u0022Text\u0022:\u0022 = \u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:2,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022921e595a-467c-45c3-b581-ed3ab45cbbc1\u0022,\u0022Text\u0022:\u002212\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:3,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022f0127eb4-4015-42ab-98d1-379d6c2bc750\u0022,\u0022Text\u0022:\u0022 m\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:5,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252c8d3e0-8600-4d15-9351-5194e1e3563c\u0022,\u0022Text\u0022:\u0022, if x\\u003E0\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:6,\u0022StyleOverride\u0022:null}]}}]}]}",
+      "Purpose": "\uD604\uC7AC MathEditorControl.Render\uC640 \uC2E4\uC81C Session\uC744 \uC0AC\uC6A9\uD55C \uD770 \uBC30\uACBD \uBE44\uAD50\uC6A9 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "Role": "Number",
+      "FileName": "equation-Number.png",
+      "PngSha256": "0AABAC63CAEFDE9461C146850B7EE8C244913B4E6F2E4E7DC5BD0E630CFEDD7D",
+      "PixelWidth": 294,
+      "PixelHeight": 360,
+      "EditorBounds": {
+        "X": 273,
+        "Y": 292,
+        "Width": 294,
+        "Height": 360
+      },
+      "NodeId": "50b57b93-0109-4f56-96ea-488742ab882a",
+      "NodeText": "A1V",
+      "StoredRole": "Number",
+      "WorkspaceFingerprint": "{\u0022Id\u0022:\u002251f956cc-c032-4cab-9790-70b3b1188f02\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00220110dbf7-d558-46c0-b52d-92b38518a928\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022cf6f3375-8e79-4a19-8a27-f654f1788f13\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002243dff415-9a73-4996-ab55-3ee4089213e1\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002250b57b93-0109-4f56-96ea-488742ab882a\u0022,\u0022Text\u0022:\u0022A1V\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:3,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002299487b3b-2169-4a7a-9abe-26fac3971dc2\u0022,\u0022Text\u0022:\u0022 = \u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:2,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022921e595a-467c-45c3-b581-ed3ab45cbbc1\u0022,\u0022Text\u0022:\u002212\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:3,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022f0127eb4-4015-42ab-98d1-379d6c2bc750\u0022,\u0022Text\u0022:\u0022 m\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:5,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252c8d3e0-8600-4d15-9351-5194e1e3563c\u0022,\u0022Text\u0022:\u0022, if x\\u003E0\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:6,\u0022StyleOverride\u0022:null}]}}]}]}",
+      "Purpose": "\uD604\uC7AC MathEditorControl.Render\uC640 \uC2E4\uC81C Session\uC744 \uC0AC\uC6A9\uD55C \uD770 \uBC30\uACBD \uBE44\uAD50\uC6A9 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "Role": "Identifier",
+      "FileName": "equation-Identifier.png",
+      "PngSha256": "32F7F84253C368B17A6A0089F5ADFB4C892950F00E1CC4FC6D899CBE0856B86E",
+      "PixelWidth": 294,
+      "PixelHeight": 360,
+      "EditorBounds": {
+        "X": 273,
+        "Y": 292,
+        "Width": 294,
+        "Height": 360
+      },
+      "NodeId": "50b57b93-0109-4f56-96ea-488742ab882a",
+      "NodeText": "A1V",
+      "StoredRole": "Identifier",
+      "WorkspaceFingerprint": "{\u0022Id\u0022:\u002251f956cc-c032-4cab-9790-70b3b1188f02\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00220110dbf7-d558-46c0-b52d-92b38518a928\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022cf6f3375-8e79-4a19-8a27-f654f1788f13\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002243dff415-9a73-4996-ab55-3ee4089213e1\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002250b57b93-0109-4f56-96ea-488742ab882a\u0022,\u0022Text\u0022:\u0022A1V\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002299487b3b-2169-4a7a-9abe-26fac3971dc2\u0022,\u0022Text\u0022:\u0022 = \u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:2,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022921e595a-467c-45c3-b581-ed3ab45cbbc1\u0022,\u0022Text\u0022:\u002212\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:3,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022f0127eb4-4015-42ab-98d1-379d6c2bc750\u0022,\u0022Text\u0022:\u0022 m\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:5,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252c8d3e0-8600-4d15-9351-5194e1e3563c\u0022,\u0022Text\u0022:\u0022, if x\\u003E0\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:6,\u0022StyleOverride\u0022:null}]}}]}]}",
+      "Purpose": "\uD604\uC7AC MathEditorControl.Render\uC640 \uC2E4\uC81C Session\uC744 \uC0AC\uC6A9\uD55C \uD770 \uBC30\uACBD \uBE44\uAD50\uC6A9 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    },
+    {
+      "Role": "AutomaticAfterUndo",
+      "FileName": "equation-AutomaticAfterUndo.png",
+      "PngSha256": "7C34573CF1A94756090592670EADF9CFF43E5B71043CF5EE3CB76660A0687C32",
+      "PixelWidth": 294,
+      "PixelHeight": 360,
+      "EditorBounds": {
+        "X": 273,
+        "Y": 292,
+        "Width": 294,
+        "Height": 360
+      },
+      "NodeId": "50b57b93-0109-4f56-96ea-488742ab882a",
+      "NodeText": "A1V",
+      "StoredRole": "Automatic",
+      "WorkspaceFingerprint": "{\u0022Id\u0022:\u002251f956cc-c032-4cab-9790-70b3b1188f02\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00220110dbf7-d558-46c0-b52d-92b38518a928\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022cf6f3375-8e79-4a19-8a27-f654f1788f13\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002243dff415-9a73-4996-ab55-3ee4089213e1\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002250b57b93-0109-4f56-96ea-488742ab882a\u0022,\u0022Text\u0022:\u0022A1V\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002299487b3b-2169-4a7a-9abe-26fac3971dc2\u0022,\u0022Text\u0022:\u0022 = \u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:2,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022921e595a-467c-45c3-b581-ed3ab45cbbc1\u0022,\u0022Text\u0022:\u002212\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:3,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022f0127eb4-4015-42ab-98d1-379d6c2bc750\u0022,\u0022Text\u0022:\u0022 m\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:5,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252c8d3e0-8600-4d15-9351-5194e1e3563c\u0022,\u0022Text\u0022:\u0022, if x\\u003E0\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:6,\u0022StyleOverride\u0022:null}]}}]}]}",
+      "Purpose": "\uD604\uC7AC MathEditorControl.Render\uC640 \uC2E4\uC81C Session\uC744 \uC0AC\uC6A9\uD55C \uD770 \uBC30\uACBD \uBE44\uAD50\uC6A9 \uC774\uBBF8\uC9C0\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+    }
+  ]
+}

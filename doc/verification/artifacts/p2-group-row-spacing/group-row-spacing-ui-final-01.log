@@ -1,0 +1,18 @@
+RESULT 전체=1 합격=0 실패=1
+FAIL GROUP-ROW-SPACING-UI 현재 그룹 내부 행 간격의 실제 binding·geometry·history와 LaTeX 비보존 진단을 Headless 검증
+System.InvalidOperationException: 그룹 행 간격 UI child 실패(exit=1). stdout:
+GROUP-ROW-SPACING-UI formula evidence D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-group-row-spacing\equation-spacing-comparison-20261022T212831463Z-ffce6e9fc72a49cebfe4e72cd4cc1928\equation-spacing-comparison.json
+
+stderr:
+FAIL GROUP-ROW-SPACING-UI
+System.InvalidOperationException: 현재 그룹 저장값 round-trip 표시: 기대=현재 그룹 저장값: 24 px; 실제=현재 그룹 저장값: 68 px
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.Qa.Equal[T](T expected, T actual, String label) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 17
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 722
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunWindowChecksAsync(TempDirectory fixtureDirectory) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 259
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 54
+
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 118
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 226
+
+ACTUAL_EXIT_CODE=1

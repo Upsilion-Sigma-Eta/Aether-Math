@@ -1,0 +1,32 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-structure-initial-minimum-top",
+  "scenario": {
+    "edge": "top",
+    "offset": 0
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 0,
+  "stateId": "f6f21baf-0b16-4d6b-b6da-4b83543f3462",
+  "dirty": false,
+  "caret": {
+    "NodeId": "239409a0-1887-475b-96b1-9148390eaae2",
+    "TextElementOffset": 1
+  },
+  "selection": null,
+  "selectedNodeId": "239409a0-1887-475b-96b1-9148390eaae2",
+  "isNodeSelected": false,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u0022f00302cc-de13-4a8c-a2bb-179e492b4e82\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uC218\\uD559 \\uACF5\\uBC31 UI fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u002204e11fba-7378-4f0c-a624-c6f3e7b87470\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00223831275b-a269-43d7-9458-b900dedeaa7f\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022b1638938-a536-4948-9c07-5954154b7f93\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022239409a0-1887-475b-96b1-9148390eaae2\u0022,\u0022Text\u0022:\u0022ab\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}}]}}]}]}",
+  "mathSpaceIds": [],
+  "outputState": "Empty",
+  "outputRevision": null,
+  "png": "main-window.png"
+}

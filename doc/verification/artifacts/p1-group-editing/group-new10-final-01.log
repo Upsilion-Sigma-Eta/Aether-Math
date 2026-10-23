@@ -1,0 +1,12 @@
+PASS GROUP-ADD 현재 그룹 뒤에 속성을 상속한 필수 빈 그룹 추가와 단일 undo/redo
+PASS GROUP-ACTIVE 교차 그룹 구조 선택이 선택 그룹을 모든 명령의 대상으로 지정
+PASS GROUP-DUPLICATE 여러 행·깊은 구조·Unicode와 그룹 전체 ID/선택 매핑 복제
+PASS GROUP-DUP-CROSS 교차 그룹 구조 선택 복제의 fallback과 undo/redo 복원
+PASS GROUP-DELETE 그룹 삭제 뒤 다음 또는 이전 그룹 첫 텍스트로 이동
+PASS GROUP-MOVE 인접 그룹만 교환하고 행 순서·caret·선택을 보존
+PASS GROUP-NOOP 최소 그룹 수와 이동 경계에서 전체 상태 무변경
+PASS GROUP-IO 그룹 저장 재열기·LaTeX/SVG 순서와 필수 빈 출력 거절
+PASS GROUP-PASTE 그룹 이동·삭제 중 대기 중인 붙여넣기 폐기와 재시도
+PASS GROUP-UI
+PASS GROUP-UI 실제 App/MainWindow 그룹·행 도구 바인딩, 합성 편집, undo/redo 및 긴 작업영역의 Headless 검증
+RESULT 전체=10 합격=10 실패=0

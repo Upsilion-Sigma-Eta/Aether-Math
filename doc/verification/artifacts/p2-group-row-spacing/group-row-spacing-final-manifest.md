@@ -1,0 +1,35 @@
+# 그룹 행 간격 검증 manifest
+
+각 실행의 로그와 자동 산출물, 메인이 직접 검토한 자료를 구분한다. 이 승인 범위는 P2 그룹 행 간격 사용자 편집 slice이며 전체 P2/P3/P0/P1 완료나 OS 물리 입력 검증을 뜻하지 않는다.
+
+| 단계 | 로그 | 결과 | 산출물·검토 범위 |
+|---|---|---|---|
+| 초기 빌드 | [build-group-row-spacing-final-01.log](build-group-row-spacing-final-01.log) | Debug, 경고0·오류0, exit0 | 신규9 실행의 기준 빌드. |
+| 신규9 초기 실행 | [group-row-spacing-new9-final-01.log](group-row-spacing-new9-final-01.log) | 8/9, exit1 | 논리8 통과. collapsed diagnostic viewport 좌표 변환 실패; PNG/bounds 없음, 캡처 폴더는 비어 있었다. |
+| stale UI 재현 빌드/실행 | [build-group-row-spacing-final-02.log](build-group-row-spacing-final-02.log), [group-row-spacing-ui-final-01.log](group-row-spacing-ui-final-01.log) | 빌드 0/0·exit0; UI 0/1·exit1 | VM 24px / 화면 68px 불일치. shell PNG/bounds7쌍 및 비교 PNG2/JSON1 자동 생성. 메인은 적용/잘못된 입력 최소창 PNG2와 비교 PNG2만 제한적으로 확인했다. |
+| 신규10 phase-label 재실행 | [build-group-row-spacing-final-03.log](build-group-row-spacing-final-03.log), [group-row-spacing-new10-final-01.log](group-row-spacing-new10-final-01.log) | 빌드 0/0·exit0; 9/10·exit1 | UI top capture의 phase-label/offset 판정 실패(1127.5). 자동 PNG/bounds12쌍과 비교 PNG2/JSON1은 후속 성공 세트와 별도다. |
+| 최종 신규10 빌드/실행 | [build-group-row-spacing-final-04.log](build-group-row-spacing-final-04.log), [group-row-spacing-new10-final-02.log](group-row-spacing-new10-final-02.log) | 빌드 0/0·exit0; 10/10·exit0 | 2026-10-22 21:41:46–47 UTC. 메인이 bounds22 전체와 shell PNG10, 비교 PNG2/JSON1을 직접 검토했다. 직접 검토 shell 상태: 적용 최소, 상세 최종 기본, Workspace 비활성, 단일행 최소, stale 최소, 최소 expanded top/first/bottom, 기본 expanded bottom, 최소 재접힘. [비교 JSON](equation-spacing-comparison-20261022T214146552Z-c9bf902879274130ab5a0d5c2754cfc5/equation-spacing-comparison.json). |
+| 전체 회귀 1차 | [group-row-spacing-full181-final-01.log](group-row-spacing-full181-final-01.log) | 180/181·exit1 | 기존 `TEXT-ROLE-UI` 재접힘 `TextRoleCurrentValue` viewport containment 실패. 비교 PNG2/JSON1 및 UI PNG/bounds22쌍은 full-run 자동 산출물이며 직접 검토 세트가 아니다. |
+| 기존 UI 진단 스크롤 실패 | [build-group-row-spacing-final-05.log](build-group-row-spacing-final-05.log), [group-row-spacing-text-role-ui-final-01.log](group-row-spacing-text-role-ui-final-01.log) | 빌드 0/0·exit0; UI 0/1·exit1 | viewport484×58, TextBlock54, top y9..63/message-end y8..62/tail y42..54. helper가 8 DIP 여유를 무조건 요구하고 위쪽에서 전체 블록을 요구한 가정. diagnostic PNG3/JSON1과 비교 PNG4/JSON1은 자동 자료. |
+| 기존 UI 진단 스크롤 재검증 | [build-group-row-spacing-final-06.log](build-group-row-spacing-final-06.log), [group-row-spacing-text-role-ui-final-02.log](group-row-spacing-text-role-ui-final-02.log) | 빌드 0/0·exit0; UI 1/1·exit0 | 2026-10-22 21:50:23 UTC. 메인이 diagnostic PNG3/JSON을 직접 검토했다. [진단 JSON](../p2-text-role/latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80/latex-diagnostic-shell.json), 비교 산출물은 [별도 JSON](../p2-text-role/text-role-comparison-20261022T215022450Z-f922573ab0a04251a6286b389ef52f00/text-role-comparison.json)이다. 비교 PNG4 모두를 직접 검토한 것은 아니다. |
+| 최종 전체 회귀 | [group-row-spacing-full181-final-02.log](group-row-spacing-full181-final-02.log) | 181/181·exit0 | 2026-10-22 21:51 UTC 자동 산출물: 접두사 `20261022T2151` UI PNG/bounds22쌍 및 비교 PNG2/JSON1. 신규10 직접 검토 세트 및 단독 TEXT-ROLE-UI 직접 검토 세트와 별개다. |
+
+
+### 직접 검토한 캡처
+
+신규10-02의 직접 검토 shell PNG와 각 `bounds.json`은 다음과 같다. 나머지 bounds도 메인이 읽었으며, 모든 캡처 디렉터리는 실행별 시각 접두사로 분리돼 있다.
+
+- 적용 최소창: [PNG](group-spacing-applied-minimum-1060x700-20261022T214146834Z-e564e362eb6f46abbdc637e865952713/main-window.png), [bounds](group-spacing-applied-minimum-1060x700-20261022T214146834Z-e564e362eb6f46abbdc637e865952713/bounds.json)
+- 상세 최종 기본창: [PNG](group-spacing-detail-final-default-1360x880-20261022T214147317Z-6185620d96774ec3934fbaa8470eba00/main-window.png), [bounds](group-spacing-detail-final-default-1360x880-20261022T214147317Z-6185620d96774ec3934fbaa8470eba00/bounds.json)
+- Workspace 비활성: [PNG](group-spacing-disabled-workspace-1060x700-20261022T214147257Z-13b8b0e726fb4a409290d94ca8726226/main-window.png), [bounds](group-spacing-disabled-workspace-1060x700-20261022T214147257Z-13b8b0e726fb4a409290d94ca8726226/bounds.json)
+- 단일행 최소창: [PNG](group-spacing-single-row-minimum-1060x700-20261022T214147287Z-fe763952871b4a95a7819526f18af388/main-window.png), [bounds](group-spacing-single-row-minimum-1060x700-20261022T214147287Z-fe763952871b4a95a7819526f18af388/bounds.json)
+- stale 최소창: [PNG](group-spacing-stale-minimum-1060x700-20261022T214147110Z-58a0b7bbab5f48c7b032aaaec0e9f5d7/main-window.png), [bounds](group-spacing-stale-minimum-1060x700-20261022T214147110Z-58a0b7bbab5f48c7b032aaaec0e9f5d7/bounds.json)
+- 최소 expanded top/first/bottom: [top PNG](group-spacing-layout-diagnostic-minimum-top-1060x700-20261022T214147537Z-2b4470fea415483abc3306679db2bd60/main-window.png), [top bounds](group-spacing-layout-diagnostic-minimum-top-1060x700-20261022T214147537Z-2b4470fea415483abc3306679db2bd60/bounds.json), [first PNG](group-spacing-layout-diagnostic-minimum-first-1060x700-20261022T214147560Z-7e661bd6771a449f9046c534bc7e690b/main-window.png), [first bounds](group-spacing-layout-diagnostic-minimum-first-1060x700-20261022T214147560Z-7e661bd6771a449f9046c534bc7e690b/bounds.json), [bottom PNG](group-spacing-layout-diagnostic-minimum-bottom-1060x700-20261022T214147587Z-b90e8beca03c44139f97f0356905715c/main-window.png), [bottom bounds](group-spacing-layout-diagnostic-minimum-bottom-1060x700-20261022T214147587Z-b90e8beca03c44139f97f0356905715c/bounds.json)
+- 기본 expanded bottom: [PNG](group-spacing-layout-diagnostic-default-bottom-1360x880-20261022T214147460Z-012402b3a87647a8acd038d09525a0e4/main-window.png), [bounds](group-spacing-layout-diagnostic-default-bottom-1360x880-20261022T214147460Z-012402b3a87647a8acd038d09525a0e4/bounds.json)
+- 최소 재접힘: [PNG](group-spacing-code-collapsed-restored-minimum-1060x700-20261022T214147617Z-2147cdd8c4ac4c8e92cc575e7710783f/main-window.png), [bounds](group-spacing-code-collapsed-restored-minimum-1060x700-20261022T214147617Z-2147cdd8c4ac4c8e92cc575e7710783f/bounds.json)
+
+기존 `TEXT-ROLE-UI` 단독02의 직접 검토 진단 캡처는 [shell PNG](../p2-text-role/latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80/latex-diagnostic-shell.png), [message-end PNG](../p2-text-role/latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80/latex-diagnostic-message-end.png), [list-end PNG](../p2-text-role/latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80/latex-diagnostic-list-end.png), [bounds/상태 JSON](../p2-text-role/latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80/latex-diagnostic-shell.json)이다. full181-02의 자동 생성 캡처는 이 직접 검토 세트와 별개다.
+
+최종 결과는 build06 경고0·오류0/exit0, 신규10-02 10/10/exit0, 기존 `TEXT-ROLE-UI` 단독02 1/1/exit0, 전체181-02 181/181/exit0이다. 메인은 지정된 신규10-02와 TEXT-ROLE-UI 단독02 캡처를 직접 검토한 뒤 전체 회귀 결과를 승인했다. 첫 좌표 변환·phase-label 오류는 helper 실패였고, stale 화면 재현은 Core active-row cache 알림 순서의 실제 결함이었다. `SESSION-ACTIVE-TARGET-NOTIFY`가 이 결함을 독립적으로 고정한다. 기존 `TEXT-ROLE-UI` viewport/diagnostic scroll 실패도 실패 당시 이력으로 보존하며, helper 수정 후 단독 및 전체가 통과했다.
+
+21:09·21:24·21:39·21:56 UTC 감사는 절차 정지 기록이며 테스트 근거가 아니다. 21:56 UTC 감사 중 QA는 작업을 멈추고 대기했다. 검증은 Headless `STUB`/0 및 `TempDirectory`에 제한했다. 실제 OS/IME/clipboard/AppData, 외부 TeX, 전체 간격 정책 및 P2/P3/P0/P1 전체 완료는 포함하지 않는다.

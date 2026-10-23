@@ -1,0 +1,24 @@
+PASS STRUCT-PROJECTION 구조 트리의 문서 순서·실제 ID·슬롯 순서 투영
+PASS STRUCT-SELECT-PURITY 트리 선택과 표면 caret/부분선택 동기화의 편집 상태 순수성
+PASS CLEAR-SELECTION 정·역 Unicode 부분선택 및 전체 구조 선택만 비우기
+PASS CLEAR-ROW 교차 행 선택에서 선택 노드 행만 비우고 행 식별자 보존
+PASS CLEAR-GROUP 교차 그룹 선택에서 선택 노드 그룹만 비우기
+PASS CLEAR-WORKSPACE 작업 전체 비우기의 행·그룹·스타일 보존과 활성 caret
+PASS CLEAR-NOOP 무효 범위·빈 범위는 완전 무변경, 빈 구조는 비우기 가능
+PASS CLEAR-HISTORY 단일 Commit·undo/redo·고정 범위 선택과 SVG 출력 경계
+RESULT 전체=9 합격=8 실패=1
+FAIL STRUCTURE-CLEAR-UI 실제 구조 트리 선택·접힌 경로 노출·네 범위 비우기와 실행 취소의 Headless UI 검증
+System.InvalidOperationException: 구조/비우기 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL STRUCTURE-CLEAR-UI
+System.InvalidOperationException: 선택된 깊은 수식 노드 header가 Tree viewport 안에 완전히 노출되지 않습니다: item=BoundsRecord { X = 828, Y = 456, Width = 229, Height = 24 }, tree=BoundsRecord { X = 791, Y = 420, Width = 226, Height = 111 }.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 507
+   at AetherMath.LogicQA.StructureClearUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\StructureClearUiInteractionCases.cs:line 143
+   at AetherMath.LogicQA.StructureClearUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\StructureClearUiInteractionCases.cs:line 45
+
+   at AetherMath.LogicQA.StructureClearUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\StructureClearUiInteractionCases.cs:line 108
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 154
+
+ACTUAL_EXIT_CODE=1

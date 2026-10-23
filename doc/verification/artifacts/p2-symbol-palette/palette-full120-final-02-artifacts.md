@@ -1,0 +1,50 @@
+# 팔레트 전체120 실행 최신 화면 산출물
+
+- 실행 로그: `palette-full120-final-02.log` (120/120, 종료 코드 0)
+- 실행 시각: 2026-10-22 16:19:02–16:19:04 UTC
+- 각 폴더에는 `main-window.png`와 `bounds.json`이 있다.
+
+- `palette-structure-minimum-top-1060x700-20261022T161902446Z-f6da25bd36e147ecb6d219444190d28a/main-window.png`
+- `palette-structure-minimum-top-1060x700-20261022T161902446Z-f6da25bd36e147ecb6d219444190d28a/bounds.json`
+- `palette-structure-minimum-bottom-1060x700-20261022T161902489Z-0d7ef9f425ac4560af26fd9456982e31/main-window.png`
+- `palette-structure-minimum-bottom-1060x700-20261022T161902489Z-0d7ef9f425ac4560af26fd9456982e31/bounds.json`
+- `palette-symbols-minimum-top-1060x700-20261022T161902608Z-decb939287514f889bd56c1d8c04064b/main-window.png`
+- `palette-symbols-minimum-top-1060x700-20261022T161902608Z-decb939287514f889bd56c1d8c04064b/bounds.json`
+- `palette-symbols-minimum-bottom-1060x700-20261022T161902631Z-a69cfa9d353f416580dd201244c0292f/main-window.png`
+- `palette-symbols-minimum-bottom-1060x700-20261022T161902631Z-a69cfa9d353f416580dd201244c0292f/bounds.json`
+- `palette-unicode-minimum-top-1060x700-20261022T161902714Z-68047db5a95746b9b61382576d4cbec1/main-window.png`
+- `palette-unicode-minimum-top-1060x700-20261022T161902714Z-68047db5a95746b9b61382576d4cbec1/bounds.json`
+- `palette-unicode-minimum-bottom-1060x700-20261022T161902741Z-61eea559a5144ef585e634afa874a15a/main-window.png`
+- `palette-unicode-minimum-bottom-1060x700-20261022T161902741Z-61eea559a5144ef585e634afa874a15a/bounds.json`
+- `palette-emoji-minimum-top-1060x700-20261022T161902819Z-fba0a1e088bf420e8c6bd590320fe057/main-window.png`
+- `palette-emoji-minimum-top-1060x700-20261022T161902819Z-fba0a1e088bf420e8c6bd590320fe057/bounds.json`
+- `palette-emoji-minimum-bottom-1060x700-20261022T161902843Z-4b71d2d0139a47fa858dc849e255bb61/main-window.png`
+- `palette-emoji-minimum-bottom-1060x700-20261022T161902843Z-4b71d2d0139a47fa858dc849e255bb61/bounds.json`
+- `palette-structure-default-top-1360x880-20261022T161902886Z-4d0b6f6ffe5b4677917c58f16b179e36/main-window.png`
+- `palette-structure-default-top-1360x880-20261022T161902886Z-4d0b6f6ffe5b4677917c58f16b179e36/bounds.json`
+- `palette-structure-default-bottom-1360x880-20261022T161902917Z-9dd5238258154e6e832beee928db8f2a/main-window.png`
+- `palette-structure-default-bottom-1360x880-20261022T161902917Z-9dd5238258154e6e832beee928db8f2a/bounds.json`
+- `palette-symbols-default-top-1360x880-20261022T161902969Z-cc6d8c36ffe3437b959ed05c2304254f/main-window.png`
+- `palette-symbols-default-top-1360x880-20261022T161902969Z-cc6d8c36ffe3437b959ed05c2304254f/bounds.json`
+- `palette-symbols-default-bottom-1360x880-20261022T161903002Z-ebf7d46ec54f4923a2ea2c3399710553/main-window.png`
+- `palette-symbols-default-bottom-1360x880-20261022T161903002Z-ebf7d46ec54f4923a2ea2c3399710553/bounds.json`
+- `palette-unicode-default-top-1360x880-20261022T161903070Z-8ae38bfe9ec3421c9ced2f964cf6efaf/main-window.png`
+- `palette-unicode-default-top-1360x880-20261022T161903070Z-8ae38bfe9ec3421c9ced2f964cf6efaf/bounds.json`
+- `palette-unicode-default-bottom-1360x880-20261022T161903101Z-906b902fd0014f60b32238c2d5b5267a/main-window.png`
+- `palette-unicode-default-bottom-1360x880-20261022T161903101Z-906b902fd0014f60b32238c2d5b5267a/bounds.json`
+- `palette-emoji-default-top-1360x880-20261022T161903177Z-77791c39f6d040b182d1f1328ef605f5/main-window.png`
+- `palette-emoji-default-top-1360x880-20261022T161903177Z-77791c39f6d040b182d1f1328ef605f5/bounds.json`
+- `palette-emoji-default-bottom-1360x880-20261022T161903210Z-f4f74263141349a0b9f80ea5c4e0a62e/main-window.png`
+- `palette-emoji-default-bottom-1360x880-20261022T161903210Z-f4f74263141349a0b9f80ea5c4e0a62e/bounds.json`
+- `palette-unicode-disabled-default-disabled-top-1360x880-20261022T161903511Z-8c1798c9e8454e12be28e66957a25f1f/main-window.png`
+- `palette-unicode-disabled-default-disabled-top-1360x880-20261022T161903511Z-8c1798c9e8454e12be28e66957a25f1f/bounds.json`
+- `palette-unicode-disabled-default-disabled-bottom-1360x880-20261022T161903543Z-d29946739bdc414bba6029e118c5a399/main-window.png`
+- `palette-unicode-disabled-default-disabled-bottom-1360x880-20261022T161903543Z-d29946739bdc414bba6029e118c5a399/bounds.json`
+- `palette-unicode-invalid-query-default-invalid-top-1360x880-20261022T161903818Z-2bedfeb0213c4b78b244b00674e98bb4/main-window.png`
+- `palette-unicode-invalid-query-default-invalid-top-1360x880-20261022T161903818Z-2bedfeb0213c4b78b244b00674e98bb4/bounds.json`
+- `palette-unicode-invalid-query-default-invalid-bottom-1360x880-20261022T161903863Z-30a2143fa2124e60a4909b86ef6a9a26/main-window.png`
+- `palette-unicode-invalid-query-default-invalid-bottom-1360x880-20261022T161903863Z-30a2143fa2124e60a4909b86ef6a9a26/bounds.json`
+- `palette-unicode-outside-page-default-lookup-top-1360x880-20261022T161904009Z-c309330b79d44271966c05ea063f959e/main-window.png`
+- `palette-unicode-outside-page-default-lookup-top-1360x880-20261022T161904009Z-c309330b79d44271966c05ea063f959e/bounds.json`
+- `palette-unicode-outside-page-default-lookup-bottom-1360x880-20261022T161904043Z-7e66217b17d54ad2848bab65089da8d5/main-window.png`
+- `palette-unicode-outside-page-default-lookup-bottom-1360x880-20261022T161904043Z-7e66217b17d54ad2848bab65089da8d5/bounds.json`

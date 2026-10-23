@@ -1,0 +1,11 @@
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\MainWindow.axaml.cs(457,35): error CS1061: 'Border'에는 'TranslatePoint'에 대한 정의가 포함되어 있지 않고, 'Border' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'TranslatePoint'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\MainWindow.axaml.cs(457,35): error CS1061: 'Border'에는 'TranslatePoint'에 대한 정의가 포함되어 있지 않고, 'Border' 형식의 첫 번째 인수를 허용하는 액세스 가능한 확장 메서드 'TranslatePoint'이(가) 없습니다. using 지시문 또는 어셈블리 참조가 있는지 확인하세요. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+    경고 0개
+    오류 1개
+
+경과 시간: 00:00:00.60
+
+ACTUAL_EXIT_CODE=1

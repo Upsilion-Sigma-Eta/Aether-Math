@@ -1,0 +1,20 @@
+PASS PIN-APPLY 분수 scope pin 및 부분 텍스트 역할·스타일 통합 적용·되돌리기·초기화
+PASS PIN-DRAFT pin 초안의 no-op·무효·stale 보존과 분수 문맥 분리
+PASS DFRAC-LATEX 분수 자체의 명시 Display만 dfrac로 직렬화
+PASS DFRAC-IO 분수 pin·역할·식별자·복제본의 파일 및 recovery 왕복
+PASS DFRAC-LAYOUT-PREVIEW pin geometry·Inline 투영·동일 frozen Layout SVG 소비
+RESULT 전체=6 합격=5 실패=1
+FAIL DFRAC-PIN-UI 분수의 Display pin 의도, 통합 적용·실행 취소, 범위 제한과 LaTeX dfrac 안내를 Headless 검증
+System.InvalidOperationException: 분수 조판 pin UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL DFRAC-PIN-UI
+System.InvalidOperationException: 분수 pin UI 클릭 대상이 실제 viewport 여유폭 안에 있지 않습니다: name=ApplyPropertiesButton, bounds=0, 0, 36, 30, origin=791, 563, viewport=234, 387, origin=791, 214, offset=0, 1126.5, extent=234, 1587
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.DfracPinUiInteractionCases.ClickControlAsync(MainWindow window, Control control) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\DfracPinUiInteractionCases.cs:line 401
+   at AetherMath.LogicQA.DfracPinUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\DfracPinUiInteractionCases.cs:line 227
+   at AetherMath.LogicQA.DfracPinUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\DfracPinUiInteractionCases.cs:line 46
+
+   at AetherMath.LogicQA.DfracPinUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\DfracPinUiInteractionCases.cs:line 105
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 214
+QA_RESULT exit=1

@@ -1,0 +1,217 @@
+{
+  "renderedBy": "MathEditorControl",
+  "evidencePurpose": "\uAC80\uD1A0\uC6A9 \uC624\uD504\uC2A4\uD06C\uB9B0 \uC2DC\uAC01 \uC99D\uAC70\uC774\uBA70 \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30 \uCD9C\uB825\uC774 \uC544\uB2D9\uB2C8\uB2E4.",
+  "background": "#FFFFFF",
+  "workspace": "P2 \uD15C\uD50C\uB9BF \uC2DC\uAC01 \uD45C\uBCF8",
+  "windowSize": {
+    "Width": 1360,
+    "Height": 880
+  },
+  "pixelSize": {
+    "width": 219,
+    "height": 819
+  },
+  "layoutSize": {
+    "Width": 218.57109375,
+    "Height": 818.5574707031249
+  },
+  "renderCoordinateSpace": "MathEditorControl \uB85C\uCEEC \uC88C\uD45C (0,0)\uC5D0\uC11C \uC9C1\uC811 Render",
+  "temporaryMargin": {
+    "Left": 0,
+    "Top": 0,
+    "Right": 0,
+    "Bottom": 0
+  },
+  "originalMargin": {
+    "Left": 30,
+    "Top": 30,
+    "Right": 30,
+    "Bottom": 40
+  },
+  "originalVisualTreeBounds": {
+    "X": 30,
+    "Y": 30,
+    "Width": 64,
+    "Height": 360
+  },
+  "controlBoundsAtRender": {
+    "X": 0,
+    "Y": 0,
+    "Width": 219,
+    "Height": 819
+  },
+  "rowCount": 10,
+  "rows": [
+    {
+      "index": 1,
+      "template": "Fraction",
+      "rootType": "FractionNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 24,
+        "Width": 69.84433593749999,
+        "Height": 78.891796875
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 24.000000000000007,
+        "Width": 69.84433593749999,
+        "Height": 78.891796875
+      }
+    },
+    {
+      "index": 2,
+      "template": "Radical",
+      "rootType": "RadicalNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 116.891796875,
+        "Width": 81.72539062499999,
+        "Height": 39.9708984375
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 116.891796875,
+        "Width": 81.72539062499999,
+        "Height": 39.9708984375
+      }
+    },
+    {
+      "index": 3,
+      "template": "Superscript",
+      "rootType": "ScriptNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 170.8626953125,
+        "Width": 27.495996093749998,
+        "Height": 40.553979492187494
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 170.8626953125,
+        "Width": 27.495996093749998,
+        "Height": 40.553979492187494
+      }
+    },
+    {
+      "index": 4,
+      "template": "Subscript",
+      "rootType": "ScriptNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 225.4166748046875,
+        "Width": 27.736083984375,
+        "Height": 40.888256835937504
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 225.4166748046875,
+        "Width": 27.736083984375,
+        "Height": 40.888256835937504
+      }
+    },
+    {
+      "index": 5,
+      "template": "Integral",
+      "rootType": "IntegralNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 280.304931640625,
+        "Width": 89.956201171875,
+        "Height": 54.514892578125
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 280.304931640625,
+        "Width": 89.956201171875,
+        "Height": 54.514892578125
+      }
+    },
+    {
+      "index": 6,
+      "template": "Summation",
+      "rootType": "SummationNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 348.81982421875,
+        "Width": 46.759423828124994,
+        "Height": 110.54047851562498
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 348.81982421875,
+        "Width": 46.759423828124994,
+        "Height": 110.54047851562498
+      }
+    },
+    {
+      "index": 7,
+      "template": "Limit",
+      "rootType": "LimitNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 473.36030273437495,
+        "Width": 135.466546875,
+        "Height": 83.54267578125
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 473.36030273437495,
+        "Width": 135.466546875,
+        "Height": 83.54267578125
+      }
+    },
+    {
+      "index": 8,
+      "template": "Matrix",
+      "rootType": "MatrixNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 570.9029785156249,
+        "Width": 61.42265625,
+        "Height": 77.541796875
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 570.9029785156249,
+        "Width": 61.42265625,
+        "Height": 77.541796875
+      }
+    },
+    {
+      "index": 9,
+      "template": "Brackets",
+      "rootType": "BracketsNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 662.444775390625,
+        "Width": 88.325390625,
+        "Height": 39.9708984375
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 662.444775390625,
+        "Width": 88.325390625,
+        "Height": 39.9708984375
+      }
+    },
+    {
+      "index": 10,
+      "template": "Cases",
+      "rootType": "CasesNode",
+      "rowBounds": {
+        "X": 24,
+        "Y": 716.4156738281249,
+        "Width": 170.57109375,
+        "Height": 78.141796875
+      },
+      "rootBounds": {
+        "X": 24,
+        "Y": 716.4156738281249,
+        "Width": 170.57109375,
+        "Height": 78.141796875
+      }
+    }
+  ],
+  "pngSha256": "4DC3145BE582CF9FB9FD0672FA1044FFD19B1069E68938CB99F5F9EAB6DFDAE3"
+}

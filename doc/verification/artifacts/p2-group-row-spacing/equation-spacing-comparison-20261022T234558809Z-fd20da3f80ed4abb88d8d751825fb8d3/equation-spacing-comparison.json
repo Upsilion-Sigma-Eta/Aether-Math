@@ -1,0 +1,38 @@
+{
+  "caseId": "GROUP-ROW-SPACING-UI",
+  "purpose": "\uB3D9\uC77C \uC218\uC2DD\uC758 \uD589 \uAC04\uACA9 \uC801\uC6A9 \uC804\uD6C4 \uC2E4\uC81C MathEditorControl \uC624\uD504\uC2A4\uD06C\uB9B0 \uAC80\uD1A0 \uC774\uBBF8\uC9C0\uC785\uB2C8\uB2E4. \uC81C\uD488 \uB0B4\uBCF4\uB0B4\uAE30 \uD30C\uC77C\uC774 \uC544\uB2D9\uB2C8\uB2E4.",
+  "formulaFingerprintBeforeApply": "4494F67B2DF645FD1A9BE07D9A0B306F134361C4ECBB0B048655BE428261753C",
+  "formulaFingerprintAfterApply": "4494F67B2DF645FD1A9BE07D9A0B306F134361C4ECBB0B048655BE428261753C",
+  "sameFormulaIdsAndContent": true,
+  "revisionBeforeApply": 0,
+  "revisionAfterApply": 1,
+  "revisionAfterApplyAndBeforeUndoRedo": 1,
+  "targetGroupId": "42fe0813-a975-4390-b118-92fbbea00390",
+  "targetRowIds": [
+    "b1eb7517-0ee6-492a-8a9b-6b854ffb2797",
+    "b242fe5d-d58c-486b-8d1d-33d86e38bb70",
+    "265b4ea9-07c4-447f-9a95-d24066857a81"
+  ],
+  "initialSpacing": 18,
+  "appliedSpacing": 68,
+  "before": {
+    "Label": "group-row-spacing-before",
+    "File": "group-row-spacing-before.png",
+    "Sha256": "A58763733CB2093D935977C5B2B3229E9356271AEBEE66987FF9E00F2008952F",
+    "PixelWidth": 144,
+    "PixelHeight": 626,
+    "FormulaFingerprint": "4494F67B2DF645FD1A9BE07D9A0B306F134361C4ECBB0B048655BE428261753C",
+    "Revision": 0,
+    "Purpose": "\uC2E4\uC81C MathEditorControl.Render \uC624\uD504\uC2A4\uD06C\uB9B0 PNG\uC774\uBA70 \uC81C\uD488 SVG/\uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+  },
+  "after": {
+    "Label": "group-row-spacing-after",
+    "File": "group-row-spacing-after.png",
+    "Sha256": "D8BAE3DCEC7237F928D8EA8164EC13D24E020BDB69FD5C1A8AB90A4ADDC1AA6B",
+    "PixelWidth": 144,
+    "PixelHeight": 726,
+    "FormulaFingerprint": "4494F67B2DF645FD1A9BE07D9A0B306F134361C4ECBB0B048655BE428261753C",
+    "Revision": 1,
+    "Purpose": "\uC2E4\uC81C MathEditorControl.Render \uC624\uD504\uC2A4\uD06C\uB9B0 PNG\uC774\uBA70 \uC81C\uD488 SVG/\uB0B4\uBCF4\uB0B4\uAE30\uAC00 \uC544\uB2D9\uB2C8\uB2E4."
+  }
+}

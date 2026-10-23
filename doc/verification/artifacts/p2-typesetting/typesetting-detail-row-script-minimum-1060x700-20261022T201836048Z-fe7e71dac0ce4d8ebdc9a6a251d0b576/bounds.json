@@ -1,0 +1,708 @@
+{
+  "Label": "typesetting-detail-row-script-minimum",
+  "ArtifactScope": "p2-typesetting",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 516,
+    "Height": 257
+  },
+  "EditorBounds": {
+    "X": 273,
+    "Y": 292,
+    "Width": 297,
+    "Height": 536
+  },
+  "VisibleEditorBounds": {
+    "X": 273,
+    "Y": 292,
+    "Width": 297,
+    "Height": 257
+  },
+  "HeaderActionBounds": [
+    {
+      "Name": "NewWorkspaceButton",
+      "Bounds": {
+        "X": 542,
+        "Y": 16,
+        "Width": 89,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "OpenWorkspaceButton",
+      "Bounds": {
+        "X": 639,
+        "Y": 16,
+        "Width": 72,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "SaveWorkspaceButton",
+      "Bounds": {
+        "X": 719,
+        "Y": 16,
+        "Width": 71,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "UndoButton",
+      "Bounds": {
+        "X": 813,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "RedoButton",
+      "Bounds": {
+        "X": 857,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "ExportSvgButton",
+      "Bounds": {
+        "X": 906,
+        "Y": 16,
+        "Width": 132,
+        "Height": 36
+      },
+      "IsVisible": true
+    }
+  ],
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 207,
+        "Width": 75,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 338,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 377,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 416,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 455,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 494,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 252,
+        "Width": 108,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 371,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 410,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 449,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 488,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 527,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      },
+      "IsVisible": true
+    }
+  ],
+  "LifecycleDialogBounds": null,
+  "LifecycleTargetCardBounds": null,
+  "LifecycleTargetBounds": null,
+  "LifecycleChoiceBounds": null,
+  "LifecycleErrorText": null,
+  "LifecycleErrorBounds": null,
+  "LibraryViewportBounds": null,
+  "LibraryHeaderBounds": null,
+  "LibraryRecentActionsVisibleBounds": null,
+  "LibraryRecoveryActionsVisibleBounds": null,
+  "LibraryPreviewVisibleBounds": null,
+  "LibraryPreviewNameBounds": null,
+  "LibraryPreviewPathBounds": null,
+  "LibraryPreviewStatusBounds": null,
+  "LibraryPreviewModifiedBounds": null,
+  "LibraryVerticalOffset": null,
+  "PalettePanelBounds": null,
+  "PaletteModeTabsBounds": null,
+  "PaletteActiveScrollBounds": null,
+  "PaletteControlBounds": null,
+  "PaletteVerticalOffset": null,
+  "PaletteCaptureMode": null,
+  "TemplatePanelBounds": null,
+  "TemplateScrollViewerBounds": null,
+  "TemplateButtonBounds": null,
+  "TemplateVerticalOffset": null,
+  "TemplateCaptureEdge": null,
+  "StructureInspectorBounds": null,
+  "StructureClearPanelBounds": null,
+  "StructureTreeBounds": null,
+  "StructureScrollViewerBounds": null,
+  "StructureEffectiveViewportBounds": null,
+  "StructureHeaderScrollViewerBounds": null,
+  "StructureScrollMetrics": null,
+  "StructureSelectedItemBounds": null,
+  "StructureSelectedItemIsSelected": null,
+  "StructureSelectionMode": null,
+  "StructureHorizontalScrollVisibility": null,
+  "StructureControlBounds": null,
+  "StructureSelectedNodeId": null,
+  "StructureActivePath": null,
+  "StructureClearDescription": null,
+  "StructureClearDisabledReason": null,
+  "StructureClearAffectedRows": null,
+  "StructureCanClear": null,
+  "Properties": {
+    "PanelBounds": {
+      "X": 791,
+      "Y": -509,
+      "Width": 224,
+      "Height": 1416
+    },
+    "ScrollViewerBounds": {
+      "X": 791,
+      "Y": 214,
+      "Width": 234,
+      "Height": 387
+    },
+    "ViewportBounds": {
+      "X": 791,
+      "Y": 214,
+      "Width": 234,
+      "Height": 387
+    },
+    "ViewportWidth": 234,
+    "ViewportHeight": 387,
+    "ExtentWidth": 234,
+    "ExtentHeight": 1438,
+    "OffsetX": 0,
+    "OffsetY": 735,
+    "Scope": "CurrentRow",
+    "TargetSummary": "\uADF8\uB8F9 1 \u00B7 1\uD589",
+    "SelectionNotice": "\uC120\uD0DD\uD55C \uC801\uC6A9 \uBC94\uC704\uC758 \uBAA8\uB4E0 \uD558\uC704 \uB178\uB4DC\uC5D0 \uC18D\uC131\uC744 \uC801\uC6A9\uD569\uB2C8\uB2E4.",
+    "IsDraftStale": false,
+    "StaleReason": "",
+    "CanApply": false,
+    "EffectiveTypesettingStyle": "Script",
+    "ExplicitTypesettingStyle": "Script",
+    "TypesettingStyleSourceLabel": "\uC801\uC6A9 \uCD9C\uCC98: \uADF8\uB8F9 1 \u00B7 1\uD589",
+    "DraftTypesettingStyle": "Script",
+    "TypesettingStyleContextNotice": "\uC774 \uAC12\uC740 \uD574\uB2F9 \uBC94\uC704\uC758 \uC870\uD310 \uAE30\uC900\uC785\uB2C8\uB2E4. \uBD84\uC218\u00B7\uCCA8\uC790\u00B7\uD589\uB82C\u00B7\uACBD\uC6B0 \uB098\uB204\uAE30\uC758 \uC790\uC2DD\uC740 \uAD6C\uC870\uC5D0 \uB530\uB77C \uC790\uB3D9\uC73C\uB85C \uC791\uC740 \uC870\uD310 \uB2E8\uACC4\uB85C \uC804\uC774\uB429\uB2C8\uB2E4.",
+    "CurrentTextRole": "Automatic",
+    "TextRoleScopeNotice": "\uD14D\uC2A4\uD2B8 \uC5ED\uD560\uC740 \uC120\uD0DD \uB178\uB4DC \uBC94\uC704\uC5D0\uC11C\uB9CC \uBCC0\uACBD\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
+    "TextRoleDisabledReason": "\uD14D\uC2A4\uD2B8 \uC5ED\uD560\uC740 \uC120\uD0DD \uB178\uB4DC \uBC94\uC704\uC5D0\uC11C\uB9CC \uD3B8\uC9D1\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
+    "CanEditTextRole": false,
+    "DraftTextRole": null,
+    "LatexCodeDiagnostic": "",
+    "CanExportLatex": true,
+    "LatexTextDiagnosticCount": 0,
+    "LatexIncompleteSlotCount": 0,
+    "ControlBounds": [
+      {
+        "Name": "PropertyTargetSummary",
+        "Bounds": {
+          "X": 791,
+          "Y": -441,
+          "Width": 224,
+          "Height": 14
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertySelectionNotice",
+        "Bounds": {
+          "X": 791,
+          "Y": -418,
+          "Width": 224,
+          "Height": 27
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertyScopeComboBox",
+        "Bounds": {
+          "X": 800,
+          "Y": -352,
+          "Width": 78,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeEffectiveValue",
+        "Bounds": {
+          "X": 800,
+          "Y": -268,
+          "Width": 206,
+          "Height": 14
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeExplicitValue",
+        "Bounds": {
+          "X": 800,
+          "Y": -250,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeSourceLabel",
+        "Bounds": {
+          "X": 800,
+          "Y": -225,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeDraftTextBox",
+        "Bounds": {
+          "X": 800,
+          "Y": -200,
+          "Width": 206,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeValidationError",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontSizeLatexDiagnostic",
+        "Bounds": {
+          "X": 800,
+          "Y": -148,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilyEffectiveValue",
+        "Bounds": {
+          "X": 800,
+          "Y": -81,
+          "Width": 206,
+          "Height": 14
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilyExplicitValue",
+        "Bounds": {
+          "X": 800,
+          "Y": -63,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilySourceLabel",
+        "Bounds": {
+          "X": 800,
+          "Y": -38,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilyDraftTextBox",
+        "Bounds": {
+          "X": 800,
+          "Y": -13,
+          "Width": 206,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilyValidationError",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontMeasurementDiagnostic",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "FontFamilyLatexDiagnostic",
+        "Bounds": {
+          "X": 800,
+          "Y": 64,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundEffectiveValue",
+        "Bounds": {
+          "X": 800,
+          "Y": 131,
+          "Width": 206,
+          "Height": 14
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundExplicitValue",
+        "Bounds": {
+          "X": 800,
+          "Y": 149,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundSourceLabel",
+        "Bounds": {
+          "X": 800,
+          "Y": 174,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundDraftTextBox",
+        "Bounds": {
+          "X": 800,
+          "Y": 199,
+          "Width": 206,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundValidationError",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ForegroundLatexDiagnostic",
+        "Bounds": {
+          "X": 800,
+          "Y": 251,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertiesUnitsNotice",
+        "Bounds": {
+          "X": 791,
+          "Y": 661,
+          "Width": 224,
+          "Height": 63
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TypesettingStyleEffectiveValue",
+        "Bounds": {
+          "X": 800,
+          "Y": 324,
+          "Width": 206,
+          "Height": 14
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TypesettingStyleExplicitValue",
+        "Bounds": {
+          "X": 800,
+          "Y": 342,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TypesettingStyleSourceLabel",
+        "Bounds": {
+          "X": 800,
+          "Y": 367,
+          "Width": 206,
+          "Height": 21
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TypesettingStyleComboBox",
+        "Bounds": {
+          "X": 800,
+          "Y": 392,
+          "Width": 100,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TypesettingStyleContextNotice",
+        "Bounds": {
+          "X": 800,
+          "Y": 428,
+          "Width": 206,
+          "Height": 63
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TextRoleCurrentValue",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": false
+      },
+      {
+        "Name": "TextRoleScopeNotice",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": false
+      },
+      {
+        "Name": "TextRoleDisabledReason",
+        "Bounds": {
+          "X": 800,
+          "Y": 573,
+          "Width": 206,
+          "Height": 24
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TextRoleComboBox",
+        "Bounds": {
+          "X": 800,
+          "Y": 537,
+          "Width": 92,
+          "Height": 32
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "TextRoleSemanticsNotice",
+        "Bounds": {
+          "X": 800,
+          "Y": 601,
+          "Width": 206,
+          "Height": 42
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertyBlankMeansUnchangedNotice",
+        "Bounds": {
+          "X": 791,
+          "Y": 733,
+          "Width": 224,
+          "Height": 63
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertiesStaleNotice",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": false
+      },
+      {
+        "Name": "ApplyPropertiesButton",
+        "Bounds": {
+          "X": 791.1118221942195,
+          "Y": 805.0931851618495,
+          "Width": 36,
+          "Height": 30
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ResetPropertiesDraftButton",
+        "Bounds": {
+          "X": 832,
+          "Y": 805,
+          "Width": 80,
+          "Height": 30
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ResetPropertiesOverrideButton",
+        "Bounds": {
+          "X": 917,
+          "Y": 805,
+          "Width": 70,
+          "Height": 30
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "ResetPropertiesOverrideDisabledReason",
+        "Bounds": {
+          "X": 0,
+          "Y": 0,
+          "Width": 0,
+          "Height": 0
+        },
+        "IsVisible": true
+      },
+      {
+        "Name": "PropertiesResetOverrideNotice",
+        "Bounds": {
+          "X": 791,
+          "Y": 865,
+          "Width": 224,
+          "Height": 42
+        },
+        "IsVisible": true
+      }
+    ],
+    "CaptureEdge": "state"
+  },
+  "PngFile": "main-window.png",
+  "PngSha256": "73153498C7AD834C27DAC01DF2B7AE5B71C2BDC9AB572A0B2F641F8260CA3229"
+}

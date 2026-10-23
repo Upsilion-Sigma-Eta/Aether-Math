@@ -1,0 +1,140 @@
+{
+  "Label": "group-shell-many-default",
+  "ArtifactScope": "p1-group-editing",
+  "ClientWidth": 1360,
+  "ClientHeight": 880,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 183,
+    "Y": 292,
+    "Width": 876,
+    "Height": 437
+  },
+  "EditorBounds": {
+    "X": -6391,
+    "Y": -304,
+    "Width": 7473,
+    "Height": 1056
+  },
+  "VisibleEditorBounds": {
+    "X": 183,
+    "Y": 292,
+    "Width": 876,
+    "Height": 437
+  },
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 195,
+        "Y": 207,
+        "Width": 87,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 290,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 329.07941590486655,
+        "Y": 207.07941590486655,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 368,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 407,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 446,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 195,
+        "Y": 252,
+        "Width": 114,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 317,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 356,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 395,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 434,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 473,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "PngFile": "main-window.png",
+  "PngSha256": "BCAF274539A5112008BE4F491743C5FCFCADB53D10D95189E5C8E9AEBC1C65D2"
+}

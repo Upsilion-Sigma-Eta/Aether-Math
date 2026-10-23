@@ -1,0 +1,311 @@
+{
+  "Label": "palette-emoji-minimum-top",
+  "ArtifactScope": "p2-symbol-palette",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 516,
+    "Height": 257
+  },
+  "EditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 285,
+    "Height": 360
+  },
+  "VisibleEditorBounds": {
+    "X": 273,
+    "Y": 322,
+    "Width": 285,
+    "Height": 227
+  },
+  "HeaderActionBounds": [
+    {
+      "Name": "NewWorkspaceButton",
+      "Bounds": {
+        "X": 542,
+        "Y": 16,
+        "Width": 89,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "OpenWorkspaceButton",
+      "Bounds": {
+        "X": 639,
+        "Y": 16,
+        "Width": 72,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "SaveWorkspaceButton",
+      "Bounds": {
+        "X": 719,
+        "Y": 16,
+        "Width": 71,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "UndoButton",
+      "Bounds": {
+        "X": 813,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "RedoButton",
+      "Bounds": {
+        "X": 857,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "ExportSvgButton",
+      "Bounds": {
+        "X": 906,
+        "Y": 16,
+        "Width": 132,
+        "Height": 36
+      }
+    }
+  ],
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 207,
+        "Width": 75,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 338,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 377,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 416,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 455,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 494,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 255,
+        "Y": 252,
+        "Width": 108,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 371,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 410,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 449,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 488,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 527,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "LifecycleDialogBounds": null,
+  "LifecycleTargetCardBounds": null,
+  "LifecycleTargetBounds": null,
+  "LifecycleChoiceBounds": null,
+  "LifecycleErrorText": null,
+  "LifecycleErrorBounds": null,
+  "LibraryViewportBounds": null,
+  "LibraryHeaderBounds": null,
+  "LibraryRecentActionsVisibleBounds": null,
+  "LibraryRecoveryActionsVisibleBounds": null,
+  "LibraryPreviewVisibleBounds": null,
+  "LibraryPreviewNameBounds": null,
+  "LibraryPreviewPathBounds": null,
+  "LibraryPreviewStatusBounds": null,
+  "LibraryPreviewModifiedBounds": null,
+  "LibraryVerticalOffset": null,
+  "PalettePanelBounds": {
+    "X": 18,
+    "Y": 88,
+    "Width": 210,
+    "Height": 564
+  },
+  "PaletteModeTabsBounds": {
+    "X": 30,
+    "Y": 167,
+    "Width": 186,
+    "Height": 375
+  },
+  "PaletteActiveScrollBounds": {
+    "X": 30,
+    "Y": 217,
+    "Width": 186,
+    "Height": 325
+  },
+  "PaletteControlBounds": [
+    {
+      "Name": "CharacterModeSelector",
+      "Bounds": {
+        "X": 31,
+        "Y": 219,
+        "Width": 184,
+        "Height": 32
+      }
+    },
+    {
+      "Name": "EmojiBrowserPanel",
+      "Bounds": {
+        "X": 31,
+        "Y": 259,
+        "Width": 184,
+        "Height": 571
+      }
+    },
+    {
+      "Name": "EmojiSearchBox",
+      "Bounds": {
+        "X": 31,
+        "Y": 308,
+        "Width": 184,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "EmojiResultsList",
+      "Bounds": {
+        "X": 31,
+        "Y": 349,
+        "Width": 184,
+        "Height": 252
+      }
+    },
+    {
+      "Name": "SelectedEmojiName",
+      "Bounds": {
+        "X": 40,
+        "Y": 616,
+        "Width": 166,
+        "Height": 18
+      }
+    },
+    {
+      "Name": "SelectedEmojiDetails",
+      "Bounds": {
+        "X": 31,
+        "Y": 608,
+        "Width": 184,
+        "Height": 109
+      }
+    },
+    {
+      "Name": "SelectedEmojiGlyphStatus",
+      "Bounds": {
+        "X": 40,
+        "Y": 667,
+        "Width": 166,
+        "Height": 12
+      }
+    },
+    {
+      "Name": "EmojiInsertButton",
+      "Bounds": {
+        "X": 31,
+        "Y": 794,
+        "Width": 103,
+        "Height": 36
+      }
+    }
+  ],
+  "PaletteVerticalOffset": 0,
+  "PaletteCaptureMode": "emoji-top",
+  "TemplatePanelBounds": null,
+  "TemplateScrollViewerBounds": null,
+  "TemplateButtonBounds": null,
+  "TemplateVerticalOffset": null,
+  "TemplateCaptureEdge": null,
+  "PngFile": "main-window.png",
+  "PngSha256": "AA053DAB948D0EC4CBC1414F61ED4BBC1F3FEC44675477C409566F6462956E6A"
+}

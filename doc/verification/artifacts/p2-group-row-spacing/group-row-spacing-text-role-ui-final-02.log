@@ -1,0 +1,6 @@
+TEXT-ROLE-UI 비교 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\text-role-comparison-20261022T215022450Z-f922573ab0a04251a6286b389ef52f00\text-role-comparison.json
+TEXT-ROLE-UI LaTeX 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\latex-diagnostic-20261022T215023658Z-b3502c588671469a98eec288fc8bcd80
+PASS TEXT-ROLE-UI
+PASS TEXT-ROLE-UI 수식 텍스트 역할의 실제 바인딩·범위·통합 적용/실행 취소와 LaTeX 진단 패널을 Headless 검증
+RESULT 전체=1 합격=1 실패=0
+ACTUAL_EXIT_CODE=0

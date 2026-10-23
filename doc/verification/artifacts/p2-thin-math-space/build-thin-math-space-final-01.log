@@ -1,0 +1,13 @@
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Editing\EditingSession.cs(1195,53): error CS0128: 이름이 'currentSelection'인 지역 변수 또는 함수가 이미 이 범위 안에 정의되어 있습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Editing\EditingSession.cs(1196,24): error CS0165: 할당되지 않은 'currentSelection' 지역 변수를 사용했습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Editing\EditingSession.cs(1195,53): error CS0128: 이름이 'currentSelection'인 지역 변수 또는 함수가 이미 이 범위 안에 정의되어 있습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Editing\EditingSession.cs(1196,24): error CS0165: 할당되지 않은 'currentSelection' 지역 변수를 사용했습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+    경고 0개
+    오류 2개
+
+경과 시간: 00:00:02.02
+
+ACTUAL_EXIT_CODE=1

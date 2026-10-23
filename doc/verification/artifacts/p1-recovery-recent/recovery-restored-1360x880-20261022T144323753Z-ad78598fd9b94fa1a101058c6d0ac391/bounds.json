@@ -1,0 +1,237 @@
+{
+  "Label": "recovery-restored",
+  "ArtifactScope": "p1-recovery-recent",
+  "ClientWidth": 1360,
+  "ClientHeight": 880,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ScrollViewerBounds": {
+    "X": 183,
+    "Y": 292,
+    "Width": 876,
+    "Height": 437
+  },
+  "EditorBounds": {
+    "X": 213,
+    "Y": 322,
+    "Width": 248,
+    "Height": 360
+  },
+  "VisibleEditorBounds": {
+    "X": 213,
+    "Y": 322,
+    "Width": 248,
+    "Height": 360
+  },
+  "HeaderActionBounds": [
+    {
+      "Name": "NewWorkspaceButton",
+      "Bounds": {
+        "X": 842,
+        "Y": 16,
+        "Width": 89,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "OpenWorkspaceButton",
+      "Bounds": {
+        "X": 939,
+        "Y": 16,
+        "Width": 72,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "SaveWorkspaceButton",
+      "Bounds": {
+        "X": 1019,
+        "Y": 16,
+        "Width": 71,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "UndoButton",
+      "Bounds": {
+        "X": 1113,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "RedoButton",
+      "Bounds": {
+        "X": 1157,
+        "Y": 16,
+        "Width": 36,
+        "Height": 36
+      }
+    },
+    {
+      "Name": "ExportSvgButton",
+      "Bounds": {
+        "X": 1206,
+        "Y": 16,
+        "Width": 132,
+        "Height": 36
+      }
+    }
+  ],
+  "GroupToolbarBounds": [
+    {
+      "Name": "ActiveGroupIndicator",
+      "Bounds": {
+        "X": 195,
+        "Y": 207,
+        "Width": 75,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddGroupButton",
+      "Bounds": {
+        "X": 278,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateGroupButton",
+      "Bounds": {
+        "X": 317,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteGroupButton",
+      "Bounds": {
+        "X": 356,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupUpButton",
+      "Bounds": {
+        "X": 395,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveGroupDownButton",
+      "Bounds": {
+        "X": 434,
+        "Y": 207,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "RowToolbarBounds": [
+    {
+      "Name": "ActiveRowIndicator",
+      "Bounds": {
+        "X": 195,
+        "Y": 252,
+        "Width": 108,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "AddRowButton",
+      "Bounds": {
+        "X": 311,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DuplicateRowButton",
+      "Bounds": {
+        "X": 350,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "DeleteRowButton",
+      "Bounds": {
+        "X": 389,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowUpButton",
+      "Bounds": {
+        "X": 428,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    },
+    {
+      "Name": "MoveRowDownButton",
+      "Bounds": {
+        "X": 467,
+        "Y": 252,
+        "Width": 34,
+        "Height": 34
+      }
+    }
+  ],
+  "LifecycleDialogBounds": null,
+  "LifecycleTargetCardBounds": null,
+  "LifecycleTargetBounds": null,
+  "LifecycleChoiceBounds": null,
+  "LifecycleErrorText": null,
+  "LifecycleErrorBounds": null,
+  "LibraryViewportBounds": {
+    "X": 1091,
+    "Y": 214,
+    "Width": 234,
+    "Height": 497
+  },
+  "LibraryHeaderBounds": {
+    "X": 1091,
+    "Y": -141,
+    "Width": 226,
+    "Height": 40
+  },
+  "LibraryRecentActionsVisibleBounds": {
+    "X": 0,
+    "Y": 0,
+    "Width": 0,
+    "Height": 0
+  },
+  "LibraryRecoveryActionsVisibleBounds": {
+    "X": 1091,
+    "Y": 681,
+    "Width": 226,
+    "Height": 30
+  },
+  "LibraryPreviewVisibleBounds": {
+    "X": 1091,
+    "Y": 214,
+    "Width": 226,
+    "Height": 29
+  },
+  "LibraryPreviewNameBounds": null,
+  "LibraryPreviewPathBounds": null,
+  "LibraryPreviewStatusBounds": null,
+  "LibraryPreviewModifiedBounds": null,
+  "LibraryVerticalOffset": 367,
+  "PngFile": "main-window.png",
+  "PngSha256": "58B2B59A8A7043E278D3163A8365497818F2A81E9C34A7831CF734EDEB6AC5D1"
+}

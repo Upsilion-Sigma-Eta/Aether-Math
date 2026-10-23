@@ -1,0 +1,188 @@
+{
+  "CaseId": "TEXT-ROLE-UI",
+  "Directory": "D:\\_UserLibrary\\_Programming\\Aether-Math\\doc\\verification\\artifacts\\p2-text-role\\latex-diagnostic-20261022T214353989Z-f16fdb8b54be4d6b8573c21fd3593e6a",
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "WindowBounds": {
+    "X": 0,
+    "Y": 0,
+    "Width": 1060,
+    "Height": 700
+  },
+  "CollapsedViewportHeight": 257,
+  "ExpandedViewportHeight": 72,
+  "CollapsedExpanderBounds": {
+    "X": 242,
+    "Y": 604,
+    "Width": 342,
+    "Height": 48
+  },
+  "ExpandedExpanderBounds": {
+    "X": 242,
+    "Y": 419,
+    "Width": 518,
+    "Height": 233
+  },
+  "ExpanderGrowth": 185,
+  "ViewportLoss": 185,
+  "LayoutDeltaError": 0,
+  "ExpanderExpanded": true,
+  "ExpanderVisible": true,
+  "DiagnosticBannerVisible": true,
+  "LayoutBannerVisible": true,
+  "DiagnosticTextVisible": true,
+  "AmsmathNoticeVisible": true,
+  "SourceIsReadOnly": true,
+  "SourceScrollBarVisibility": 1,
+  "DiagnosticsScrollBarVisibility": 1,
+  "DiagnosticsViewportBounds": {
+    "X": 259,
+    "Y": 483,
+    "Width": 484,
+    "Height": 58
+  },
+  "DiagnosticsViewportHeight": 58,
+  "DiagnosticsExtentHeight": 132,
+  "DiagnosticsOffsetTop": 0,
+  "DiagnosticsOffsetMessageEnd": 1,
+  "DiagnosticsOffsetListEnd": 74,
+  "DiagnosticTextBoundsTop": {
+    "X": 13,
+    "Y": 9,
+    "Width": 458,
+    "Height": 54
+  },
+  "DiagnosticTextBoundsMessageEnd": {
+    "X": 13,
+    "Y": 8,
+    "Width": 458,
+    "Height": 54
+  },
+  "DiagnosticTextBoundsListEnd": {
+    "X": 13,
+    "Y": -65,
+    "Width": 458,
+    "Height": 54
+  },
+  "LayoutTailBoundsListEnd": {
+    "X": 13,
+    "Y": 42,
+    "Width": 458,
+    "Height": 12
+  },
+  "TopCaptureFile": "latex-diagnostic-shell.png",
+  "MessageEndCaptureFile": "latex-diagnostic-message-end.png",
+  "ListEndCaptureFile": "latex-diagnostic-list-end.png",
+  "SourceText": "{\\displaystyle \\text{A\u0001B}}{\\displaystyle \\frac{{\\textstyle n}}{{\\textstyle }}} \\qquad \\begin{aligned}{\\displaystyle u}{\\displaystyle }\u0026={\\displaystyle }{\\displaystyle 0} \\\\{\\displaystyle v}{\\displaystyle }\u0026={\\displaystyle }{\\displaystyle 1}\\end{aligned}",
+  "SourceAndDiagnosticHeight": 152,
+  "CodePanelMaxHeight": 160,
+  "DiagnosticText": "\uC81C\uC5B4 \uBB38\uC790 1\uAC1C(U\u002B0001)\uAC00 \uC788\uC5B4 \uC678\uBD80 LaTeX \uC7AC\uC0AC\uC6A9\uC740 \uC9C0\uC6D0\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uC0DD\uC131 \uCF54\uB4DC\uC5D0\uB294 \uC6D0\uBB38\uC774 \uC720\uC9C0\uB429\uB2C8\uB2E4.\r\n\uD544\uC218 \uC218\uC2DD \uC2AC\uB86F 1\uAC1C\uAC00 \uBE44\uC5B4 \uC788\uC5B4 \uC218\uC2DD\uC774 \uBBF8\uC644\uC131\uC785\uB2C8\uB2E4.\r\n1\uAC1C \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uAC04\uACA9\uC740 LaTeX \uCF54\uB4DC\uC5D0 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.",
+  "AmsmathNotice": "amsmath \uD544\uC694",
+  "AmsmathTooltip": "\uC77C\uBC18 \uD14D\uC2A4\uD2B8\u00B7\uC870\uAC74\uACFC \uB9AC\uD130\uB7F4 ^/~ \uD45C\uAE30, Display\uB97C \uBA85\uC2DC\uD55C \uBD84\uC218\uC758 \\dfrac\uC5D0\uB294 amsmath \uD328\uD0A4\uC9C0\uAC00 \uD544\uC694\uD569\uB2C8\uB2E4.",
+  "LatexCode": "{\\displaystyle \\text{A\u0001B}}{\\displaystyle \\frac{{\\textstyle n}}{{\\textstyle }}} \\qquad \\begin{aligned}{\\displaystyle u}{\\displaystyle }\u0026={\\displaystyle }{\\displaystyle 0} \\\\{\\displaystyle v}{\\displaystyle }\u0026={\\displaystyle }{\\displaystyle 1}\\end{aligned}",
+  "Diagnostic": "\uC81C\uC5B4 \uBB38\uC790 1\uAC1C(U\u002B0001)\uAC00 \uC788\uC5B4 \uC678\uBD80 LaTeX \uC7AC\uC0AC\uC6A9\uC740 \uC9C0\uC6D0\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uC0DD\uC131 \uCF54\uB4DC\uC5D0\uB294 \uC6D0\uBB38\uC774 \uC720\uC9C0\uB429\uB2C8\uB2E4.\r\n\uD544\uC218 \uC218\uC2DD \uC2AC\uB86F 1\uAC1C\uAC00 \uBE44\uC5B4 \uC788\uC5B4 \uC218\uC2DD\uC774 \uBBF8\uC644\uC131\uC785\uB2C8\uB2E4.\r\n1\uAC1C \uADF8\uB8F9\uC758 \uB17C\uB9AC \uD589 \uAC04\uACA9\uC740 LaTeX \uCF54\uB4DC\uC5D0 \uBC18\uC601\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.",
+  "CanExportLatex": false,
+  "TextDiagnostics": [
+    {
+      "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+      "Role": "PlainText",
+      "Utf16Index": 1,
+      "CodePoint": 1,
+      "Reason": "\uC81C\uC5B4 \uBB38\uC790\uB294 LaTeX \uC678\uBD80 \uC7AC\uC0AC\uC6A9 \uBC94\uC704\uC5D0\uC11C \uC9C0\uC6D0\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uC6D0\uBB38 code point\uB294 \uC0DD\uC131 \uCF54\uB4DC\uC5D0 \uC720\uC9C0\uB429\uB2C8\uB2E4.",
+      "CodePointLabel": "U\u002B0001"
+    }
+  ],
+  "IncompleteSlotNodeIds": [
+    "a59c3ebe-89bc-44e1-b9b5-7b89609910ea"
+  ],
+  "ExpanderBounds": {
+    "X": 242,
+    "Y": 419,
+    "Width": 518,
+    "Height": 233
+  },
+  "CodePanelBounds": {
+    "X": 259,
+    "Y": 483,
+    "Width": 484,
+    "Height": 152
+  },
+  "BannerBounds": {
+    "X": 265,
+    "Y": 414,
+    "Width": 472,
+    "Height": 62
+  },
+  "DiagnosticTextBounds": {
+    "X": 272,
+    "Y": 418,
+    "Width": 458,
+    "Height": 54
+  },
+  "AmsmathNoticeBounds": {
+    "X": 464,
+    "Y": 432,
+    "Width": 59,
+    "Height": 21
+  },
+  "SourceBounds": {
+    "X": 259,
+    "Y": 541,
+    "Width": 484,
+    "Height": 94
+  },
+  "EditorViewportBounds": {
+    "X": 243,
+    "Y": 292,
+    "Width": 516,
+    "Height": 72
+  },
+  "SessionState": {
+    "Workspace": "{\u0022Id\u0022:\u00220e34a784-26c9-4452-88d2-24e9f0bf3324\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u0022deace33d-f04f-4c6a-8c5a-913cdeb2c69a\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022e2c2e12e-3c98-42ba-a119-f3427e7871df\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022442db29e-60e8-4a29-b261-ee609b6c6522\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00226c9ed318-2cb5-41e0-ac78-5138fbe7af52\u0022,\u0022Text\u0022:\u0022A\\u0001B\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:4,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022fraction\u0022,\u0022Id\u0022:\u0022eea5807d-e145-4d83-b36f-5cca44a429a3\u0022,\u0022StyleOverride\u0022:null,\u0022Numerator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002287eb6a84-b9ed-4a05-a552-582d4b05fa08\u0022,\u0022Text\u0022:\u0022n\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},\u0022Denominator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022a59c3ebe-89bc-44e1-b9b5-7b89609910ea\u0022,\u0022Text\u0022:\u0022\u0022,\u0022IsEmptySlot\u0022:true,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}}]}}]},{\u0022Id\u0022:\u0022834cc13d-ecf2-4a00-a433-adf2f916321d\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:41,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00222de23939-7a91-44ea-ba8a-080b3cf11cf2\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022641e5dc1-d37a-41c1-b38c-397d6115b79a\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002200108656-1ffe-42c6-a554-9a51c174ee32\u0022,\u0022Text\u0022:\u0022u\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022ab84d3cf-7c8c-46fe-a381-aec648d19691\u0022,\u0022Text\u0022:\u0022=\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022b7eec6d2-a1d7-4803-af8a-54d16f704bf9\u0022,\u0022Text\u0022:\u00220\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}]}},{\u0022Id\u0022:\u0022701ed3a6-b32c-463d-b8b2-0c5e080121aa\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022680795a1-5de8-4d18-8d13-51c2cf3f6d97\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022d92076dd-4560-42ff-8ca7-865eba837705\u0022,\u0022Text\u0022:\u0022v\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022d663f3fe-61af-4f50-93bb-cfe7092f9719\u0022,\u0022Text\u0022:\u0022=\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252b5a091-cc13-499a-acee-af416e91f6bc\u0022,\u0022Text\u0022:\u00221\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}]}}]}]}",
+    "StateId": "cf7d3a85-2522-45ef-9ca8-2701717b0221",
+    "Revision": 0,
+    "Caret": {
+      "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+      "TextElementOffset": 1
+    },
+    "Selection": {
+      "Anchor": {
+        "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+        "TextElementOffset": 0
+      },
+      "Focus": {
+        "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+        "TextElementOffset": 1
+      }
+    },
+    "SelectedNodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+    "IsNodeSelected": false,
+    "IsDirty": false,
+    "CanUndo": false,
+    "CanRedo": false
+  },
+  "CollapsedSessionState": {
+    "Workspace": "{\u0022Id\u0022:\u00220e34a784-26c9-4452-88d2-24e9f0bf3324\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uB17C\\uB9AC QA \\uD835\\uDC65 e\\u0301 \\uD55C\\uAE00\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u0022deace33d-f04f-4c6a-8c5a-913cdeb2c69a\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022e2c2e12e-3c98-42ba-a119-f3427e7871df\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022442db29e-60e8-4a29-b261-ee609b6c6522\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00226c9ed318-2cb5-41e0-ac78-5138fbe7af52\u0022,\u0022Text\u0022:\u0022A\\u0001B\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:4,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022fraction\u0022,\u0022Id\u0022:\u0022eea5807d-e145-4d83-b36f-5cca44a429a3\u0022,\u0022StyleOverride\u0022:null,\u0022Numerator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002287eb6a84-b9ed-4a05-a552-582d4b05fa08\u0022,\u0022Text\u0022:\u0022n\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},\u0022Denominator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022a59c3ebe-89bc-44e1-b9b5-7b89609910ea\u0022,\u0022Text\u0022:\u0022\u0022,\u0022IsEmptySlot\u0022:true,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}}]}}]},{\u0022Id\u0022:\u0022834cc13d-ecf2-4a00-a433-adf2f916321d\u0022,\u0022Alignment\u0022:1,\u0022RowSpacing\u0022:41,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00222de23939-7a91-44ea-ba8a-080b3cf11cf2\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022641e5dc1-d37a-41c1-b38c-397d6115b79a\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002200108656-1ffe-42c6-a554-9a51c174ee32\u0022,\u0022Text\u0022:\u0022u\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022ab84d3cf-7c8c-46fe-a381-aec648d19691\u0022,\u0022Text\u0022:\u0022=\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022b7eec6d2-a1d7-4803-af8a-54d16f704bf9\u0022,\u0022Text\u0022:\u00220\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}]}},{\u0022Id\u0022:\u0022701ed3a6-b32c-463d-b8b2-0c5e080121aa\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022680795a1-5de8-4d18-8d13-51c2cf3f6d97\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022d92076dd-4560-42ff-8ca7-865eba837705\u0022,\u0022Text\u0022:\u0022v\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022d663f3fe-61af-4f50-93bb-cfe7092f9719\u0022,\u0022Text\u0022:\u0022=\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002252b5a091-cc13-499a-acee-af416e91f6bc\u0022,\u0022Text\u0022:\u00221\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}]}}]}]}",
+    "StateId": "cf7d3a85-2522-45ef-9ca8-2701717b0221",
+    "Revision": 0,
+    "Caret": {
+      "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+      "TextElementOffset": 1
+    },
+    "Selection": {
+      "Anchor": {
+        "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+        "TextElementOffset": 0
+      },
+      "Focus": {
+        "NodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+        "TextElementOffset": 1
+      }
+    },
+    "SelectedNodeId": "6c9ed318-2cb5-41e0-ac78-5138fbe7af52",
+    "IsNodeSelected": false,
+    "IsDirty": false,
+    "CanUndo": false,
+    "CanRedo": false
+  }
+}

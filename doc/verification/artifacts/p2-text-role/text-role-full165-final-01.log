@@ -1,0 +1,185 @@
+PASS SEL-01 실제 명령으로 2단 분수 삽입 후 내부 분모 부분 교체·undo
+PASS SEL-02 근호·밑/위/아래첨자·행렬 모든 슬롯 독립 교체
+PASS SEL-03 정방향/역방향 선택의 동일한 교체
+PASS SEL-INVALID 잘못된 ID/오프셋/교차 슬롯 선택의 무변경 거절
+PASS DEL-01 슬롯 첫 Backspace/끝 Delete 안전 경계
+PASS DEL-02 구조 직전 Delete/직후 Backspace는 중첩 내용을 보존
+PASS DEL-03 명시선택 subtree 삭제·이웃/부모 보존·undo 선택 복구
+PASS UNI-01 보조평면·결합·ZWJ·한글 텍스트 요소 삭제/undo
+PASS UNI-04 확정 한글 문자열 한 번 입력은 undo 한 단계
+PASS UND-01 입력 undo/redo의 모델·커서·선택·dirty 복원
+PASS UND-02 undo 뒤 새 입력은 redo 분기를 폐기
+PASS UND-03 선택과 빈 입력/경계 삭제는 이력을 만들지 않음
+PASS UND-04 저장 state 복귀와 지연 저장 snapshot dirty
+PASS TPL-01 네 구조 템플릿의 감싸기/빈 슬롯/ID 고유성
+PASS DEL-TEXT 부분선택 명시 삭제와 undo 선택 복구
+PASS LATEX-NESTED-SCRIPT 중첩 첨자 밑은 독립 내부식 전체를 묶어 합성 의미 보존
+PASS IO-01 중첩·Unicode·논리 행·정렬·ID·빈 슬롯 flag JSON 왕복
+PASS IO-02 기존 파일 원자 교체와 마지막 성공 내용
+PASS IO-03 Windows 독점 잠금 저장실패의 기존 파일·dirty 보존
+PASS IO-04 부모 경로가 파일인 저장실패의 데이터 보존
+PASS IO-05 손상·스키마·ID·슬롯 flag·행렬 오류 파일 거절
+PASS IO-CANCEL 취소된 저장의 원본·임시파일 안전성
+PASS IO-SNAPSHOT 편집 중 이전 snapshot 저장은 그 버전만 기록
+PASS LAY-01 최상위 등호 정렬과 논리 행 순서
+PASS LAY-02 실제 폰트 측정의 중첩 bounds/baseline/caret stop
+PASS LAY-03 반복/폭변경 레이아웃의 결정성·원본/선택 보존
+PASS SEL-04 실제 레이아웃 caret hit-test로 내부 슬롯만 편집
+PASS SVG-01 모든 SVG primitive와 공통 LayoutResult 수치 비교
+PASS SVG-02 XML escape·Unicode 원문·편집 표시 배제
+PASS SVG-FILE SVG 실제 파일 출력/교체/취소 안전성
+PASS SVG-04 빈 슬롯의 노드별 미완성 진단과 출력 파일 보존
+PASS TPL-SVG 시작/끝/선택 감싸기 템플릿 완성 후 접합노드 오탐 없이 출력
+PASS SLOT-INVARIANT 필수 슬롯 flag 불일치로 미완성 출력 우회 금지
+PASS STRUCT-SELECT 실제 hit 구조대상/상위선택은 비dirty, 삭제 undo는 전체선택 복구
+PASS VM-SAVE 실제 저장 성공/잠금·경로실패의 dirty와 현재경로
+PASS VM-OPEN 열기 실패 보존과 dirty valid-open의 명시적 Discard
+PASS VM-EXPORT 필수 빈 슬롯 출력실패의 기존 SVG·편집 상태 보존
+PASS VM-COMMAND 공개 삽입·undo/redo 명령의 모델변경과 focus 요청
+PASS CLIP-01 제어 reader로 붙여넣기 후 한 단계 undo
+PASS CLIP-02 clipboard 없음·빈 결과·읽기 실패의 모델/이력 보존
+PASS CLIP-03 읽기 중 Session 교체와 현재 편집 대상 변경 결과 폐기
+PASS CLIP-04 같은 Session의 detach·재부착과 늦은 응답 폐기·재시도
+PASS CLIP-05 연속 paste FIFO 및 사용자 편집·Session 변경 시 대기열 폐기
+PASS CLIP-06 caret 왕복은 대기 paste를 무효화하고 저장 상태만 바뀌면 유지
+PASS ROW-ADD 활성 행 뒤 필수 빈 슬롯 추가와 단일 undo/redo
+PASS ROW-ACTIVE 교차 행 구조 선택이 선택 구조의 행을 편집 대상으로 지정
+PASS ROW-DUPLICATE 깊은 행 복제의 ID·의미·역방향 Unicode 선택 매핑
+PASS ROW-DUP-CROSS 교차 행 구조 선택 복제의 caret fallback과 undo 복원
+PASS ROW-DELETE 행 삭제 후 다음 또는 이전 행의 첫 텍스트로 이동
+PASS ROW-MOVE 그룹 내부 인접 행 이동과 모든 편집 위치 보존
+PASS ROW-NOOP 그룹 마지막 행과 이동 경계의 완전 무변경 거절
+PASS ROW-IO 행 history·저장 재열기·LaTeX/SVG 순서 및 빈 슬롯 출력 거절
+PASS ROW-PASTE 행 이동 중 대기 중인 붙여넣기를 폐기하고 재시도 허용
+PASS ROW-UI
+PASS ROW-UI 실제 App/MainWindow 바인딩·행 버튼·undo/redo와 두 크기 셸 및 긴 문서 caret 접근성의 Headless 검증
+PASS GROUP-ADD 현재 그룹 뒤에 속성을 상속한 필수 빈 그룹 추가와 단일 undo/redo
+PASS GROUP-ACTIVE 교차 그룹 구조 선택이 선택 그룹을 모든 명령의 대상으로 지정
+PASS GROUP-DUPLICATE 여러 행·깊은 구조·Unicode와 그룹 전체 ID/선택 매핑 복제
+PASS GROUP-DUP-CROSS 교차 그룹 구조 선택 복제의 fallback과 undo/redo 복원
+PASS GROUP-DELETE 그룹 삭제 뒤 다음 또는 이전 그룹 첫 텍스트로 이동
+PASS GROUP-MOVE 인접 그룹만 교환하고 행 순서·caret·선택을 보존
+PASS GROUP-NOOP 최소 그룹 수와 이동 경계에서 전체 상태 무변경
+PASS GROUP-IO 그룹 저장 재열기·LaTeX/SVG 순서와 필수 빈 출력 거절
+PASS GROUP-PASTE 그룹 이동·삭제 중 대기 중인 붙여넣기 폐기와 재시도
+PASS GROUP-UI
+PASS GROUP-UI 실제 App/MainWindow 그룹·행 도구 바인딩, 합성 편집, undo/redo 및 긴 작업영역의 Headless 검증
+PASS LIFECYCLE-CLEAN 깨끗한 New/Open/Close와 빈 작업의 식별자·필수 슬롯
+PASS LIFECYCLE-NEW dirty New의 취소·버리기·저장 후 전환
+PASS LIFECYCLE-OPEN dirty Open의 취소·저장 후 대상 파일 전환
+PASS LIFECYCLE-CLOSE dirty Close 확인과 승인 토큰의 일회성·무효화
+PASS LIFECYCLE-FAIL pending 저장 실패·취소 뒤 상태 보존과 재시도
+PASS LIFECYCLE-SAVE-EDIT 저장 중 편집 및 취소 뒤 늦은 저장 완료 폐기
+PASS LIFECYCLE-SAVE-UNDO 지연 일반 저장 중 Undo 뒤 New/Open/Close 보호와 이전 snapshot 저장
+PASS LIFECYCLE-SAVE-CANCELLED-WRITE 취소 뒤 늦게 성공한 저장 보호와 실패·실제 취소 ticket 정리
+PASS LIFECYCLE-ASYNC-STALE 새 요청 뒤 늦게 끝난 Open과 close token 경합
+PASS LIFECYCLE-REENTRY pending 동안 중복 요청·해결 거부와 단일 전환
+PASS LIFECYCLE-UI
+PASS LIFECYCLE-UI 실제 App/MainWindow에서 dirty 작업 보호, 저장 오류 재시도, 취소·버리기 및 두 크기 확인 overlay를 Headless 검증
+PASS STATE-RECENT-INDEX 최근 경로 정규화·대소문자 중복 통합·표시명과 UTC 최근 사용 갱신
+PASS STATE-RECENT-BOUNDS 고정 항목 보존·정렬·고정되지 않은 항목 20개 제한
+PASS STATE-RECENT-METADATA 최근 사용 시각과 실제 파일 수정 시각 및 누락 상태 분리
+PASS STATE-RECENT-MUTATION 고정·고정 해제·삭제의 무변경 및 없는 경로 no-op
+PASS STATE-INDEX-PROTECTION 손상·미래 버전 인덱스 진단, 쓰기 차단, 원본 보존
+PASS STATE-RECOVERY-ROUNDTRIP 중첩 Unicode snapshot 복구 저장·목록·열기·삭제 왕복
+PASS STATE-RECOVERY-PROTECTION 복구 ID·버전·AST 손상 진단, 파일 보존 및 비정상 입력 거부
+PASS STATE-CONCURRENCY 서비스 인스턴스 간 RMW 직렬화·루트 격리·잠금 및 취소 보존
+PASS VM-STATE-INIT 저장 기반 초기화와 상태 서비스를 쓰지 않는 기존 VM 격리
+PASS AUTO-RECOVERY-TICK 실제 자동 tick의 dirty snapshot·ID·스타일과 편집 상태 보존
+PASS AUTO-RECOVERY-CLEANUP 성공 저장 뒤 복구본 정리 및 저장 실패 때 원본 보존
+PASS AUTO-RECOVERY-STALE 정지·세션 교체와 겹친 복구 저장 drain 및 늦은 결과 차단
+PASS RECOVERY-RESTORE 재시작 복구 후보의 명시 복원과 새 dirty Session 생성
+PASS RECOVERY-DIRTY-GUARD dirty 작업에서 복원 Cancel·Save·Discard 확인
+PASS RECENT-SUCCESS 성공한 Save/Open만 recent 목록에 기록
+PASS RECENT-MISSING-RELINK 누락·metadata 상태, 명시 경로 재연결, pin·remove와 원본 보존
+PASS LIBRARY-UI
+PASS LIBRARY-UI 실제 App의 최근 작업·복구본 작업 탭, 명시 동작과 두 크기 셸을 Headless로 검증
+PASS TPL-CATALOG 공개 10종 템플릿 API와 기존 네 삽입 명령 호환
+PASS TPL-SHAPES 새 여섯 구조의 초기 모양·필수 빈 슬롯·caret
+PASS TPL-WRAP-TEXT 정방향·역방향 Unicode 부분선택 감싸기와 주변 텍스트 보존
+PASS TPL-WRAP-NODE 전체 구조 선택 감싸기·선택 대상/undo 매핑
+PASS TPL-BOUNDS 적분·합 optional 상하한과 필수 내용의 구분
+PASS TPL-BRACKETS-CASES 괄호 네 종류와 두 식/조건 행의 독립 편집
+PASS TPL-NAV 중첩 10종 MathTree 자식 순서·문자소 caret 경계
+PASS TPL-HISTORY 새 노드 깊은 복제 ID·selection·delete·undo/redo
+PASS TPL-JSON 구버전 노드 JSON 읽기와 10종 신규 AST 저장 재열기
+PASS TPL-JSON-REJECT 새 노드의 null·빈 행·잘못된 enum·중복 ID 거절과 원본 보존
+PASS TPL-LATEX 10종 LaTeX 구조 의미와 null 상하한 생략
+PASS TPL-LAYOUT-SVG 새 구조 bounds·glyph·같은 LayoutResult SVG 및 미완성 출력 거절
+TEMPLATE-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-templates\template-examples-20261022T201819502Z-570b7bb3c6d54ca9ba58c38ac248bd97\template-examples.png
+TEMPLATE-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-templates\template-examples-20261022T201819502Z-570b7bb3c6d54ca9ba58c38ac248bd97\template-examples-bounds.json
+PASS TEMPLATE-UI
+PASS TEMPLATE-UI 10개 수식 템플릿 버튼의 접근성·공통 세션 삽입·슬롯 편집과 최소/기본 크기 화면의 Headless 검증
+PASS PTR-01 headless visual tree의 합성 Ctrl+클릭으로 구조 선택 후 삭제·undo
+PASS PTR-02 headless visual tree의 합성 포인터 누름·놓기에서 caret와 캡처 수명주기
+PASS PTR-03 headless visual tree의 합성 capture-loss 이벤트가 드래그 상태를 정리
+PASS PTR-04 visual-tree detach·재부착과 Session 교체가 잡힌 포인터를 해제
+PASS FONT-PROBE-ORDERS 신선한 프로세스의 글꼴 resolve·shaping 순서 비교
+PASS FONT-OFFSCREEN 수식 컨트롤과 같은 레이아웃의 화면 외 PNG·SVG 생성
+PASS PAL-CATALOG-IDENTITY 7개 기호 분류·안정 ID·Structures 템플릿 대응
+PASS PAL-SEARCH-ALIAS 분류별 이름·alias 검색과 공유 alias 보존
+PASS PAL-UNICODE-PAGES Unicode scalar 페이지 총량·surrogate 경계·첫/마지막 page
+PASS PAL-UNICODE-LOOKUP U+ 조회·안전 placeholder·금지 scalar 삽입 거절
+PASS PAL-INSERT-REPLACE canonical 기호 삽입이 부분 선택만 교체하고 undo/redo
+PASS PAL-EMOJI-GRAPHEME ZWJ·variation selector·skin-tone 원문과 한 단계 undo
+PASS PAL-BROWSE-PURITY 탐색 불변성과 forged command 무변경
+GLYPH-OBSERVATION status=Present; family=Cambria Math; reason=요청한 글꼴의 문자표에 코드 포인트가 있습니다. 실제 shaping·fallback 표시를 보장하지는 않습니다.
+PASS PAL-ROUNDTRIP-GLYPH JSON/LaTeX 원문 보존 및 결정적 missing-glyph 대역
+PASS PALETTE-UI
+PASS PALETTE-UI 기호·Unicode·이모지 찾아보기의 세션 불변성, 명시 삽입과 undo, 두 크기 실제 셸의 Headless 검증
+PASS STRUCT-PROJECTION 구조 트리의 문서 순서·실제 ID·슬롯 순서 투영
+PASS STRUCT-SELECT-PURITY 트리 선택과 표면 caret/부분선택 동기화의 편집 상태 순수성
+PASS CLEAR-SELECTION 정·역 Unicode 부분선택 및 전체 구조 선택만 비우기
+PASS CLEAR-ROW 교차 행 선택에서 선택 노드 행만 비우고 행 식별자 보존
+PASS CLEAR-GROUP 교차 그룹 선택에서 선택 노드 그룹만 비우기
+PASS CLEAR-WORKSPACE 작업 전체 비우기의 행·그룹·스타일 보존과 활성 caret
+PASS CLEAR-NOOP 무효 범위·빈 범위는 완전 무변경, 빈 구조는 비우기 가능
+PASS CLEAR-HISTORY 단일 Commit·undo/redo·고정 범위 선택과 SVG 출력 경계
+PASS STRUCTURE-CLEAR-UI
+PASS STRUCTURE-CLEAR-UI 실제 구조 트리 선택·접힌 경로 노출·네 범위 비우기와 실행 취소의 Headless UI 검증
+PASS PROP-CASCADE 세 스타일 필드의 상속 출처와 자식 명시 override
+PASS PROP-TARGETS 네 scope의 실제 대상과 구조/부분 텍스트 선택 경계
+PASS PROP-APPLY-RESET 한 번 적용·초기화, 선택/ID 보존과 undo/redo
+PASS PROP-STALE 캡처 뒤 revision·대상·선택·Session 변경 거절
+PASS PROP-VALIDATION 수치·글꼴·색 검증과 명시값 기준 no-op
+PASS PROP-EDIT-CLONE-CLEAR 텍스트 편집·템플릿 감싸기·복제·Clear의 스타일 ID 보존
+PASS PROP-JSON-RECOVERY schema v1 기본값·파일/복구 왕복 및 손상 원본 보존
+PASS PROP-OUTPUT 첨자/분수 축소의 effective style 및 SVG 반투명 색
+PASS PROPERTIES-UI
+PASS PROPERTIES-UI 속성 패널 4개 범위의 실제 바인딩, 초안·stale·적용·상속 초기화와 셸 레이아웃 Headless 검증
+PASS TYPE-CASCADE Display/Text/Script 상속 출처와 node override 우선순위
+PASS TYPE-APPLY-RESET 네 번째 조판 속성의 combined apply·호환 wrapper·reset·history
+PASS TYPE-JSON schema v1 Display 기본값·override 왕복·잘못된 enum 원본 보존
+PASS TYPE-FRACTION Display 분수의 level0 Text 전이와 compact 분수의 level+1 전이
+PASS TYPE-NESTED Script 축소와 Matrix/Cases의 compact 동일 level
+PASS TYPE-DEPTH 0.71 깊이 축소·1px 하한·명시 크기의 자식 상대 전이
+PASS TYPE-OPERATORS 큰 연산자 한계 배치·적분 옆 한계·hit-test 및 모델 불변
+PASS TYPE-LATEX-SVG scope LaTeX 조판 명령과 동일 LayoutResult의 SVG 소비
+TYPESETTING-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-typesetting\equation-style-comparison-20261022T201835102Z-72af9dcfdc8e40e1bb871579cbc3ef88\equation-typesetting-comparison.json
+PASS TYPESETTING-UI
+PASS TYPESETTING-UI 기준 조판 스타일의 실제 바인딩, 네 필드 적용·초기화·실행 취소, stale 차단과 같은 수식 렌더 비교를 Headless 검증
+PASS OUT-PREVIEW-MODE Workspace/Display/Inline 투영과 그룹·행·노드 설정 보존
+PASS OUT-PREVIEW-PURITY 미리보기와 Main VM 연결이 편집 상태를 변경하지 않음
+PASS OUT-PREVIEW-REFRESH 탐색·편집·모드·Session별 stale 및 명시 새로고침
+PASS OUT-PREVIEW-INCOMPLETE 필수 슬롯 미완성 미리보기의 SVG 저장 차단
+PASS OUT-SVG-EXACT 동일 frozen LayoutResult의 SVG 실제 파일 내보내기
+PASS OUT-SVG-RACE busy 재진입과 오래된 내보내기 완료의 현재 상태 비침범
+PASS OUT-SVG-CANCEL-FAIL 취소·실패 파일 보존과 취소 무시 실제 성공 구분
+PASS OUT-SVG-STALE-START stale preview와 picker 대기 중 낡은 snapshot의 I/O 차단
+INFO editorScrollOffsetProbe=0, 14; max=0, 173; nonzero=True
+PASS OUTPUT-PREVIEW-UI
+PASS OUTPUT-PREVIEW-UI 전체 작업 SVG 미리보기의 출력 모드·고정 snapshot·탭 복귀를 실제 App Headless에서 검증
+PASS TEXT-ROLE-SCHEMA schema v1 역할 왕복·legacy 기본값·복구 왕복·손상 원본 보존
+PASS TEXT-ROLE-LAYOUT 역할별 italic과 명시 역할 shaping run·caret 폭
+PASS TEXT-ROLE-LATEX 역할 macro·공백/예약 문자 escaping·Unicode 및 제어 진단
+PASS TEXT-ROLE-ALIGN-SVG 역할 한정 등호 정렬과 같은 layout의 SVG 소비
+PASS TEXT-ROLE-APPLY 다섯 필드 원자 Apply·stale/no-op/범위 거절·reset 보존
+PASS TEXT-ROLE-EDIT-PRESERVE 문자 편집·분할·붙이기 경로와 부분선택 감싸기의 역할 보존
+PASS TEXT-ROLE-TEMPLATE-CLONE 빈 템플릿 내용·복제·undo에서 역할·ID 보존
+PASS TEXT-ROLE-VM-DIAGNOSTIC 속성 패널 범위 안내와 MainVM의 진단/외부 재사용 차단
+TEXT-ROLE-UI 비교 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\text-role-comparison-20261022T201839742Z-d19b784c875049f181d69127edfa3c78\text-role-comparison.json
+TEXT-ROLE-UI LaTeX 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\latex-diagnostic-20261022T201840891Z-6e1eacc2caaa4e5aafebfba251c5f469
+PASS TEXT-ROLE-UI
+PASS TEXT-ROLE-UI 수식 텍스트 역할의 실제 바인딩·범위·통합 적용/실행 취소와 LaTeX 진단 패널을 Headless 검증
+RESULT 전체=165 합격=165 실패=0
+ACTUAL_EXIT_CODE=0

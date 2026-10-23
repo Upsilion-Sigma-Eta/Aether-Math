@@ -1,0 +1,23 @@
+PASS VM-STATE-INIT 저장 기반 초기화와 상태 서비스를 쓰지 않는 기존 VM 격리
+PASS AUTO-RECOVERY-TICK 실제 자동 tick의 dirty snapshot·ID·스타일과 편집 상태 보존
+PASS AUTO-RECOVERY-CLEANUP 성공 저장 뒤 복구본 정리 및 저장 실패 때 원본 보존
+PASS AUTO-RECOVERY-STALE 정지·세션 교체와 겹친 복구 저장 drain 및 늦은 결과 차단
+PASS RECOVERY-RESTORE 재시작 복구 후보의 명시 복원과 새 dirty Session 생성
+PASS RECOVERY-DIRTY-GUARD dirty 작업에서 복원 Cancel·Save·Discard 확인
+PASS RECENT-SUCCESS 성공한 Save/Open만 recent 목록에 기록
+PASS RECENT-MISSING-RELINK 누락·metadata 상태, 명시 경로 재연결, pin·remove와 원본 보존
+RESULT 전체=9 합격=8 실패=1
+FAIL LIBRARY-UI 실제 App의 최근 작업·복구본 작업 탭, 명시 동작과 두 크기 셸을 Headless로 검증
+System.InvalidOperationException: 최근 작업 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL LIBRARY-UI
+System.InvalidOperationException: 최근 작업 버튼 묶음이 inspector viewport에서 전혀 보이지 않습니다.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 231
+   at AetherMath.LogicQA.LibraryUiInteractionCases.RunWindowChecksAsync(TempDirectory temporary) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LibraryUiInteractionCases.cs:line 243
+   at AetherMath.LogicQA.LibraryUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LibraryUiInteractionCases.cs:line 51
+
+   at AetherMath.LogicQA.LibraryUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LibraryUiInteractionCases.cs:line 130
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 118
+EXIT_CODE=1

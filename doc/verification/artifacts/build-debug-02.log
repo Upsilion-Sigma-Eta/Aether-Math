@@ -1,0 +1,12 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(148,40): error CS0535: 'PointerCases.TestPointer'은(는) 'IPointer.(This interface or abstract class is -not- implementable by user code !)()' 인터페이스 멤버를 구현하지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(148,40): error CS0738: 'PointerCases.TestPointer'은(는) 'IPointer.Id' 인터페이스 멤버를 구현하지 않습니다. 'PointerCases.TestPointer.Id'에 일치하는 반환 형식 'int'이(가) 없으므로 'IPointer.Id'을(를) 구현할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(148,40): error CS0535: 'PointerCases.TestPointer'은(는) 'IPointer.(This interface or abstract class is -not- implementable by user code !)()' 인터페이스 멤버를 구현하지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PointerCases.cs(148,40): error CS0738: 'PointerCases.TestPointer'은(는) 'IPointer.Id' 인터페이스 멤버를 구현하지 않습니다. 'PointerCases.TestPointer.Id'에 일치하는 반환 형식 'int'이(가) 없으므로 'IPointer.Id'을(를) 구현할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 0개
+    오류 2개
+
+경과 시간: 00:00:01.36

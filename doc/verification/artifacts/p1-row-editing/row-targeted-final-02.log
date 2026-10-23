@@ -1,0 +1,23 @@
+PASS ROW-ADD 활성 행 뒤 필수 빈 슬롯 추가와 단일 undo/redo
+PASS ROW-ACTIVE 교차 행 구조 선택이 선택 구조의 행을 편집 대상으로 지정
+PASS ROW-DUPLICATE 깊은 행 복제의 ID·의미·역방향 Unicode 선택 매핑
+PASS ROW-DUP-CROSS 교차 행 구조 선택 복제의 caret fallback과 undo 복원
+PASS ROW-DELETE 행 삭제 후 다음 또는 이전 행의 첫 텍스트로 이동
+PASS ROW-MOVE 그룹 내부 인접 행 이동과 모든 편집 위치 보존
+PASS ROW-NOOP 그룹 마지막 행과 이동 경계의 완전 무변경 거절
+PASS ROW-IO 행 history·저장 재열기·LaTeX/SVG 순서 및 빈 슬롯 출력 거절
+PASS ROW-PASTE 행 이동 중 대기 중인 붙여넣기를 폐기하고 재시도 허용
+RESULT 전체=10 합격=9 실패=1
+FAIL ROW-UI 실제 App/MainWindow 바인딩·행 버튼·undo/redo와 두 크기 셸 및 긴 문서 caret 접근성의 Headless 검증
+System.InvalidOperationException: 행 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL ROW-UI
+System.InvalidOperationException: 맨 아래 긴 행 끝 caret가 편집 viewport 밖에 있습니다. caret=874.1, 447.0148437499997, 1.7999999999999998, 35.1708984375; viewport=0, 0, 876, 482; offset=6604.5, 676.1857421874997.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowUiInteractionCases.AssertActiveCaretVisible(Window window, EditingSession session) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 353
+   at AetherMath.LogicQA.RowUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 238
+   at AetherMath.LogicQA.RowUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 46
+
+   at AetherMath.LogicQA.RowUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 110
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 81

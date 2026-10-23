@@ -1,0 +1,32 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-structure-required-slot-minimum-bottom",
+  "scenario": {
+    "edge": "bottom",
+    "offset": 675
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 0,
+  "stateId": "003f1495-60c9-4b82-9539-a4a58eb3ae5e",
+  "dirty": false,
+  "caret": {
+    "NodeId": "02d28419-3a70-4247-a3cc-2a4df1fe5db4",
+    "TextElementOffset": 0
+  },
+  "selection": null,
+  "selectedNodeId": "02d28419-3a70-4247-a3cc-2a4df1fe5db4",
+  "isNodeSelected": false,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u0022b7d751ca-d97b-4a96-bf1f-5f13c1cf0e48\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uBE48 \\uBD84\\uC790 \\uC2AC\\uB86F \\uC218\\uD559 \\uACF5\\uBC31 fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00226d3eb86b-24cf-41e7-be26-38d15af0fdc0\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022d7c651a9-10cc-429c-b0f4-3f28708363d3\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022fraction\u0022,\u0022Id\u0022:\u00223be5fc14-1b7c-4a78-85a4-77620727e42f\u0022,\u0022StyleOverride\u0022:null,\u0022Numerator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002202d28419-3a70-4247-a3cc-2a4df1fe5db4\u0022,\u0022Text\u0022:\u0022\u0022,\u0022IsEmptySlot\u0022:true,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null},\u0022Denominator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u00228feec917-9348-4083-9603-9d7586803b6a\u0022,\u0022Text\u0022:\u0022b\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}}}]}]}",
+  "mathSpaceIds": [],
+  "outputState": "Empty",
+  "outputRevision": null,
+  "png": "main-window.png"
+}

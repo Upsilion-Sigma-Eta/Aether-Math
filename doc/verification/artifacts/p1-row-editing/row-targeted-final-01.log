@@ -1,0 +1,40 @@
+PASS ROW-ADD 활성 행 뒤 필수 빈 슬롯 추가와 단일 undo/redo
+PASS ROW-ACTIVE 교차 행 구조 선택이 선택 구조의 행을 편집 대상으로 지정
+PASS ROW-DUPLICATE 깊은 행 복제의 ID·의미·역방향 Unicode 선택 매핑
+PASS ROW-DUP-CROSS 교차 행 구조 선택 복제의 caret fallback과 undo 복원
+PASS ROW-DELETE 행 삭제 후 다음 또는 이전 행의 첫 텍스트로 이동
+PASS ROW-MOVE 그룹 내부 인접 행 이동과 모든 편집 위치 보존
+PASS ROW-NOOP 그룹 마지막 행과 이동 경계의 완전 무변경 거절
+FAIL ROW-IO 행 history·저장 재열기·LaTeX/SVG 순서 및 빈 슬롯 출력 거절
+System.InvalidOperationException: SVG 논리 행 텍스트 순서: <svg width="144.27" height="269.373" viewBox="0 0 144.27 269.373" role="img" aria-label="AetherMath 수식 출력" xmlns="http://www.w3.org/2000/svg">
+  <text x="62.175" y="50.784" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">A</text>
+  <text x="81.489" y="50.784" font-family="Cambria Math" font-size="31" font-style="normal" fill="#24364B" xml:space="preserve">=</text>
+  <text x="104.648" y="50.784" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">x</text>
+  <text x="24" y="111.128" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">long</text>
+  <text x="81.489" y="111.128" font-family="Cambria Math" font-size="31" font-style="normal" fill="#24364B" xml:space="preserve">=</text>
+  <text x="104.648" y="111.128" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">y</text>
+  <text x="25.06" y="171.471" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">new</text>
+  <text x="81.489" y="171.471" font-family="Cambria Math" font-size="31" font-style="normal" fill="#24364B" xml:space="preserve">=</text>
+  <text x="104.648" y="171.471" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">z</text>
+  <text x="24" y="235.814" font-family="Cambria Math" font-size="31" font-style="italic" fill="#24364B" xml:space="preserve">u</text>
+  <text x="41.12" y="235.814" font-family="Cambria Math" font-size="31" font-style="normal" fill="#24364B" xml:space="preserve">=1</text>
+</svg>
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowEditingCases.SaveAndExportRows() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowEditingCases.cs:line 337
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 81
+PASS ROW-PASTE 행 이동 중 대기 중인 붙여넣기를 폐기하고 재시도 허용
+FAIL ROW-UI 실제 App/MainWindow 바인딩·행 버튼·undo/redo와 두 크기 셸 및 긴 문서 caret 접근성의 Headless 검증
+System.InvalidOperationException: 행 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL ROW-UI
+RESULT 전체=10 합격=8 실패=2
+System.InvalidOperationException: MoveRowUpButton CanExecute/IsEnabled: 기대=False; 실제=True
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.Qa.Equal[T](T expected, T actual, String label) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 17
+   at AetherMath.LogicQA.RowUiInteractionCases.AssertEditorAndCommands(MainWindow window, MainWindowViewModel viewModel) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 268
+   at AetherMath.LogicQA.RowUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 132
+   at AetherMath.LogicQA.RowUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 46
+
+   at AetherMath.LogicQA.RowUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowUiInteractionCases.cs:line 110
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 81

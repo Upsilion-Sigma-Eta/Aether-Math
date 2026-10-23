@@ -1,0 +1,16 @@
+PASS LATEX-HIGHLIGHT-COVERAGE UTF-16 토큰 범위가 원문을 완전히 보존
+PASS LATEX-HIGHLIGHT-CONTEXT 제어어·기호·주석·수식 기호를 분류
+PASS LATEX-HIGHLIGHT-REFRESH 코드 변경 시 원문·토큰 스냅샷을 함께 갱신
+PASS LATEX-HIGHLIGHT-PURITY 강조 설정은 수식·진단·복사 판정을 바꾸지 않음
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-collapsed-minimum-1060x700-20261023T001526222Z-d95d774d254441219eb9a604a51af1c5\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-collapsed-default-1360x880-20261023T001526278Z-18037ec862564e99a3304c1c48df33b7\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-expanded-minimum-top-1060x700-20261023T001526680Z-194e85d7d0fa4058a74220a8761b1856\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-off-combining-minimum-bottom-1060x700-20261023T001527760Z-ed240d21ac0141a884f5e31ba1d1fb16\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-on-reverse-selection-minimum-bottom-1060x700-20261023T001528852Z-b22a8334fbe14bc6b5533dc5c08b5cc2\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-on-default-bottom-1360x880-20261023T001529259Z-01465045f7c84d3ca1264bbe496db173\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-source-changed-reset-minimum-1060x700-20261023T001529904Z-69f04b23c1e444fa9adc48a0223a63f7\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-copy-partial-selection-minimum-1060x700-20261023T001530116Z-12cabe01157c4c9087ae803ee3696b62\bounds.json
+PASS LATEX-HIGHLIGHT-UI
+PASS LATEX-HIGHLIGHT-UI LaTeX 한 표면의 색상 강조·선택·스크롤·전체 복사 경계를 Headless에서 검증
+RESULT 전체=5 합격=5 실패=0
+ACTUAL_EXIT_CODE=0

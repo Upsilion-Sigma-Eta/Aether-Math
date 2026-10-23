@@ -1,0 +1,5 @@
+TYPESETTING-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-typesetting\equation-style-comparison-20261022T205322899Z-e35f57cc3a3045788b0c5d13dd44a8f3\equation-typesetting-comparison.json
+PASS TYPESETTING-UI
+PASS TYPESETTING-UI 기준 조판 스타일의 실제 바인딩, 네 필드 적용·초기화·실행 취소, stale 차단과 같은 수식 렌더 비교를 Headless 검증
+RESULT 전체=1 합격=1 실패=0
+QA_RESULT exit=0

@@ -1,0 +1,157 @@
+{
+  "Label": "thin-space-incomplete-minimum",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "ToolsPanelBounds": {
+    "X": 18,
+    "Y": 88,
+    "Width": 210,
+    "Height": 564
+  },
+  "PreviewSurfaceBounds": {
+    "X": 242,
+    "Y": 159,
+    "Width": 518,
+    "Height": 442
+  },
+  "PreviewHeaderBounds": {
+    "X": 243,
+    "Y": 160,
+    "Width": 516,
+    "Height": 42
+  },
+  "PreviewScrollViewerBounds": {
+    "X": 243,
+    "Y": 202,
+    "Width": 516,
+    "Height": 398
+  },
+  "PreviewCanvasBounds": {
+    "X": 273,
+    "Y": 232,
+    "Width": 80,
+    "Height": 121
+  },
+  "PreviewTitleBounds": {
+    "X": 271,
+    "Y": 166,
+    "Width": 44,
+    "Height": 15
+  },
+  "PreviewScaleNoticeBounds": {
+    "X": 271,
+    "Y": 182,
+    "Width": 472,
+    "Height": 12
+  },
+  "InspectorBounds": {
+    "X": 791,
+    "Y": 164,
+    "Width": 234,
+    "Height": 437
+  },
+  "SettingsScrollViewerBounds": {
+    "X": 791,
+    "Y": 214,
+    "Width": 234,
+    "Height": 276
+  },
+  "SettingsViewportBounds": {
+    "X": 791,
+    "Y": 214,
+    "Width": 234,
+    "Height": 276
+  },
+  "SettingsExtentWidth": 234,
+  "SettingsExtentHeight": 406,
+  "SettingsVerticalOffset": 0,
+  "ActionsPanelBounds": {
+    "X": 791,
+    "Y": 494,
+    "Width": 224,
+    "Height": 97
+  },
+  "ModeComboBoxBounds": {
+    "X": 801,
+    "Y": 348,
+    "Width": 112,
+    "Height": 32
+  },
+  "RefreshButtonBounds": {
+    "X": 791,
+    "Y": 526,
+    "Width": 104,
+    "Height": 30
+  },
+  "SaveButtonBounds": {
+    "X": 791,
+    "Y": 561,
+    "Width": 69,
+    "Height": 30
+  },
+  "ReturnButtonBounds": {
+    "X": 32,
+    "Y": 602,
+    "Width": 135,
+    "Height": 36
+  },
+  "ActionsContained": true,
+  "CanvasUsesSnapshotLayout": true,
+  "CanvasAllocationMatchesLayout": true,
+  "InspectorTabHeaderBounds": [
+    {
+      "Name": "\uC18D\uC131",
+      "Bounds": {
+        "X": 803,
+        "Y": 180,
+        "Width": 24,
+        "Height": 16
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "\uAD6C\uC870",
+      "Bounds": {
+        "X": 851,
+        "Y": 180,
+        "Width": 24,
+        "Height": 16
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "\uC791\uC5C5",
+      "Bounds": {
+        "X": 899,
+        "Y": 180,
+        "Width": 24,
+        "Height": 16
+      },
+      "IsVisible": true
+    },
+    {
+      "Name": "\uCD9C\uB825",
+      "Bounds": {
+        "X": 947,
+        "Y": 180,
+        "Width": 24,
+        "Height": 16
+      },
+      "IsVisible": true
+    }
+  ],
+  "Mode": "WorkspaceStyle",
+  "SnapshotRevision": 1,
+  "State": "Incomplete",
+  "StateSummary": "\uD544\uC218 \uC2AC\uB86F \uBBF8\uC644\uC131",
+  "CurrentRevisionSummary": "\uD604\uC7AC revision 1 \u00B7 \uBBF8\uB9AC\uBCF4\uAE30 revision 1",
+  "ScopeSummary": "\uC804\uCCB4 \uC791\uC5C5 \u00B7 \uBAA8\uB4E0 \uADF8\uB8F9\uACFC \uD589",
+  "CanExportSvg": false,
+  "ExportDisabledReason": "\uD544\uC218 \uC218\uC2DD \uC2AC\uB86F\uC774 \uBE44\uC5B4 \uC788\uC5B4 SVG\uB85C \uC800\uC7A5\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.",
+  "LayoutWidth": 79.4,
+  "LayoutHeight": 120.5208984375,
+  "PngFile": "main-window.png",
+  "PngSha256": "C534C8120568F8E07413059A21152B236579633E81CBAA961E63C91280B5A919"
+}

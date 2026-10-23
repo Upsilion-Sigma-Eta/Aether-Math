@@ -1,0 +1,14 @@
+PASS TYPE-CASCADE Display/Text/Script 상속 출처와 node override 우선순위
+PASS TYPE-APPLY-RESET 네 번째 조판 속성의 combined apply·호환 wrapper·reset·history
+PASS TYPE-JSON schema v1 Display 기본값·override 왕복·잘못된 enum 원본 보존
+PASS TYPE-FRACTION Display 분수의 level0 Text 전이와 compact 분수의 level+1 전이
+PASS TYPE-NESTED Script 축소와 Matrix/Cases의 compact 동일 level
+PASS TYPE-DEPTH 0.71 깊이 축소·1px 하한·명시 크기의 자식 상대 전이
+PASS TYPE-OPERATORS 큰 연산자 한계 배치·적분 옆 한계·hit-test 및 모델 불변
+PASS TYPE-LATEX-SVG scope LaTeX 조판 명령과 동일 LayoutResult의 SVG 소비
+TYPESETTING-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-typesetting\equation-style-comparison-20261022T183623369Z-ecddc61407644eaf8b619e62e74f380b\equation-typesetting-comparison.json
+PASS TYPESETTING-UI
+PASS TYPESETTING-UI 기준 조판 스타일의 실제 바인딩, 네 필드 적용·초기화·실행 취소, stale 차단과 같은 수식 렌더 비교를 Headless 검증
+RESULT 전체=9 합격=9 실패=0
+
+ACTUAL_EXIT_CODE=0

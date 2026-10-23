@@ -1,0 +1,98 @@
+{
+  "CaseId": "LATEX-COPY-UI",
+  "Label": "latex-copy-previous-snapshot-expanded-minimum",
+  "EvidencePurpose": "Headless UI \uC0C1\uD0DC\uC758 \uAC80\uD1A0\uC6A9 \uC804\uCCB4 \uCC3D \uCEA1\uCC98\uC774\uBA70 \uBCF5\uC0AC\uD55C LaTeX \uCF54\uB4DC\uB098 \uC81C\uD488 \uCD9C\uB825\uBB3C\uC774 \uC544\uB2D9\uB2C8\uB2E4.",
+  "ClientWidth": 1060,
+  "ClientHeight": 700,
+  "HandleDescriptor": "STUB",
+  "Handle": 0,
+  "CopyButtonBounds": {
+    "X": 571.2678503714133,
+    "Y": 429.091834413056,
+    "Width": 105,
+    "Height": 36
+  },
+  "CopyButtonLabelBounds": {
+    "X": 598.1300987518293,
+    "Y": 440.03571338285514,
+    "Width": 68,
+    "Height": 14
+  },
+  "ExpanderBounds": {
+    "X": 242,
+    "Y": 423,
+    "Width": 495,
+    "Height": 229
+  },
+  "CodeGridBounds": {
+    "X": 259,
+    "Y": 487,
+    "Width": 461,
+    "Height": 148
+  },
+  "CodeViewBounds": {
+    "X": 259,
+    "Y": 545,
+    "Width": 461,
+    "Height": 90
+  },
+  "DiagnosticsBounds": {
+    "X": 259,
+    "Y": 487,
+    "Width": 461,
+    "Height": 58
+  },
+  "DiagnosticsViewportBounds": {
+    "X": 259,
+    "Y": 487,
+    "Width": 461,
+    "Height": 58
+  },
+  "CopyStatusBounds": {
+    "X": 265,
+    "Y": 492,
+    "Width": 449,
+    "Height": 22
+  },
+  "CopyStatusTextBounds": {
+    "X": 272,
+    "Y": 496,
+    "Width": 435,
+    "Height": 14
+  },
+  "CopyButtonEnabled": true,
+  "CanCopyLatex": true,
+  "IsCopyingLatex": false,
+  "CopyButtonLabel": "\uC804\uCCB4 \uCF54\uB4DC \uBCF5\uC0AC",
+  "ToolTipShowOnDisabled": true,
+  "CopyButtonToolTip": "",
+  "CopyDisabledReason": "",
+  "CopyMessage": "\uC694\uCCAD \uB2F9\uC2DC \uC774\uC804 \uC218\uC2DD\uC758 LaTeX \uCF54\uB4DC\uB97C \uBCF5\uC0AC\uD588\uC2B5\uB2C8\uB2E4.",
+  "ExpanderExpanded": true,
+  "ExpanderContentAttached": true,
+  "CodeGridCoordinatesAvailable": true,
+  "CodeViewCoordinatesAvailable": true,
+  "DiagnosticsCoordinatesAvailable": true,
+  "CopyStatusRawVisible": true,
+  "CopyStatusVisibilityRequested": true,
+  "CopyStatusCoordinatesAvailable": true,
+  "CopyStatusTextCoordinatesAvailable": true,
+  "CodeViewReadOnly": true,
+  "CodeLength": 183,
+  "CodeSelectionStart": 0,
+  "CodeSelectionEnd": 3,
+  "EditorViewportHeight": 76,
+  "EditorViewportWidth": 516,
+  "CopyStatusVisible": true,
+  "HasCopyMessage": true,
+  "IsCollapsedCapture": false,
+  "IsExpandedCapture": true,
+  "SessionRevision": 1,
+  "SessionDirty": true,
+  "SessionCanUndo": true,
+  "OutputPreviewState": "Empty",
+  "OutputPreviewVisible": false,
+  "CopyButtonBelongsToExpander": true,
+  "PngFile": "main-window.png",
+  "PngSha256": "46EEBAA439DD47B5158B3F64B4CC434ABE3EBDD916F86A078378B2F53F72E1FB"
+}

@@ -1,0 +1,27 @@
+PASS PROP-CASCADE 세 스타일 필드의 상속 출처와 자식 명시 override
+PASS PROP-TARGETS 네 scope의 실제 대상과 구조/부분 텍스트 선택 경계
+PASS PROP-APPLY-RESET 한 번 적용·초기화, 선택/ID 보존과 undo/redo
+PASS PROP-STALE 캡처 뒤 revision·대상·선택·Session 변경 거절
+PASS PROP-VALIDATION 수치·글꼴·색 검증과 명시값 기준 no-op
+PASS PROP-EDIT-CLONE-CLEAR 텍스트 편집·템플릿 감싸기·복제·Clear의 스타일 ID 보존
+PASS PROP-JSON-RECOVERY schema v1 기본값·파일/복구 왕복 및 손상 원본 보존
+PASS PROP-OUTPUT 첨자/분수 축소의 effective style 및 SVG 반투명 색
+RESULT 전체=9 합격=8 실패=1
+FAIL PROPERTIES-UI 속성 패널 4개 범위의 실제 바인딩, 초안·stale·적용·상속 초기화와 셸 레이아웃 Headless 검증
+System.InvalidOperationException: 속성 패널 UI child 실패(exit=1). stdout:
+
+stderr:
+FAIL PROPERTIES-UI
+System.InvalidOperationException: MainWindow visual tree에서 PropertiesUnitsNotice 컨트롤을 찾지 못했습니다.
+   at AetherMath.LogicQA.RowShellVisualCases.Find[T](Control root, String name) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 982
+   at AetherMath.LogicQA.RowShellVisualCases.<>c__DisplayClass1_0.<CaptureAndVerify>b__15(String name) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 448
+   at System.Linq.Enumerable.ArraySelectIterator`2.Fill(ReadOnlySpan`1 source, Span`1 destination, Func`2 func)
+   at System.Linq.Enumerable.ArraySelectIterator`2.ToArray()
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 448
+   at AetherMath.LogicQA.PropertiesUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesUiInteractionCases.cs:line 148
+   at AetherMath.LogicQA.PropertiesUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesUiInteractionCases.cs:line 44
+
+   at AetherMath.LogicQA.PropertiesUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\PropertiesUiInteractionCases.cs:line 101
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 166
+
+EXIT_CODE=1

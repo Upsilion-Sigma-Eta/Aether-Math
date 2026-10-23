@@ -1,0 +1,17 @@
+RESULT 전체=1 합격=0 실패=1
+FAIL TEXT-ROLE-UI 수식 텍스트 역할의 실제 바인딩·범위·통합 적용/실행 취소와 LaTeX 진단 패널을 Headless 검증
+System.InvalidOperationException: 텍스트 역할 UI child 실패(exit=1). stdout:
+TEXT-ROLE-UI 비교 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\text-role-comparison-20261022T214706722Z-894361166842459d8d3111415bc1cdae\text-role-comparison.json
+TEXT-ROLE-UI LaTeX 증거 D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-text-role\latex-diagnostic-20261022T214707926Z-c837d63e33d34b7e8ea046034f97503d
+
+stderr:
+FAIL TEXT-ROLE-UI
+System.InvalidOperationException: LaTeX 차단 진단의 시작/말미 또는 layout advisory의 끝까지 실제 스크롤로 접근할 수 없습니다: top=13, 9, 458, 54, messageEnd=13, 8, 458, 54, tail=13, 42, 458, 12, viewport=0, 0, 484, 58.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.TextRoleUiInteractionCases.AssertLatexDiagnosticEvidence(MainWindow window, MainWindowViewModel viewModel, LatexDiagnosticEvidence evidence) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleUiInteractionCases.cs:line 995
+   at AetherMath.LogicQA.TextRoleUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleUiInteractionCases.cs:line 387
+   at AetherMath.LogicQA.TextRoleUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleUiInteractionCases.cs:line 52
+
+   at AetherMath.LogicQA.TextRoleUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\TextRoleUiInteractionCases.cs:line 109
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 226
+ACTUAL_EXIT_CODE=1

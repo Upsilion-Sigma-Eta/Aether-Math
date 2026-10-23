@@ -1,0 +1,1858 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:desktop="using:AetherMath.Desktop"
+        xmlns:editing="using:AetherMath.Editing"
+        xmlns:persistence="using:AetherMath.Persistence"
+        x:Class="AetherMath.Desktop.MainWindow"
+        x:DataType="desktop:MainWindowViewModel"
+        Title="AetherMath · 수식 편집기"
+        Width="1360" Height="880"
+        MinWidth="1060" MinHeight="700"
+        WindowStartupLocation="CenterScreen">
+  <Grid RowDefinitions="70,*,34">
+    <Border Grid.Row="0"
+            Background="{DynamicResource AetherHeaderBrush}"
+            BorderBrush="{DynamicResource AetherBorderBrush}"
+            BorderThickness="0,0,0,1">
+      <Grid ColumnDefinitions="196,*,Auto" Margin="22,0">
+        <StackPanel Orientation="Horizontal" Spacing="9" VerticalAlignment="Center">
+          <Grid Width="32" Height="34" Margin="0,0,1,0">
+            <TextBlock Text="A" FontFamily="Cambria Math" FontStyle="Italic"
+                       FontSize="31" Foreground="{DynamicResource AetherBlueBrush}"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Path Data="M 1,25 C 9,27 23,16 30,9 M 25,7 L 30,9 L 29,14"
+                  Stroke="{DynamicResource AetherBlueBrush}" StrokeThickness="1.7" />
+          </Grid>
+          <TextBlock Text="AetherMath" FontFamily="Segoe UI"
+                     FontSize="21" FontWeight="SemiBold"
+                     VerticalAlignment="Center" />
+        </StackPanel>
+
+        <Border Grid.Column="1" BorderBrush="#C6DBF0" BorderThickness="1,0,0,0"
+                Padding="18,0" Margin="0,16,16,16">
+          <StackPanel Spacing="2" VerticalAlignment="Center">
+            <TextBlock Text="수식 작업" Classes="label" FontSize="10" />
+            <TextBlock Text="{Binding WorkspaceName}" FontWeight="SemiBold" FontSize="13"
+                       TextTrimming="CharacterEllipsis" />
+          </StackPanel>
+        </Border>
+
+          <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8"
+                    VerticalAlignment="Center">
+          <Button x:Name="NewWorkspaceButton" Command="{Binding NewWorkspaceCommand}"
+                  AutomationProperties.AutomationId="NewWorkspaceButton"
+                  AutomationProperties.Name="새 수식 작업 만들기"
+                  ToolTip.Tip="새 수식 작업을 시작합니다">
+            <StackPanel Orientation="Horizontal" Spacing="7">
+              <Path Width="15" Height="15" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.6"
+                    Data="M 2,2 L 13,2 L 17,6 L 17,18 L 2,18 Z M 13,2 L 13,6 L 17,6 M 9.5,9 L 9.5,16 M 6,12.5 L 13,12.5" />
+              <TextBlock Text="새 작업" VerticalAlignment="Center" />
+            </StackPanel>
+          </Button>
+          <Button x:Name="OpenWorkspaceButton" Command="{Binding OpenCommand}"
+                  AutomationProperties.AutomationId="OpenWorkspaceButton"
+                  AutomationProperties.Name="수식 파일 열기"
+                  ToolTip.Tip="편집 가능한 .aethermath 수식 파일 열기">
+            <StackPanel Orientation="Horizontal" Spacing="7">
+              <Path Width="15" Height="15" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.6"
+                    Data="M 1,5 L 1,2 L 7,2 L 9,5 L 17,5 L 17,7 M 1,5 L 1,15 L 15,15 L 18,7 L 5,7 L 2,15" />
+              <TextBlock Text="열기" VerticalAlignment="Center" />
+            </StackPanel>
+          </Button>
+          <Button x:Name="SaveWorkspaceButton" Command="{Binding SaveCommand}"
+                  AutomationProperties.AutomationId="SaveWorkspaceButton"
+                  AutomationProperties.Name="수식 원본 저장"
+                  ToolTip.Tip="현재 수식을 .aethermath 원본으로 저장">
+            <StackPanel Orientation="Horizontal" Spacing="7">
+              <Path Width="14" Height="14" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.6"
+                    Data="M 1,1 L 13,1 L 17,5 L 17,17 L 1,17 Z M 5,1 L 5,7 L 12,7 L 12,1 M 5,17 L 5,11 L 13,11 L 13,17" />
+              <TextBlock Text="저장" VerticalAlignment="Center" />
+            </StackPanel>
+          </Button>
+          <Border Width="1" Height="24" Background="#C6DBF0" Margin="3,0" />
+          <Button x:Name="UndoButton" Classes="icon-action" Command="{Binding UndoCommand}"
+                  AutomationProperties.AutomationId="UndoButton"
+                  AutomationProperties.Name="실행 취소" ToolTip.Tip="실행 취소">
+            <Path Width="17" Height="17" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.6"
+                  Data="M 6,2 L 1,7 L 6,12 M 1,7 L 10,7 C 18,7 18,17 10,17 L 6,17" />
+          </Button>
+          <Button x:Name="RedoButton" Classes="icon-action" Command="{Binding RedoCommand}"
+                  AutomationProperties.AutomationId="RedoButton"
+                  AutomationProperties.Name="다시 실행" ToolTip.Tip="다시 실행">
+            <Path Width="17" Height="17" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.6"
+                  Data="M 12,2 L 17,7 L 12,12 M 17,7 L 8,7 C 0,7 0,17 8,17 L 12,17" />
+          </Button>
+          <Button x:Name="ExportSvgButton" Classes="primary" Margin="5,0,0,0"
+                  Command="{Binding ShowOutputPreviewCommand}"
+                  AutomationProperties.AutomationId="ExportSvgButton"
+                  AutomationProperties.Name="SVG 출력 미리보기 열기"
+                  ToolTip.Tip="전체 작업의 SVG 출력 미리보기를 엽니다">
+            <StackPanel Orientation="Horizontal" Spacing="8">
+              <Path Width="15" Height="15" Stretch="Uniform" Stroke="White" StrokeThickness="1.7"
+                    Data="M 9,12 L 9,1 M 5,5 L 9,1 L 13,5 M 3,8 L 1,8 L 1,18 L 17,18 L 17,8 L 15,8" />
+              <TextBlock Text="SVG 미리보기" VerticalAlignment="Center" />
+            </StackPanel>
+          </Button>
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <Grid Grid.Row="1" ColumnDefinitions="224,*,268" Margin="18,18,18,14">
+      <Border x:Name="TemplateToolsPanel" Grid.Column="0" Margin="0,0,14,0" Padding="12,17,12,14"
+              Background="#E2EEFB" CornerRadius="10"
+              AutomationProperties.AutomationId="TemplateToolsPanel"
+              AutomationProperties.Name="수식 구조·기호·문자 도구">
+        <Grid RowDefinitions="Auto,*,Auto">
+          <StackPanel Spacing="5" Margin="2,0,0,17">
+            <TextBlock Text="입력 도구" Classes="section-title" />
+            <TextBlock Text="구조 템플릿, 수학 기호와 문자" Classes="hint" FontSize="10"
+                       TextWrapping="Wrap" />
+          </StackPanel>
+          <TabControl x:Name="ToolModeTabs" Grid.Row="1" Classes="tool-mode" SelectedIndex="0"
+                      AutomationProperties.AutomationId="ToolModeTabs"
+                      AutomationProperties.Name="구조·기호·문자 도구 모드">
+            <TabItem x:Name="StructureToolsTab" Header="구조"
+                     AutomationProperties.AutomationId="StructureToolsTab"
+                     AutomationProperties.Name="구조 템플릿 도구">
+          <ScrollViewer x:Name="TemplateToolsScrollViewer"
+                        HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                        AutomationProperties.AutomationId="TemplateToolsScrollViewer"
+                        AutomationProperties.Name="수식 템플릿 목록 스크롤">
+            <StackPanel Spacing="9" Margin="0,0,10,0">
+              <Button x:Name="InsertFractionButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertFractionCommand}"
+                    AutomationProperties.AutomationId="InsertFractionButton"
+                    AutomationProperties.Name="분수 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 분자에 감싸거나 빈 위치에 분자·분모 슬롯이 있는 분수를 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <Grid Width="23" Height="34" RowDefinitions="*,1,*" HorizontalAlignment="Left">
+                  <TextBlock Text="a" FontFamily="Cambria Math" FontStyle="Italic" FontSize="15"
+                             HorizontalAlignment="Center" VerticalAlignment="Center" />
+                  <Border Grid.Row="1" Background="{DynamicResource AetherInkBrush}" />
+                  <TextBlock Grid.Row="2" Text="b" FontFamily="Cambria Math" FontStyle="Italic" FontSize="15"
+                             HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Grid>
+                <TextBlock Grid.Column="1" Text="분수" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertRootButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertRootCommand}"
+                    AutomationProperties.AutomationId="InsertRootButton"
+                    AutomationProperties.Name="근호 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 근호 안에 감싸거나 빈 근호 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <TextBlock Text="√x" FontFamily="Cambria Math" FontSize="25" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="근호" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertSuperscriptButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertSuperscriptCommand}"
+                    AutomationProperties.AutomationId="InsertSuperscriptButton"
+                    AutomationProperties.Name="위첨자 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 밑으로 감싸거나 빈 밑·위첨자 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <Grid Width="28" Height="34" HorizontalAlignment="Left">
+                  <TextBlock Text="x" FontFamily="Cambria Math" FontStyle="Italic" FontSize="24"
+                             VerticalAlignment="Bottom" />
+                  <TextBlock Text="a" FontFamily="Cambria Math" FontStyle="Italic" FontSize="13"
+                             Margin="14,0,0,0" VerticalAlignment="Top" />
+                </Grid>
+                <TextBlock Grid.Column="1" Text="위첨자" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertMatrixButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertMatrixCommand}"
+                    AutomationProperties.AutomationId="InsertMatrixButton"
+                    AutomationProperties.Name="2행 2열 행렬 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 첫 셀에 넣거나 네 개의 빈 셀이 있는 2×2 행렬을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <Grid Width="27" Height="29" HorizontalAlignment="Left" VerticalAlignment="Center">
+                  <Path Stroke="{DynamicResource AetherInkBrush}" StrokeThickness="1.2"
+                        Data="M 4,1 L 1,1 L 1,28 L 4,28 M 23,1 L 26,1 L 26,28 L 23,28" />
+                  <Grid RowDefinitions="*,*" ColumnDefinitions="*,*" Margin="5,1">
+                    <TextBlock Text="a" FontFamily="Cambria Math" FontSize="12" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Column="1" Text="b" FontFamily="Cambria Math" FontSize="12" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Row="1" Text="c" FontFamily="Cambria Math" FontSize="12" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="d" FontFamily="Cambria Math" FontSize="12" HorizontalAlignment="Center" />
+                  </Grid>
+                </Grid>
+                <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                  <TextBlock Text="행렬" />
+                  <TextBlock Text="2 × 2" Classes="label" FontSize="10" />
+                </StackPanel>
+              </Grid>
+              </Button>
+              <Button x:Name="InsertSubscriptButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertSubscriptCommand}"
+                    AutomationProperties.AutomationId="InsertSubscriptButton"
+                    AutomationProperties.Name="아래첨자 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 밑으로 감싸거나 빈 밑·아래첨자 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <Grid Width="28" Height="34" HorizontalAlignment="Left">
+                  <TextBlock Text="x" FontFamily="Cambria Math" FontStyle="Italic" FontSize="24"
+                             VerticalAlignment="Top" />
+                  <TextBlock Text="a" FontFamily="Cambria Math" FontStyle="Italic" FontSize="13"
+                             Margin="14,0,0,0" VerticalAlignment="Bottom" />
+                </Grid>
+                <TextBlock Grid.Column="1" Text="아래첨자" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertIntegralButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertIntegralCommand}"
+                    AutomationProperties.AutomationId="InsertIntegralButton"
+                    AutomationProperties.Name="적분 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 적분식으로 감싸거나 적분 기호, 상·하한·적분식·미분변수의 빈 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <TextBlock Text="∫" FontFamily="Cambria Math" FontSize="28"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="적분" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertSummationButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertSummationCommand}"
+                    AutomationProperties.AutomationId="InsertSummationButton"
+                    AutomationProperties.Name="합 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 합의 항으로 감싸거나 합 기호, 상·하한과 항의 빈 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <TextBlock Text="∑" FontFamily="Cambria Math" FontSize="25"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="합" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertLimitButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertLimitCommand}"
+                    AutomationProperties.AutomationId="InsertLimitButton"
+                    AutomationProperties.Name="극한 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 극한식으로 감싸거나 접근값과 극한식의 빈 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="0">
+                  <TextBlock Text="lim" FontFamily="Cambria Math" FontSize="13" />
+                  <TextBlock Text="x→a" FontFamily="Cambria Math" FontSize="9" />
+                </StackPanel>
+                <TextBlock Grid.Column="1" Text="극한" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertBracketsButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertBracketsCommand}"
+                    AutomationProperties.AutomationId="InsertBracketsButton"
+                    AutomationProperties.Name="소괄호 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 기본 소괄호로 감싸거나 빈 내용 슬롯이 있는 괄호를 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <TextBlock Text="( )" FontFamily="Cambria Math" FontSize="21"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="괄호" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Button x:Name="InsertCasesButton" Classes="structure-tool"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                    Command="{Binding InsertCasesCommand}"
+                    AutomationProperties.AutomationId="InsertCasesButton"
+                    AutomationProperties.Name="두 행 경우 나누기 템플릿 삽입"
+                    ToolTip.Tip="선택한 식을 첫째 행의 식으로 넣거나 두 행을 만들고 각 식·조건의 빈 슬롯을 삽입합니다">
+              <Grid ColumnDefinitions="34,*">
+                <Grid Width="30" Height="34" ColumnDefinitions="12,*" HorizontalAlignment="Left">
+                  <TextBlock Text="{}{" FontFamily="Cambria Math" FontSize="30"
+                             HorizontalAlignment="Center" VerticalAlignment="Center" />
+                  <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="-2">
+                    <TextBlock Text="a" FontFamily="Cambria Math" FontSize="11" />
+                    <TextBlock Text="b" FontFamily="Cambria Math" FontSize="11" />
+                  </StackPanel>
+                </Grid>
+                <TextBlock Grid.Column="1" Text="경우 나누기" VerticalAlignment="Center" />
+              </Grid>
+              </Button>
+              <Border Height="1" Background="#B9CCE2" Margin="1,4,8,2" />
+              <TextBlock Text="간격 도구" Classes="section-title" FontSize="11" Margin="2,0,0,0" />
+              <Button x:Name="InsertThinSpaceButton" Classes="structure-tool"
+                      HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                      Command="{Binding InsertThinSpaceCommand}"
+                      IsEnabled="{Binding CanInsertThinSpace}"
+                      AutomationProperties.AutomationId="InsertThinSpaceButton"
+                      AutomationProperties.Name="얇은 수학 공백 삽입"
+                      ToolTip.Tip="현재 입력 위치에 얇은 수학 공백을 넣습니다. Unicode U+2009 문자 삽입과는 별개입니다."
+                      ToolTip.ShowOnDisabled="True">
+                <Grid ColumnDefinitions="34,*">
+                  <Grid Width="27" Height="30" ColumnDefinitions="Auto,6,Auto"
+                        HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Text="a" FontFamily="Cambria Math" FontStyle="Italic" FontSize="16"
+                               VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="2" Text="b" FontFamily="Cambria Math" FontStyle="Italic" FontSize="16"
+                               VerticalAlignment="Center" />
+                  </Grid>
+                  <TextBlock Grid.Column="1" Text="얇은 수학 공백" TextWrapping="Wrap"
+                             VerticalAlignment="Center" />
+                </Grid>
+              </Button>
+              <TextBlock x:Name="ThinSpaceNotice" Text="{Binding ThinSpaceNotice}"
+                         Classes="hint" FontSize="10" TextWrapping="Wrap"
+                         AutomationProperties.AutomationId="ThinSpaceNotice" />
+              <TextBlock x:Name="ThinSpaceHelpText"
+                         Text="Unicode U+2009 문자와 구별되는 간격 명령입니다. Ctrl+클릭 또는 구조 트리에서 선택해 삭제할 수 있습니다."
+                         Classes="hint" FontSize="10" TextWrapping="Wrap" />
+              <TextBlock x:Name="ThinSpaceDisabledReason" Text="{Binding ThinSpaceDisabledReason}"
+                         Classes="validation" FontSize="10" TextWrapping="Wrap"
+                         AutomationProperties.AutomationId="ThinSpaceDisabledReason"
+                         AutomationProperties.Name="얇은 수학 공백을 삽입할 수 없는 이유" />
+            </StackPanel>
+          </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="SymbolPaletteTab" Header="기호"
+                     AutomationProperties.AutomationId="SymbolPaletteTab"
+                     AutomationProperties.Name="수학 기호 찾아보기">
+              <ScrollViewer x:Name="SymbolPaletteScrollViewer"
+                            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                            AutomationProperties.AutomationId="SymbolPaletteScrollViewer"
+                            AutomationProperties.Name="수학 기호 도구 스크롤">
+                <StackPanel Spacing="8" Margin="1,2,10,8">
+                    <TextBlock Text="분류와 이름으로 기호를 찾고, 목록을 선택한 뒤 삽입하세요."
+                               Classes="hint" FontSize="10" TextWrapping="Wrap" />
+                  <ComboBox x:Name="SymbolCategoryComboBox"
+                            ItemsSource="{Binding SymbolPalette.Categories}"
+                            SelectedValue="{Binding SymbolPalette.SelectedCategory, Mode=TwoWay}"
+                            SelectedValueBinding="{ReflectionBinding Category}"
+                            AutomationProperties.AutomationId="SymbolCategoryComboBox"
+                            AutomationProperties.Name="수학 기호 분류">
+                    <ComboBox.ItemTemplate>
+                      <DataTemplate x:DataType="editing:MathPaletteCategoryInfo">
+                        <TextBlock Text="{Binding NameKo}" />
+                      </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                  </ComboBox>
+                  <TextBox x:Name="SymbolSearchBox" Classes="palette-search"
+                           Text="{Binding SymbolPalette.SearchText, Mode=TwoWay}"
+                           PlaceholderText="기호 이름 또는 별칭 검색"
+                           AutomationProperties.AutomationId="SymbolSearchBox"
+                           AutomationProperties.Name="수학 기호 검색" />
+                  <ListBox x:Name="SymbolResultsList" Classes="palette-list"
+                           ItemsSource="{Binding SymbolPalette.Entries}"
+                           SelectedItem="{Binding SymbolPalette.SelectedPaletteEntry, Mode=TwoWay}"
+                           AutomationProperties.AutomationId="SymbolResultsList"
+                           AutomationProperties.Name="수학 기호 검색 결과">
+                    <ListBox.ItemTemplate>
+                      <DataTemplate x:DataType="editing:MathPaletteEntry">
+                        <Border Classes="palette-entry">
+                          <Grid ColumnDefinitions="38,*" ColumnSpacing="8">
+                            <Border Classes="palette-glyph-card">
+                              <TextBlock Text="{Binding PreviewText}" FontFamily="Cambria Math"
+                                         FontSize="21" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </Border>
+                            <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                              <TextBlock Text="{Binding NameKo}" FontSize="11" FontWeight="SemiBold"
+                                         TextTrimming="CharacterEllipsis" />
+                              <TextBlock Text="{Binding CodePointLabel}" Classes="palette-meta"
+                                         TextTrimming="CharacterEllipsis" />
+                            </StackPanel>
+                          </Grid>
+                        </Border>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <TextBlock Text="검색 결과가 없으면 분류나 검색어를 바꿔 보세요." Classes="hint" FontSize="10" />
+                  <Border x:Name="SelectedSymbolDetails" Classes="palette-detail"
+                          AutomationProperties.AutomationId="SelectedSymbolDetails">
+                    <StackPanel Spacing="3">
+                      <TextBlock Text="{Binding SymbolPalette.SelectedPaletteEntry.NameKo}" FontWeight="SemiBold"
+                                 TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="SelectedSymbolName" />
+                      <TextBlock Text="{Binding SymbolPalette.SelectedPaletteEntry.NameEn}" Classes="palette-meta"
+                                 TextWrapping="Wrap" />
+                      <TextBlock Text="{Binding SymbolPalette.SelectedPaletteEntry.CodePointLabel}" Classes="palette-meta"
+                                 TextWrapping="Wrap" />
+                      <TextBlock Text="기본 수학 글꼴 글리프 검사" Classes="palette-meta" />
+                      <TextBlock x:Name="SelectedSymbolGlyphStatus" Classes="palette-meta"
+                                 AutomationProperties.AutomationId="SelectedSymbolGlyphStatus"
+                                 AutomationProperties.Name="선택한 기호의 기본 글꼴 문자표 상태"
+                                 TextWrapping="Wrap" />
+                      <TextBlock Text="{Binding SymbolPalette.SelectedPaletteGlyphCoverage.FontFamily, StringFormat='{}글꼴: {0}'}"
+                                 Classes="palette-meta" TextWrapping="Wrap" />
+                      <TextBlock Text="{Binding SymbolPalette.SelectedPaletteGlyphCoverage.Reason}"
+                                 Classes="palette-meta" TextWrapping="Wrap" />
+                    </StackPanel>
+                  </Border>
+                  <TextBlock Text="검사는 기본 글꼴의 단일 글리프만 안내합니다. 대체 글꼴·결합 문자 렌더링을 보장하지 않습니다."
+                             Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                  <Button x:Name="InsertSelectedSymbolButton" Classes="palette-insert primary"
+                          HorizontalAlignment="Stretch"
+                          Command="{Binding SymbolPalette.InsertPaletteEntryCommand}"
+                          CommandParameter="{Binding SymbolPalette.SelectedPaletteEntry.Id}"
+                          AutomationProperties.AutomationId="InsertSelectedSymbolButton"
+                          AutomationProperties.Name="선택한 수학 기호 삽입"
+                          ToolTip.Tip="선택한 기호를 현재 수식 편집 위치에 삽입합니다">
+                    <TextBlock Text="선택 기호 삽입" />
+                  </Button>
+                </StackPanel>
+              </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="UnicodeBrowserTab" Header="문자"
+                     AutomationProperties.AutomationId="UnicodeBrowserTab"
+                     AutomationProperties.Name="유니코드와 이모지 찾아보기">
+              <ScrollViewer x:Name="UnicodeBrowserScrollViewer"
+                            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+                            AutomationProperties.AutomationId="UnicodeBrowserScrollViewer"
+                            AutomationProperties.Name="유니코드·이모지 도구 스크롤">
+                <StackPanel Spacing="8" Margin="1,2,10,8">
+                  <StackPanel x:Name="CharacterModeSelector" Orientation="Horizontal" Spacing="6"
+                              AutomationProperties.AutomationId="CharacterModeSelector"
+                              AutomationProperties.Name="유니코드 또는 엄선 이모지 모드">
+                    <RadioButton x:Name="UnicodeModeButton" GroupName="CharacterPaletteMode" IsChecked="True"
+                                 Content="유니코드" FontSize="11" Click="OnUnicodeModeClick"
+                                 AutomationProperties.AutomationId="UnicodeModeButton"
+                                 AutomationProperties.Name="유니코드 브라우저" />
+                    <RadioButton x:Name="EmojiModeButton" GroupName="CharacterPaletteMode"
+                                 Content="엄선 이모지" FontSize="11" Click="OnEmojiModeClick"
+                                 AutomationProperties.AutomationId="EmojiModeButton"
+                                 AutomationProperties.Name="엄선 이모지 브라우저" />
+                  </StackPanel>
+
+                  <StackPanel x:Name="UnicodeBrowserPanel" Spacing="7">
+                    <TextBlock Text="코드 포인트를 조회하거나 추천 범위에서 찾으세요. 페이지마다 128개 문자를 보여 줍니다."
+                               Classes="hint" FontSize="10" TextWrapping="Wrap" />
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="6">
+                      <TextBox x:Name="UnicodeQueryBox" Text="{Binding SymbolPalette.UnicodeQuery, Mode=TwoWay}"
+                               PlaceholderText="예: U+2200"
+                               AutomationProperties.AutomationId="UnicodeQueryBox"
+                               AutomationProperties.Name="유니코드 코드 포인트 입력" />
+                      <Button Grid.Column="1" x:Name="UnicodeLookupButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.LookupUnicodeCommand}"
+                              AutomationProperties.AutomationId="UnicodeLookupButton"
+                              AutomationProperties.Name="유니코드 코드 포인트 찾기">찾기</Button>
+                    </Grid>
+                    <TextBlock x:Name="UnicodeLookupError" Text="{Binding SymbolPalette.UnicodeLookupError}"
+                               Classes="palette-error" AutomationProperties.AutomationId="UnicodeLookupError"
+                               TextWrapping="Wrap" />
+                    <WrapPanel x:Name="UnicodeQuickRanges" ItemSpacing="5" LineSpacing="5"
+                               AutomationProperties.AutomationId="UnicodeQuickRanges"
+                               AutomationProperties.Name="유니코드 추천 범위">
+                      <Button x:Name="MathUnicodeRangeButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.BrowseUnicodeRangeCommand}"
+                              CommandParameter="unicode.range.math"
+                              AutomationProperties.AutomationId="MathUnicodeRangeButton"
+                              AutomationProperties.Name="수학 기호 범위로 이동">수학</Button>
+                      <Button x:Name="GreekUnicodeRangeButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.BrowseUnicodeRangeCommand}"
+                              CommandParameter="unicode.range.greek"
+                              AutomationProperties.AutomationId="GreekUnicodeRangeButton"
+                              AutomationProperties.Name="그리스 문자 범위로 이동">그리스</Button>
+                      <Button x:Name="HangulUnicodeRangeButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.BrowseUnicodeRangeCommand}"
+                              CommandParameter="unicode.range.hangul"
+                              AutomationProperties.AutomationId="HangulUnicodeRangeButton"
+                              AutomationProperties.Name="한글 음절 범위로 이동">한글</Button>
+                    </WrapPanel>
+                    <Grid ColumnDefinitions="*,Auto,*" ColumnSpacing="5">
+                      <Button x:Name="UnicodePreviousPageButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.PreviousUnicodePageCommand}"
+                              AutomationProperties.AutomationId="UnicodePreviousPageButton"
+                              AutomationProperties.Name="이전 유니코드 페이지">이전</Button>
+                      <TextBlock Grid.Column="1" x:Name="UnicodePageIndicator"
+                                 Classes="palette-meta" VerticalAlignment="Center"
+                                 AutomationProperties.AutomationId="UnicodePageIndicator"
+                                 AutomationProperties.Name="현재 유니코드 페이지" />
+                      <Button Grid.Column="2" x:Name="UnicodeNextPageButton" Classes="palette-compact-action"
+                              Command="{Binding SymbolPalette.NextUnicodePageCommand}"
+                              AutomationProperties.AutomationId="UnicodeNextPageButton"
+                              AutomationProperties.Name="다음 유니코드 페이지">다음</Button>
+                    </Grid>
+                    <TextBlock x:Name="UnicodePageCount" Text="{Binding SymbolPalette.UnicodePageCount, StringFormat='{}총 {0} 페이지'}"
+                               Classes="palette-meta" HorizontalAlignment="Center"
+                               AutomationProperties.AutomationId="UnicodePageCount" />
+                    <ListBox x:Name="UnicodeResultsList" Classes="palette-list"
+                             ItemsSource="{Binding SymbolPalette.VisibleUnicodeEntries}"
+                             SelectedItem="{Binding SymbolPalette.SelectedUnicodeEntry, Mode=TwoWay}"
+                             AutomationProperties.AutomationId="UnicodeResultsList"
+                             AutomationProperties.Name="유니코드 문자 결과">
+                      <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="editing:UnicodeScalarEntry">
+                          <Border Classes="palette-entry">
+                            <Grid ColumnDefinitions="70,*" ColumnSpacing="8">
+                              <Border Classes="palette-glyph-card" MinWidth="62">
+                                <TextBlock Text="{Binding PreviewText}" FontFamily="Cambria Math"
+                                           FontSize="{Binding PreviewIsPlaceholder, Converter={x:Static desktop:UnicodePreviewFontSizeConverter.Instance}}"
+                                           MaxWidth="62" TextWrapping="Wrap"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                              </Border>
+                              <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding CodePointLabel}" FontSize="11" FontWeight="SemiBold" />
+                                <TextBlock Text="{Binding CategoryNameKo}" Classes="palette-meta" />
+                                <TextBlock Text="{Binding DisabledReason}" Classes="palette-error" TextWrapping="Wrap" />
+                              </StackPanel>
+                            </Grid>
+                          </Border>
+                        </DataTemplate>
+                      </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Border x:Name="SelectedUnicodeDetails" Classes="palette-detail"
+                            AutomationProperties.AutomationId="SelectedUnicodeDetails">
+                      <StackPanel Spacing="3">
+                        <TextBlock x:Name="SelectedUnicodeCodePoint" Text="{Binding SymbolPalette.SelectedUnicodeEntry.CodePointLabel}"
+                                   FontWeight="SemiBold" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="SelectedUnicodeCodePoint" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedUnicodeEntry.CategoryNameKo, StringFormat='{}분류: {0}'}"
+                                   Classes="palette-meta" />
+                        <TextBlock x:Name="UnicodeDisabledReason"
+                                   Text="{Binding SymbolPalette.SelectedUnicodeEntry.DisabledReason}"
+                                   Classes="palette-error" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="UnicodeDisabledReason" />
+                        <TextBlock x:Name="SelectedUnicodeGlyphStatus" Classes="palette-meta"
+                                   AutomationProperties.AutomationId="SelectedUnicodeGlyphStatus"
+                                   AutomationProperties.Name="선택한 Unicode 문자의 기본 글꼴 문자표 상태"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedUnicodeGlyphCoverage.FontFamily, StringFormat='{}글꼴: {0}'}"
+                                   Classes="palette-meta" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedUnicodeGlyphCoverage.Reason}"
+                                   Classes="palette-meta" TextWrapping="Wrap" />
+                      </StackPanel>
+                    </Border>
+                    <TextBlock Text="공백·제어 문자는 대체 표시로 구분합니다. 기본 글꼴 검사는 안내용이며 대체 글꼴은 보장하지 않습니다."
+                               Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                    <Button x:Name="UnicodeInsertButton" Classes="palette-insert primary"
+                            HorizontalAlignment="Stretch"
+                            Command="{Binding SymbolPalette.InsertUnicodeScalarCommand}"
+                            CommandParameter="{Binding SymbolPalette.SelectedUnicodeEntry.CodePoint}"
+                            AutomationProperties.AutomationId="UnicodeInsertButton"
+                            AutomationProperties.Name="선택한 유니코드 문자 삽입"
+                            ToolTip.Tip="삽입할 수 있는 선택 문자만 현재 수식 편집 위치에 추가합니다">선택 문자 삽입</Button>
+                  </StackPanel>
+
+                  <StackPanel x:Name="EmojiBrowserPanel" Spacing="7" IsVisible="False">
+                    <TextBlock Text="엄선한 이모지를 검색해 원래 문자 시퀀스 그대로 삽입합니다."
+                               Classes="hint" FontSize="10" TextWrapping="Wrap" />
+                    <TextBox x:Name="EmojiSearchBox" Classes="palette-search"
+                             Text="{Binding SymbolPalette.EmojiSearchText, Mode=TwoWay}"
+                             PlaceholderText="이모지 이름 또는 별칭 검색"
+                             AutomationProperties.AutomationId="EmojiSearchBox"
+                             AutomationProperties.Name="엄선 이모지 검색" />
+                    <ListBox x:Name="EmojiResultsList" Classes="palette-list"
+                             ItemsSource="{Binding SymbolPalette.EmojiEntries}"
+                             SelectedItem="{Binding SymbolPalette.SelectedEmojiEntry, Mode=TwoWay}"
+                             AutomationProperties.AutomationId="EmojiResultsList"
+                             AutomationProperties.Name="엄선 이모지 결과">
+                      <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="editing:CuratedEmojiEntry">
+                          <Border Classes="palette-entry">
+                            <Grid ColumnDefinitions="38,*" ColumnSpacing="8">
+                              <Border Classes="palette-glyph-card">
+                                <TextBlock Text="{Binding PreviewText}" FontSize="20"
+                                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+                              </Border>
+                              <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding NameKo}" FontSize="11" FontWeight="SemiBold"
+                                           TextTrimming="CharacterEllipsis" />
+                                <TextBlock Text="{Binding CodePointLabel}" Classes="palette-meta"
+                                           TextTrimming="CharacterEllipsis" />
+                              </StackPanel>
+                            </Grid>
+                          </Border>
+                        </DataTemplate>
+                      </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Border x:Name="SelectedEmojiDetails" Classes="palette-detail"
+                            AutomationProperties.AutomationId="SelectedEmojiDetails">
+                      <StackPanel Spacing="3">
+                        <TextBlock x:Name="SelectedEmojiName" Text="{Binding SymbolPalette.SelectedEmojiEntry.NameKo}" FontWeight="SemiBold"
+                                   TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="SelectedEmojiName" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedEmojiEntry.NameEn}" Classes="palette-meta"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedEmojiEntry.CodePointLabel}"
+                                   Classes="palette-meta" TextWrapping="Wrap" />
+                        <TextBlock x:Name="SelectedEmojiGlyphStatus" Classes="palette-meta"
+                                   AutomationProperties.AutomationId="SelectedEmojiGlyphStatus"
+                                   AutomationProperties.Name="선택한 이모지의 기본 글꼴 문자표 상태"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedEmojiGlyphCoverage.FontFamily, StringFormat='{}글꼴: {0}'}"
+                                   Classes="palette-meta" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding SymbolPalette.SelectedEmojiGlyphCoverage.Reason}"
+                                   Classes="palette-meta" TextWrapping="Wrap" />
+                      </StackPanel>
+                    </Border>
+                    <TextBlock Text="기본 글꼴 글리프 검사는 안내용입니다. 대체 글꼴·ZWJ 결합·컬러 이모지 렌더링은 보장하지 않습니다."
+                               Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                    <Button x:Name="EmojiInsertButton" Classes="palette-insert primary"
+                            HorizontalAlignment="Stretch"
+                            Command="{Binding SymbolPalette.InsertEmojiCommand}"
+                            CommandParameter="{Binding SymbolPalette.SelectedEmojiEntry.Id}"
+                            AutomationProperties.AutomationId="EmojiInsertButton"
+                            AutomationProperties.Name="선택한 이모지 삽입"
+                            ToolTip.Tip="선택한 이모지의 전체 원문 시퀀스를 현재 편집 위치에 삽입합니다">선택 이모지 삽입</Button>
+                  </StackPanel>
+                </StackPanel>
+              </ScrollViewer>
+            </TabItem>
+          </TabControl>
+          <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Spacing="9" Margin="2,20,2,0">
+            <Border Height="1" Background="#C6DBF0" />
+            <TextBlock Text="코드 없이 편집" FontSize="11" FontWeight="SemiBold" />
+            <TextBlock Text="수식의 분자·분모나 행렬 셀을 클릭하고 바로 입력하세요." Classes="hint" FontSize="10" />
+          </StackPanel>
+        </Grid>
+      </Border>
+
+      <Border x:Name="OutputPreviewToolsPanel" Grid.Column="0" Margin="0,0,14,0" Padding="12,17,12,14"
+              Background="#E2EEFB" CornerRadius="10" IsVisible="False"
+              AutomationProperties.AutomationId="OutputPreviewToolsPanel"
+              AutomationProperties.Name="SVG 출력 미리보기 안내">
+        <Grid RowDefinitions="Auto,*,Auto">
+          <StackPanel Spacing="6" Margin="2,0,0,14">
+            <TextBlock Text="출력 미리보기" Classes="section-title" />
+            <TextBlock Text="전체 작업의 고정된 SVG 렌더링을 확인합니다." Classes="hint" FontSize="10"
+                       TextWrapping="Wrap" />
+          </StackPanel>
+          <Border Grid.Row="1" Classes="output-preview-status-card" VerticalAlignment="Top">
+            <StackPanel Spacing="7">
+              <TextBlock Text="{Binding OutputPreview.StateSummary}" FontWeight="SemiBold"
+                         TextWrapping="Wrap" AutomationProperties.AutomationId="OutputPreviewToolsState" />
+              <TextBlock Text="{Binding OutputPreview.SnapshotSummary}" Classes="hint" FontSize="10"
+                         TextWrapping="Wrap" AutomationProperties.AutomationId="OutputPreviewToolsSnapshot" />
+              <TextBlock Text="{Binding OutputPreview.CurrentRevisionSummary}" Classes="hint" FontSize="10"
+                         TextWrapping="Wrap" AutomationProperties.AutomationId="OutputPreviewToolsRevision" />
+              <TextBlock Text="전체 작업 · 모든 그룹과 행" Classes="hint" FontSize="10" TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+          <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Spacing="8" Margin="2,18,2,0">
+            <TextBlock Text="편집 수식은 그대로 유지됩니다. 출력 설정을 마치면 편집 화면으로 돌아오세요."
+                       Classes="hint" FontSize="10" TextWrapping="Wrap" />
+            <Button x:Name="OutputPreviewReturnToEditorButton" Classes="primary"
+                    Click="OnOutputPreviewReturnToEditorClick"
+                    AutomationProperties.AutomationId="OutputPreviewReturnToEditorButton"
+                    AutomationProperties.Name="수식 편집으로 돌아가기">
+              <TextBlock Text="편집으로 돌아가기" />
+            </Button>
+          </StackPanel>
+        </Grid>
+      </Border>
+
+      <Grid Grid.Column="1" RowDefinitions="Auto,*,Auto" Margin="0,0,14,0">
+        <Grid x:Name="EditorWorkspaceHeader" ColumnDefinitions="*,Auto" Margin="2,0,2,14">
+          <StackPanel Spacing="5">
+            <TextBlock Text="수식 작업영역" FontSize="23" FontWeight="SemiBold" />
+            <TextBlock Text="화면에 보이는 수식을 직접 선택하고 수정합니다." Classes="hint" />
+          </StackPanel>
+          <Border Grid.Column="1" Background="#DDEEFF" BorderBrush="#BCD9F8" BorderThickness="1"
+                  CornerRadius="5" Padding="9,4" VerticalAlignment="Top" Margin="10,6,0,0">
+            <TextBlock Text="직접 편집" Foreground="{DynamicResource AetherBlueBrush}" FontSize="10" FontWeight="SemiBold" />
+          </Border>
+        </Grid>
+
+        <Grid x:Name="OutputPreviewHeader" Grid.Row="0" ColumnDefinitions="*,Auto"
+              Margin="2,0,2,14" IsVisible="False">
+          <StackPanel Spacing="5">
+            <TextBlock Text="SVG 출력 미리보기" FontSize="23" FontWeight="SemiBold" />
+            <TextBlock Text="현재 고정된 작업 revision을 읽기 전용으로 표시합니다." Classes="hint" />
+          </StackPanel>
+          <Border Grid.Column="1" Background="#DDEEFF" BorderBrush="#BCD9F8" BorderThickness="1"
+                  CornerRadius="5" Padding="9,4" VerticalAlignment="Top" Margin="10,6,0,0">
+            <TextBlock Text="읽기 전용" Foreground="{DynamicResource AetherBlueBrush}" FontSize="10" FontWeight="SemiBold" />
+          </Border>
+        </Grid>
+
+        <Border x:Name="EditorWorkspaceSurface" Grid.Row="1" Classes="panel" ClipToBounds="True">
+          <Grid RowDefinitions="42,Auto,Auto,*,Auto">
+            <Border x:Name="EditorCanvasHeader" Background="#F8FBFF"
+                    BorderBrush="{DynamicResource AetherBorderBrush}" BorderThickness="0,0,0,1">
+              <Grid ColumnDefinitions="*,Auto" Margin="16,0">
+                <StackPanel Orientation="Horizontal" Spacing="7" VerticalAlignment="Center">
+                  <Border Width="5" Height="5" Background="{DynamicResource AetherBlueBrush}" CornerRadius="3" />
+                  <TextBlock Text="수식 편집" FontSize="11" FontWeight="SemiBold" />
+                </StackPanel>
+                <TextBlock Grid.Column="1" Text="등호 기준 정렬" Classes="label" FontSize="10" VerticalAlignment="Center" />
+              </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Background="#F0F7FF"
+                    BorderBrush="{DynamicResource AetherBorderBrush}" BorderThickness="0,0,0,1"
+                    Padding="12,5">
+              <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" ItemSpacing="5" LineSpacing="5">
+                <Border x:Name="ActiveGroupIndicator" Classes="group-indicator" Padding="10,6" Margin="0,0,3,0"
+                        AutomationProperties.AutomationId="ActiveGroupIndicator"
+                        AutomationProperties.Name="현재 그룹 번호와 전체 그룹 수">
+                  <StackPanel Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+                    <TextBlock Text="그룹" Classes="label" FontSize="11" />
+                    <TextBlock Text="{Binding ActiveGroupNumber}" FontSize="11" FontWeight="SemiBold"
+                               Foreground="{DynamicResource AetherBlueBrush}" />
+                    <TextBlock Text="/" Classes="label" FontSize="11" />
+                    <TextBlock Text="{Binding GroupCount}" Classes="label" FontSize="11" />
+                  </StackPanel>
+                </Border>
+
+                <Button x:Name="AddGroupButton" Classes="group-action" Command="{Binding AddGroupCommand}"
+                        ToolTip.Tip="현재 그룹 뒤에 새 수식 그룹 추가"
+                        AutomationProperties.AutomationId="AddGroupButton"
+                        AutomationProperties.Name="수식 그룹 추가">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#245B91" StrokeThickness="1.7"
+                        Data="M 9,1 L 9,17 M 1,9 L 17,9" />
+                </Button>
+                <Button x:Name="DuplicateGroupButton" Classes="group-action" Command="{Binding DuplicateGroupCommand}"
+                        ToolTip.Tip="현재 수식 그룹을 복제하고 새 그룹 선택"
+                        AutomationProperties.AutomationId="DuplicateGroupButton"
+                        AutomationProperties.Name="현재 수식 그룹 복제">
+                  <Path Width="17" Height="17" Stretch="Uniform" Stroke="#245B91" StrokeThickness="1.5"
+                        Data="M 6,5 L 16,5 L 16,16 L 6,16 Z M 3,12 L 1,12 L 1,1 L 12,1 L 12,3" />
+                </Button>
+                <Button x:Name="DeleteGroupButton" Classes="group-action" Command="{Binding DeleteGroupCommand}"
+                        ToolTip.Tip="{Binding DeleteGroupToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="DeleteGroupButton"
+                        AutomationProperties.Name="현재 수식 그룹 삭제">
+                  <Path Width="15" Height="16" Stretch="Uniform" Stroke="#8A4960" StrokeThickness="1.5"
+                        Data="M 2,4 L 14,4 M 5,4 L 5,1 L 11,1 L 11,4 M 4,5 L 5,15 L 11,15 L 12,5 M 7,7 L 7,13 M 9,7 L 9,13" />
+                </Button>
+                <Button x:Name="MoveGroupUpButton" Classes="group-action" Command="{Binding MoveGroupUpCommand}"
+                        ToolTip.Tip="{Binding MoveGroupUpToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="MoveGroupUpButton"
+                        AutomationProperties.Name="현재 수식 그룹 위로 이동">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#245B91" StrokeThickness="1.7"
+                        Data="M 9,16 L 9,2 M 3,8 L 9,2 L 15,8" />
+                </Button>
+                <Button x:Name="MoveGroupDownButton" Classes="group-action" Command="{Binding MoveGroupDownCommand}"
+                        ToolTip.Tip="{Binding MoveGroupDownToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="MoveGroupDownButton"
+                        AutomationProperties.Name="현재 수식 그룹 아래로 이동">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#245B91" StrokeThickness="1.7"
+                        Data="M 9,2 L 9,16 M 3,10 L 9,16 L 15,10" />
+                </Button>
+              </WrapPanel>
+            </Border>
+
+            <Border Grid.Row="2" Background="#FBFDFF"
+                    BorderBrush="{DynamicResource AetherBorderBrush}" BorderThickness="0,0,0,1"
+                    Padding="12,5">
+              <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" ItemSpacing="5" LineSpacing="5">
+                <Border x:Name="ActiveRowIndicator" Classes="row-indicator" Padding="10,6" Margin="0,0,3,0"
+                        AutomationProperties.AutomationId="ActiveRowIndicator"
+                        AutomationProperties.Name="현재 수식 그룹과 활성 행">
+                  <StackPanel Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+                    <TextBlock Text="그룹" Classes="label" FontSize="11" />
+                    <TextBlock Text="{Binding ActiveGroupNumber}" FontSize="11" FontWeight="SemiBold"
+                               Foreground="{DynamicResource AetherBlueBrush}" />
+                    <TextBlock Text="·" Classes="label" FontSize="11" />
+                    <TextBlock Text="{Binding ActiveRowNumber}" FontSize="11" FontWeight="SemiBold"
+                               Foreground="{DynamicResource AetherBlueBrush}" />
+                    <TextBlock Text="/" Classes="label" FontSize="11" />
+                    <TextBlock Text="{Binding ActiveRowCount}" Classes="label" FontSize="11" />
+                    <TextBlock Text="행" Classes="label" FontSize="11" />
+                  </StackPanel>
+                </Border>
+
+                <Button x:Name="AddRowButton" Classes="row-action" Command="{Binding AddRowCommand}"
+                        ToolTip.Tip="현재 그룹에 새 빈 수식 행 추가"
+                        AutomationProperties.AutomationId="AddRowButton"
+                        AutomationProperties.Name="수식 행 추가">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.7"
+                        Data="M 9,1 L 9,17 M 1,9 L 17,9" />
+                </Button>
+                <Button x:Name="DuplicateRowButton" Classes="row-action" Command="{Binding DuplicateRowCommand}"
+                        ToolTip.Tip="현재 행을 복제하고 새 행을 선택"
+                        AutomationProperties.AutomationId="DuplicateRowButton"
+                        AutomationProperties.Name="현재 수식 행 복제">
+                  <Path Width="17" Height="17" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.5"
+                        Data="M 6,5 L 16,5 L 16,16 L 6,16 Z M 3,12 L 1,12 L 1,1 L 12,1 L 12,3" />
+                </Button>
+                <Button x:Name="DeleteRowButton" Classes="row-action" Command="{Binding DeleteRowCommand}"
+                        ToolTip.Tip="{Binding DeleteRowToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="DeleteRowButton"
+                        AutomationProperties.Name="현재 수식 행 삭제">
+                  <Path Width="15" Height="16" Stretch="Uniform" Stroke="#8A4960" StrokeThickness="1.5"
+                        Data="M 2,4 L 14,4 M 5,4 L 5,1 L 11,1 L 11,4 M 4,5 L 5,15 L 11,15 L 12,5 M 7,7 L 7,13 M 9,7 L 9,13" />
+                </Button>
+                <Button x:Name="MoveRowUpButton" Classes="row-action" Command="{Binding MoveRowUpCommand}"
+                        ToolTip.Tip="{Binding MoveRowUpToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="MoveRowUpButton"
+                        AutomationProperties.Name="현재 수식 행 위로 이동">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.7"
+                        Data="M 9,16 L 9,2 M 3,8 L 9,2 L 15,8" />
+                </Button>
+                <Button x:Name="MoveRowDownButton" Classes="row-action" Command="{Binding MoveRowDownCommand}"
+                        ToolTip.Tip="{Binding MoveRowDownToolTip}" ToolTip.ShowOnDisabled="True"
+                        AutomationProperties.AutomationId="MoveRowDownButton"
+                        AutomationProperties.Name="현재 수식 행 아래로 이동">
+                  <Path Width="15" Height="15" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.7"
+                        Data="M 9,2 L 9,16 M 3,10 L 9,16 L 15,10" />
+                </Button>
+              </WrapPanel>
+            </Border>
+
+            <ScrollViewer x:Name="MathEditorScrollViewer" Grid.Row="3"
+                          HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                          AutomationProperties.AutomationId="MathEditorScrollViewer"
+                          AutomationProperties.Name="수식 작업영역 스크롤">
+              <desktop:MathEditorControl x:Name="MathEditorSurface"
+                                         Session="{Binding Session}"
+                                         Margin="30,30,30,40" MinHeight="360"
+                                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                                         Focusable="True"
+                                         AutomationProperties.AutomationId="MathEditorSurface"
+                                         AutomationProperties.Name="수식 직접 편집 작업영역" />
+            </ScrollViewer>
+            <Border Grid.Row="4" BorderBrush="#E9EFF7" BorderThickness="0,1,0,0" Padding="16,10">
+              <TextBlock Text="분모·근호 안·첨자·행렬 셀을 클릭해 선택한 부분만 바꿀 수 있습니다."
+                         Classes="hint" FontSize="10" />
+            </Border>
+          </Grid>
+        </Border>
+
+        <Border x:Name="OutputPreviewSurface" Grid.Row="1" Classes="panel output-preview-surface"
+                ClipToBounds="True" IsVisible="False"
+                AutomationProperties.AutomationId="OutputPreviewSurface"
+                AutomationProperties.Name="SVG 출력 레이아웃 읽기 전용 미리보기">
+          <Grid RowDefinitions="42,*">
+            <Border x:Name="OutputPreviewCanvasHeader" Background="#F8FBFF"
+                    BorderBrush="{DynamicResource AetherBorderBrush}" BorderThickness="0,0,0,1"
+                    AutomationProperties.AutomationId="OutputPreviewCanvasHeader">
+              <StackPanel Margin="16,4" Spacing="1" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Spacing="7">
+                  <Border Width="5" Height="5" Background="{DynamicResource AetherBlueBrush}" CornerRadius="3" />
+                  <TextBlock x:Name="OutputPreviewSurfaceTitle" Text="미리보기" FontSize="11"
+                             FontWeight="SemiBold" TextTrimming="CharacterEllipsis"
+                             AutomationProperties.AutomationId="OutputPreviewSurfaceTitle" />
+                </StackPanel>
+                <TextBlock x:Name="OutputPreviewSurfaceScaleNotice" Text="100%" Classes="label" FontSize="9"
+                           Margin="12,0,0,0" TextTrimming="CharacterEllipsis"
+                           AutomationProperties.AutomationId="OutputPreviewSurfaceScaleNotice" />
+              </StackPanel>
+            </Border>
+            <ScrollViewer x:Name="OutputPreviewScrollViewer" Grid.Row="1"
+                          HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                          Background="White" AutomationProperties.AutomationId="OutputPreviewScrollViewer"
+                          AutomationProperties.Name="SVG 출력 미리보기 스크롤">
+              <desktop:MathOutputPreviewControl x:Name="OutputPreviewCanvas"
+                                                Layout="{Binding OutputPreview.PreviewSnapshot.Layout}"
+                                                Margin="30,30,30,40"
+                                                HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                Focusable="False" IsHitTestVisible="False"
+                                                AutomationProperties.AutomationId="OutputPreviewCanvas"
+                                                AutomationProperties.Name="고정 레이아웃 읽기 전용 SVG 미리보기" />
+            </ScrollViewer>
+          </Grid>
+        </Border>
+
+        <Expander Grid.Row="2" x:Name="LatexCodeExpander" Classes="code-panel"
+                  IsExpanded="False" Margin="0,12,0,0"
+                  AutomationProperties.AutomationId="LatexCodeExpander"
+                  AutomationProperties.Name="LaTeX 보조 코드 펼치기">
+          <Expander.Header>
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="7">
+              <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                <TextBlock Text="LaTeX 보조 코드" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" />
+                <TextBlock Text="자동 생성 · 읽기 전용" Classes="label" FontSize="10" VerticalAlignment="Center" />
+                <TextBlock x:Name="LatexAmsmathNotice" Text="amsmath 필요" Classes="hint" FontSize="9"
+                           VerticalAlignment="Center"
+                           ToolTip.Tip="일반 텍스트·조건과 리터럴 ^/~ 표기, Display를 명시한 분수의 \dfrac에는 amsmath 패키지가 필요합니다."
+                           AutomationProperties.AutomationId="LatexAmsmathNotice"
+                           AutomationProperties.Name="텍스트 역할과 리터럴 표기의 LaTeX 패키지 안내" />
+              </StackPanel>
+              <ToggleButton x:Name="LatexHighlightToggle" Grid.Column="1"
+                            Classes="code-highlight-toggle"
+                            IsChecked="{Binding IsLatexHighlightingEnabled, Mode=TwoWay}"
+                            Click="OnLatexHighlightToggleClick"
+                            ToolTip.Tip="LaTeX 토큰의 색상 강조를 켜거나 끕니다. 원문과 선택 범위는 유지됩니다."
+                            AutomationProperties.AutomationId="LatexHighlightToggle"
+                            AutomationProperties.Name="LaTeX 구문 강조 표시"
+                            AutomationProperties.HelpText="코드 글꼴이나 원문을 바꾸지 않고 토큰 색상만 전환합니다." >
+                <TextBlock Text="강조" VerticalAlignment="Center" />
+              </ToggleButton>
+              <Button x:Name="CopyLatexButton" Grid.Column="2" Classes="code-copy-button"
+                      Padding="9,4" FontSize="10" IsEnabled="{Binding CanCopyLatex}"
+                      Click="OnCopyLatexClick"
+                      ToolTip.Tip="{Binding LatexCopyDisabledReason}"
+                      ToolTip.ShowOnDisabled="True"
+                      AutomationProperties.AutomationId="CopyLatexButton"
+                      AutomationProperties.Name="전체 LaTeX 코드 복사"
+                      AutomationProperties.HelpText="선택한 일부가 아니라 현재 수식 작업의 전체 LaTeX 코드를 복사합니다.">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                  <Path Width="12" Height="12" Stretch="Uniform" Stroke="#355779" StrokeThickness="1.4"
+                        Data="M 6,1 L 14,1 L 17,4 L 17,17 L 6,17 Z M 14,1 L 14,4 L 17,4 M 3,4 L 1,4 L 1,14 L 4,14" />
+                  <TextBlock x:Name="CopyLatexButtonLabel" Text="전체 코드 복사" VerticalAlignment="Center" />
+                </StackPanel>
+              </Button>
+            </Grid>
+          </Expander.Header>
+          <Grid x:Name="LatexCodePanelGrid" RowDefinitions="Auto,*" MaxHeight="160">
+            <ScrollViewer x:Name="LatexDiagnosticsScrollViewer" Grid.Row="0" MaxHeight="58"
+                          IsVisible="False" VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          AutomationProperties.AutomationId="LatexDiagnosticsScrollViewer"
+                          AutomationProperties.Name="LaTeX 코드와 레이아웃 진단 스크롤">
+              <StackPanel Spacing="4" Margin="6,5,6,0">
+                <Border x:Name="LatexCopyStatusBanner" IsVisible="False"
+                        Background="#EEF3F7" BorderBrush="#D2DDE5" BorderThickness="1"
+                        CornerRadius="6" Padding="6,3"
+                        AutomationProperties.AutomationId="LatexCopyStatusBanner">
+                  <TextBlock x:Name="LatexCopyStatusText" Text="{Binding LatexCopyMessage}"
+                             FontSize="10" TextWrapping="Wrap"
+                             ToolTip.Tip="{Binding LatexCopyMessage}"
+                             AutomationProperties.AutomationId="LatexCopyStatusText"
+                             AutomationProperties.Name="LaTeX 코드 복사 결과" />
+                </Border>
+                <Border x:Name="LatexCodeDiagnosticBanner" IsVisible="False"
+                        Background="#FFF4F3" BorderBrush="#E8C8C8" BorderThickness="1"
+                        CornerRadius="6" Padding="6,3"
+                        AutomationProperties.AutomationId="LatexCodeDiagnosticBanner">
+                  <TextBlock x:Name="LatexCodeDiagnosticText" Text="{Binding LatexCodeDiagnostic}"
+                             Foreground="#8A3B34" FontSize="10" TextWrapping="Wrap"
+                             ToolTip.Tip="{Binding LatexCodeDiagnostic}"
+                             AutomationProperties.AutomationId="LatexCodeDiagnosticText"
+                             AutomationProperties.Name="LaTeX 코드의 미지원 텍스트 또는 미완성 필수 슬롯 안내" />
+                </Border>
+                <Border x:Name="LatexLayoutDiagnosticBanner" IsVisible="False"
+                        Background="#FFF8E8" BorderBrush="#E6D6A9" BorderThickness="1"
+                        CornerRadius="6" Padding="6,3"
+                        AutomationProperties.AutomationId="LatexLayoutDiagnosticBanner">
+                  <StackPanel Spacing="3">
+                    <TextBlock Text="행 간격 미보존 안내"
+                               FontSize="10" FontWeight="SemiBold" TextWrapping="Wrap" />
+                    <TextBlock Text="그룹 내부 행 간격은 LaTeX 코드에 보존되지 않습니다. 이 간격 경고만으로 코드 출력을 차단하지 않습니다."
+                               Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                    <ItemsControl x:Name="LatexLayoutDiagnosticsList"
+                                  ItemsSource="{Binding LatexLayoutDiagnostics}"
+                                  AutomationProperties.AutomationId="LatexLayoutDiagnosticsList">
+                      <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="editing:LatexLayoutDiagnostic">
+                          <TextBlock Text="{Binding Message}" FontSize="9" TextWrapping="Wrap"
+                                     AutomationProperties.Name="LaTeX에서 보존되지 않는 그룹 레이아웃 진단" />
+                        </DataTemplate>
+                      </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                  </StackPanel>
+                </Border>
+              </StackPanel>
+            </ScrollViewer>
+            <Border x:Name="LatexCodeViewFrame" Grid.Row="1" Classes="code-view-frame"
+                    MinHeight="90" MaxHeight="110">
+              <desktop:LatexCodeSurface x:Name="LatexCodeView"
+                                         Syntax="{Binding LatexSyntax, Mode=OneWay}"
+                                         IsHighlightingEnabled="{Binding IsLatexHighlightingEnabled, Mode=OneWay}"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                         AutomationProperties.AutomationId="LatexCodeView"
+                                         AutomationProperties.Name="자동 생성된 LaTeX 원문 선택 표면" />
+            </Border>
+          </Grid>
+        </Expander>
+        <Border x:Name="OutputPreviewFooter" Grid.Row="2" Classes="code-panel output-preview-footer"
+                Margin="0,12,0,0" Padding="12,8" IsVisible="False"
+                AutomationProperties.AutomationId="OutputPreviewFooter">
+          <TextBlock Text="선택한 모드의 현재 미리보기를 SVG로 저장합니다."
+                     Classes="hint" FontSize="10" TextWrapping="Wrap" />
+        </Border>
+      </Grid>
+
+      <Border Grid.Column="2" Classes="panel" Padding="16,18,16,16">
+        <Grid RowDefinitions="Auto,*,Auto">
+          <StackPanel Spacing="5" Margin="1,0,0,12">
+            <TextBlock Text="수식 살펴보기" Classes="section-title" />
+                      <TextBlock x:Name="InspectorSubtitle" Text="현재 편집 중인 수식의 정보" Classes="hint" FontSize="11" />
+          </StackPanel>
+          <TabControl x:Name="EquationInspector" Grid.Row="1" Classes="inspector"
+                      AutomationProperties.AutomationId="EquationInspector"
+                      AutomationProperties.Name="수식 속성과 구조">
+            <TabItem x:Name="PropertiesTab" Header="속성"
+                     AutomationProperties.AutomationId="PropertiesTab"
+                     AutomationProperties.Name="선택 수식 속성">
+              <ScrollViewer x:Name="PropertiesScrollViewer"
+                            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="PropertiesPanelContent" Spacing="9" Margin="0,12,10,10">
+                  <TextBlock Text="현재 선택" Classes="label" FontWeight="SemiBold" />
+                  <Border Background="#ECF5FF" BorderBrush="#C7DFF8" BorderThickness="1" CornerRadius="7" Padding="9,7">
+                    <TextBlock x:Name="SelectedNodeDescription" Text="{Binding SelectedNodeDescription}"
+                               TextWrapping="Wrap" MaxLines="3" TextTrimming="CharacterEllipsis"
+                               AutomationProperties.AutomationId="SelectedNodeDescription"
+                               AutomationProperties.Name="선택한 수식 부분" />
+                  </Border>
+                  <TextBlock x:Name="PropertyTargetSummary" Text="{Binding Properties.TargetSummary}"
+                             FontSize="10" TextWrapping="Wrap" MaxLines="2" TextTrimming="CharacterEllipsis"
+                             AutomationProperties.AutomationId="PropertyTargetSummary"
+                             AutomationProperties.Name="속성 적용 대상" />
+                  <TextBlock x:Name="PropertySelectionNotice" Text="{Binding Properties.SelectionNotice}"
+                             FontSize="10" Foreground="#8A4B37" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="PropertySelectionNotice"
+                             AutomationProperties.Name="부분 선택에 대한 적용 안내" />
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="5">
+                      <TextBlock Text="적용 범위" Classes="label" FontWeight="SemiBold" />
+                      <ComboBox x:Name="PropertyScopeComboBox"
+                                ItemsSource="{Binding Properties.ScopeChoices}"
+                                SelectedValueBinding="{ReflectionBinding Scope}"
+                                SelectedValue="{Binding Properties.SelectedScope, Mode=TwoWay}"
+                                AutomationProperties.AutomationId="PropertyScopeComboBox"
+                                AutomationProperties.Name="속성을 적용할 범위">
+                        <ComboBox.ItemTemplate>
+                          <DataTemplate>
+                            <StackPanel Spacing="1" ToolTip.Tip="{ReflectionBinding Description}">
+                              <TextBlock Text="{ReflectionBinding DisplayName}" FontSize="10" />
+                            </StackPanel>
+                          </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                      </ComboBox>
+                    </StackPanel>
+                  </Border>
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="4">
+                      <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Text="글자 크기" FontSize="11" FontWeight="SemiBold" />
+                        <TextBlock Grid.Column="1" Text="논리 px" Classes="hint" FontSize="9" />
+                      </Grid>
+                      <TextBlock x:Name="FontSizeEffectiveValue"
+                                 Text="{Binding Properties.EffectiveFontSize, StringFormat='{}현재: {0:0.##} px'}"
+                                 FontSize="10" AutomationProperties.AutomationId="FontSizeEffectiveValue" />
+                      <TextBlock x:Name="FontSizeExplicitValue"
+                                 Text="{Binding Properties.ExplicitFontSize, StringFormat='{}이 범위 명시값: {0:0.##} px', TargetNullValue='상속'}"
+                                 Classes="hint" FontSize="9" AutomationProperties.AutomationId="FontSizeExplicitValue" />
+                      <TextBlock x:Name="FontSizeSourceLabel" Text="{Binding Properties.FontSizeSourceLabel}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontSizeSourceLabel" />
+                      <TextBox x:Name="FontSizeDraftTextBox" Text="{Binding Properties.DraftFontSizeText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               PlaceholderText="1–512" AutomationProperties.AutomationId="FontSizeDraftTextBox"
+                               AutomationProperties.Name="초안 글자 크기, 논리 px" />
+                      <TextBlock x:Name="FontSizeValidationError" Text="{Binding Properties.FontSizeValidationError}"
+                                 Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontSizeValidationError" />
+                      <TextBlock x:Name="FontSizeLatexDiagnostic" Text="{Binding Properties.FontSizeLatexDiagnostic}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontSizeLatexDiagnostic" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="4">
+                      <TextBlock Text="수학 글꼴" FontSize="11" FontWeight="SemiBold" />
+                      <TextBlock x:Name="FontFamilyEffectiveValue" Text="{Binding Properties.EffectiveFontFamily, StringFormat='{}현재: {0}'}"
+                                 FontSize="10" TextWrapping="Wrap" AutomationProperties.AutomationId="FontFamilyEffectiveValue" />
+                      <TextBlock x:Name="FontFamilyExplicitValue"
+                                 Text="{Binding Properties.ExplicitFontFamily, StringFormat='{}이 범위 명시값: {0}', TargetNullValue='상속'}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontFamilyExplicitValue" />
+                      <TextBlock x:Name="FontFamilySourceLabel" Text="{Binding Properties.FontFamilySourceLabel}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontFamilySourceLabel" />
+                      <TextBox x:Name="FontFamilyDraftTextBox" Text="{Binding Properties.DraftFontFamily, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               PlaceholderText="예: Cambria Math" AutomationProperties.AutomationId="FontFamilyDraftTextBox"
+                               AutomationProperties.Name="초안 수학 글꼴 이름" />
+                      <TextBlock x:Name="FontFamilyValidationError" Text="{Binding Properties.FontFamilyValidationError}"
+                                 Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontFamilyValidationError" />
+                      <TextBlock x:Name="FontMeasurementDiagnostic" Text="{Binding Properties.FontMeasurementDiagnostic}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontMeasurementDiagnostic" />
+                      <TextBlock x:Name="FontFamilyLatexDiagnostic" Text="{Binding Properties.FontFamilyLatexDiagnostic}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="FontFamilyLatexDiagnostic" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="4">
+                      <TextBlock Text="색상" FontSize="11" FontWeight="SemiBold" />
+                      <TextBlock x:Name="ForegroundEffectiveValue" Text="{Binding Properties.EffectiveForeground, StringFormat='{}현재: {0}'}"
+                                 FontSize="10" AutomationProperties.AutomationId="ForegroundEffectiveValue" />
+                      <TextBlock x:Name="ForegroundExplicitValue"
+                                 Text="{Binding Properties.ExplicitForeground, StringFormat='{}이 범위 명시값: {0}', TargetNullValue='상속'}"
+                                 Classes="hint" FontSize="9" AutomationProperties.AutomationId="ForegroundExplicitValue" />
+                      <TextBlock x:Name="ForegroundSourceLabel" Text="{Binding Properties.ForegroundSourceLabel}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="ForegroundSourceLabel" />
+                      <TextBox x:Name="ForegroundDraftTextBox" Text="{Binding Properties.DraftForeground, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               PlaceholderText="#RRGGBB 또는 #AARRGGBB"
+                               AutomationProperties.AutomationId="ForegroundDraftTextBox"
+                               AutomationProperties.Name="초안 수식 색상" />
+                      <TextBlock x:Name="ForegroundValidationError" Text="{Binding Properties.ForegroundValidationError}"
+                                 Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="ForegroundValidationError" />
+                      <TextBlock x:Name="ForegroundLatexDiagnostic" Text="{Binding Properties.ForegroundLatexDiagnostic}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="ForegroundLatexDiagnostic" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="4">
+                      <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Text="기준 조판 스타일" FontSize="11" FontWeight="SemiBold" />
+                        <TextBlock Grid.Column="1" Text="구조별 자동 전이" Classes="hint" FontSize="9" />
+                      </Grid>
+                      <TextBlock x:Name="TypesettingStyleEffectiveValue"
+                                 Text="{Binding Properties.EffectiveTypesettingStyle, Converter={x:Static desktop:MathTypesettingStyleDisplayConverter.Instance}, StringFormat='{}현재: {0}'}"
+                                 FontSize="10" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingStyleEffectiveValue" />
+                      <TextBlock x:Name="TypesettingStyleExplicitValue"
+                                 Text="{Binding Properties.ExplicitTypesettingStyle, Converter={x:Static desktop:MathTypesettingStyleDisplayConverter.Instance}, StringFormat='{}이 범위 명시값: {0}'}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingStyleExplicitValue" />
+                      <TextBlock x:Name="TypesettingStyleSourceLabel"
+                                 Text="{Binding Properties.TypesettingStyleSourceLabel}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingStyleSourceLabel" />
+                      <ComboBox x:Name="TypesettingStyleComboBox"
+                                ItemsSource="{Binding Properties.TypesettingStyleChoices}"
+                                SelectedItem="{Binding Properties.SelectedTypesettingStyleChoice, Mode=TwoWay}"
+                                AutomationProperties.AutomationId="TypesettingStyleComboBox"
+                                AutomationProperties.Name="기준 조판 스타일 초안">
+                        <ComboBox.ItemTemplate>
+                          <DataTemplate>
+                            <StackPanel Spacing="1" ToolTip.Tip="{ReflectionBinding Description}">
+                              <TextBlock Text="{ReflectionBinding DisplayName}" FontSize="10" />
+                            </StackPanel>
+                          </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                      </ComboBox>
+                      <CheckBox x:Name="TypesettingPinCheckBox"
+                                IsChecked="{Binding Properties.DraftPinTypesettingStyle, Mode=TwoWay}"
+                                IsEnabled="{Binding Properties.CanPinTypesettingStyle}"
+                                ToolTip.Tip="{Binding Properties.TypesettingPinDisabledReason}"
+                                ToolTip.ShowOnDisabled="True"
+                                AutomationProperties.AutomationId="TypesettingPinCheckBox"
+                                AutomationProperties.Name="현재 조판 스타일 명시 적용">
+                        <TextBlock x:Name="TypesettingPinCheckBoxLabel"
+                                   Text="현재 조판 스타일 명시 적용"
+                                   FontSize="10" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="TypesettingPinCheckBoxLabel" />
+                      </CheckBox>
+                      <TextBlock x:Name="TypesettingPinNotice"
+                                 Text="{Binding Properties.TypesettingPinNotice}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingPinNotice" />
+                      <TextBlock x:Name="TypesettingPinDisabledReason"
+                                 Text="{Binding Properties.TypesettingPinDisabledReason}"
+                                 Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingPinDisabledReason" />
+                      <TextBlock x:Name="FractionDisplayNotice"
+                                 Text="{Binding Properties.FractionDisplayNotice}"
+                                 IsVisible="False" Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 ToolTip.Tip="{Binding Properties.FractionDisplayNotice}"
+                                 AutomationProperties.AutomationId="FractionDisplayNotice"
+                                 AutomationProperties.Name="선택된 분수의 LaTeX 표기 안내" />
+                      <TextBlock x:Name="TypesettingStyleContextNotice"
+                                 Text="{Binding Properties.TypesettingStyleContextNotice}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TypesettingStyleContextNotice" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border Classes="property-field">
+                    <StackPanel Spacing="4">
+                      <TextBlock Text="수식 텍스트 역할" FontSize="11" FontWeight="SemiBold" />
+                      <TextBlock x:Name="TextRoleCurrentValue"
+                                 Text="{Binding Properties.CurrentTextRole, Converter={x:Static desktop:MathTextRoleDisplayConverter.Instance}, StringFormat='{}현재 역할: {0}'}"
+                                 FontSize="10" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TextRoleCurrentValue"
+                                 AutomationProperties.Name="선택된 수식 텍스트의 현재 역할" />
+                      <TextBlock x:Name="TextRoleScopeNotice"
+                                 Text="{Binding Properties.TextRoleScopeNotice}"
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TextRoleScopeNotice"
+                                 AutomationProperties.Name="수식 텍스트 역할 적용 범위 안내" />
+                      <ComboBox x:Name="TextRoleComboBox"
+                                ItemsSource="{Binding Properties.TextRoleChoices}"
+                                SelectedItem="{Binding Properties.SelectedTextRoleChoice, Mode=TwoWay}"
+                                IsEnabled="{Binding Properties.CanEditTextRole}"
+                                ToolTip.Tip="{Binding Properties.TextRoleDisabledReason}"
+                                ToolTip.ShowOnDisabled="True"
+                                AutomationProperties.AutomationId="TextRoleComboBox"
+                                AutomationProperties.Name="선택한 수식 텍스트의 역할 초안">
+                        <ComboBox.ItemTemplate>
+                          <DataTemplate>
+                            <StackPanel Spacing="1" ToolTip.Tip="{ReflectionBinding Description}">
+                              <TextBlock Text="{ReflectionBinding DisplayName}" FontSize="10" />
+                            </StackPanel>
+                          </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                      </ComboBox>
+                      <TextBlock x:Name="TextRoleDisabledReason"
+                                 Text="{Binding Properties.TextRoleDisabledReason}"
+                                 IsVisible="False" Foreground="#8A4B37" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TextRoleDisabledReason"
+                                 AutomationProperties.Name="텍스트 역할을 편집할 수 없는 이유" />
+                      <TextBlock x:Name="TextRoleSemanticsNotice"
+                                 Text="역할은 문자를 바꾸지 않고 표시만 정합니다. 자동은 기존 수식 표시를 유지합니다."
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="TextRoleSemanticsNotice"
+                                 AutomationProperties.Name="텍스트 역할은 내용이나 숫자 문법을 바꾸지 않습니다" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border x:Name="GroupRowSpacingCard" Classes="property-field"
+                          AutomationProperties.AutomationId="GroupRowSpacingCard"
+                          AutomationProperties.Name="현재 그룹 내부 행 간격">
+                    <StackPanel Spacing="4">
+                      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="6">
+                        <TextBlock Text="그룹 내부 행 간격" FontSize="11" FontWeight="SemiBold"
+                                   TextWrapping="Wrap" />
+                        <TextBlock Grid.Column="1" Text="논리 px" Classes="hint" FontSize="9"
+                                   VerticalAlignment="Center" />
+                      </Grid>
+                      <TextBlock x:Name="GroupRowSpacingCurrentValue"
+                                 IsVisible="False"
+                                 FontSize="10" TextWrapping="Wrap"
+                                 Text="{Binding Properties.CurrentGroupRowSpacing, Converter={x:Static desktop:GroupRowSpacingDisplayConverter.Instance}, StringFormat='{}현재 그룹 저장값: {0} px'}"
+                                 AutomationProperties.AutomationId="GroupRowSpacingCurrentValue"
+                                 AutomationProperties.Name="현재 그룹에 저장된 행 간격, 논리 픽셀" />
+                      <TextBlock x:Name="GroupRowSpacingMeaningNotice"
+                                 Text="앞 행 수식과 다음 행 수식 사이에 더하는 간격이며 그룹 사이 간격과는 별도입니다. 빈칸은 저장값을 유지하고, 상속 초기화로는 바뀌지 않습니다."
+                                 Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="GroupRowSpacingMeaningNotice" />
+                      <TextBox x:Name="GroupRowSpacingDraftTextBox"
+                               Text="{Binding Properties.DraftGroupRowSpacingText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                               IsEnabled="{Binding Properties.CanEditGroupRowSpacing}"
+                               ToolTip.Tip="{Binding Properties.GroupRowSpacingDisabledReason}"
+                               ToolTip.ShowOnDisabled="True"
+                               PlaceholderText="0–512"
+                               AutomationProperties.AutomationId="GroupRowSpacingDraftTextBox"
+                               AutomationProperties.Name="그룹 내부 행 간격 초안, 논리 px" />
+                      <TextBlock x:Name="GroupRowSpacingValidationError"
+                                 Text="{Binding Properties.GroupRowSpacingValidationError}"
+                                 IsVisible="False" Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="GroupRowSpacingValidationError"
+                                 AutomationProperties.Name="행 간격 입력 오류" />
+                      <TextBlock x:Name="GroupRowSpacingDisabledReason"
+                                 Text="{Binding Properties.GroupRowSpacingDisabledReason}"
+                                 IsVisible="False" Foreground="#8A4B37" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="GroupRowSpacingDisabledReason"
+                                 AutomationProperties.Name="그룹 행 간격을 편집할 수 없는 이유" />
+                      <TextBlock x:Name="GroupRowSpacingNotice"
+                                 Text="{Binding Properties.GroupRowSpacingNotice}"
+                                 IsVisible="False" Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="GroupRowSpacingNotice"
+                                 AutomationProperties.Name="현재 그룹 행 간격 효과 안내" />
+                      <TextBlock x:Name="GroupRowSpacingLatexDiagnostic"
+                                 Text="{Binding Properties.GroupRowSpacingLatexDiagnostic}"
+                                 IsVisible="False" Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="GroupRowSpacingLatexDiagnostic"
+                                 AutomationProperties.Name="행 간격의 LaTeX 표현 제한 안내" />
+                    </StackPanel>
+                  </Border>
+
+                  <Border x:Name="BracketKindCard" Classes="property-field"
+                          AutomationProperties.AutomationId="BracketKindCard"
+                          AutomationProperties.Name="괄호 모양">
+                    <StackPanel Spacing="4">
+                      <Grid ColumnDefinitions="*,Auto" ColumnSpacing="6">
+                        <TextBlock Text="괄호 모양" FontSize="11" FontWeight="SemiBold" />
+                        <TextBlock Grid.Column="1" Text="전체 선택" Classes="hint" FontSize="9"
+                                   VerticalAlignment="Center" />
+                      </Grid>
+                      <TextBlock x:Name="CurrentBracketKindValue"
+                                 Text="{Binding Properties.CurrentBracketKindLabel, StringFormat='{}현재: {0}'}"
+                                 IsVisible="False" FontSize="10" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="CurrentBracketKindValue"
+                                 AutomationProperties.Name="선택된 괄호의 현재 모양" />
+                      <ComboBox x:Name="BracketKindComboBox"
+                                ItemsSource="{Binding Properties.BracketKindChoices}"
+                                SelectedItem="{Binding Properties.SelectedBracketKindChoice, Mode=TwoWay}"
+                                IsEnabled="{Binding Properties.CanEditBracketKind}"
+                                ToolTip.Tip="{Binding Properties.BracketKindDisabledReason}"
+                                ToolTip.ShowOnDisabled="True"
+                                AutomationProperties.AutomationId="BracketKindComboBox"
+                                AutomationProperties.Name="괄호 모양 초안">
+                        <ComboBox.ItemTemplate>
+                          <DataTemplate>
+                            <StackPanel Spacing="1" ToolTip.Tip="{ReflectionBinding Description}">
+                              <TextBlock Text="{ReflectionBinding DisplayName}" FontSize="10" />
+                            </StackPanel>
+                          </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                      </ComboBox>
+                      <TextBlock x:Name="BracketKindDisabledReason"
+                                 Text="{Binding Properties.BracketKindDisabledReason}"
+                                 IsVisible="False" Foreground="#8A4B37" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="BracketKindDisabledReason"
+                                 AutomationProperties.Name="괄호 모양을 바꿀 수 없는 이유" />
+                      <TextBlock x:Name="BracketKindNotice"
+                                 Text="{Binding Properties.BracketKindNotice}"
+                                 IsVisible="False" Classes="hint" FontSize="9" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="BracketKindNotice"
+                                 AutomationProperties.Name="괄호 모양 변경 안내" />
+                    </StackPanel>
+                  </Border>
+
+                  <TextBlock x:Name="PropertiesUnitsNotice"
+                             Text="크기는 논리 px 단위이며 화면 확대율·출력 DPI와 독립적입니다. LaTeX에 표현되지 않는 스타일 차이는 진단으로 표시합니다."
+                             Classes="hint" FontSize="9" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="PropertiesUnitsNotice" />
+                  <TextBlock x:Name="PropertyBlankMeansUnchangedNotice"
+                             Text="빈칸이거나 바꾸지 않은 필드는 현재 값과 상속을 유지합니다. 상속값으로 되돌리려면 ‘상속 초기화’를 사용하세요."
+                             Classes="hint" FontSize="9" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="PropertyBlankMeansUnchangedNotice"
+                             AutomationProperties.Name="빈 초안 필드는 변경하지 않으며 상속 초기화는 별도 동작입니다" />
+                  <TextBlock x:Name="PropertiesStaleNotice" Text="{Binding Properties.StaleReason}"
+                             IsVisible="{Binding Properties.IsDraftStale}"
+                             Foreground="#9A3B34" FontSize="10" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="PropertiesStaleNotice"
+                             AutomationProperties.Name="속성 초안이 오래되어 적용할 수 없는 이유" />
+                  <WrapPanel ItemSpacing="5" LineSpacing="5">
+                    <Button x:Name="ApplyPropertiesButton" Classes="primary property-action"
+                            Command="{Binding Properties.ApplyCommand}"
+                            IsEnabled="{Binding Properties.CanApply}"
+                            ToolTip.Tip="초안의 속성을 현재 대상에 한 번의 실행 취소 가능한 작업으로 적용합니다"
+                            ToolTip.ShowOnDisabled="True"
+                            AutomationProperties.AutomationId="ApplyPropertiesButton"
+                            AutomationProperties.Name="속성 초안 적용">
+                      <TextBlock Text="적용" />
+                    </Button>
+                    <Button x:Name="ResetPropertiesDraftButton" Classes="property-action"
+                            Command="{Binding Properties.ResetDraftCommand}"
+                            AutomationProperties.AutomationId="ResetPropertiesDraftButton"
+                            AutomationProperties.Name="현재 대상 값 다시 불러오기">
+                      <TextBlock Text="초안 되돌리기" />
+                    </Button>
+                    <Button x:Name="ResetPropertiesOverrideButton" Classes="property-action destructive"
+                            Command="{Binding Properties.ResetOverrideCommand}"
+                            IsEnabled="{Binding Properties.CanResetOverride}"
+                            ToolTip.Tip="{Binding Properties.ResetOverrideDisabledReason}"
+                            ToolTip.ShowOnDisabled="True"
+                            AutomationProperties.AutomationId="ResetPropertiesOverrideButton"
+                            AutomationProperties.Name="이 범위의 명시 스타일을 상속값으로 되돌리기">
+                      <TextBlock Text="상속 초기화" />
+                    </Button>
+                  </WrapPanel>
+                  <TextBlock x:Name="ResetPropertiesOverrideDisabledReason"
+                             Text="{Binding Properties.ResetOverrideDisabledReason}"
+                             Foreground="#9A3B34" FontSize="9" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="ResetPropertiesOverrideDisabledReason" />
+                  <TextBlock x:Name="PropertiesResetOverrideNotice"
+                             Text="상속 초기화는 이 범위의 크기·글꼴·색·조판 기준 명시값을 모두 제거합니다."
+                             Classes="hint" FontSize="9" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="PropertiesResetOverrideNotice" />
+                </StackPanel>
+              </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="StructureInspectorTab" Header="구조"
+                     AutomationProperties.AutomationId="StructureInspectorTab"
+                     AutomationProperties.Name="현재 수식 구조">
+              <Grid x:Name="StructureInspectorPanel" RowDefinitions="Auto,Auto,*" Margin="0,10,8,0">
+                <StackPanel x:Name="StructureSelectionHeader" Spacing="3" Margin="0,0,0,7">
+                  <Grid ColumnDefinitions="Auto,*" ColumnSpacing="5">
+                    <TextBlock x:Name="StructureSelectionModeText" Text="표면 입력 위치"
+                               Classes="label" FontWeight="SemiBold"
+                               AutomationProperties.AutomationId="StructureSelectionModeText"
+                               AutomationProperties.Name="활성 수식 선택 방식" />
+                    <TextBlock Grid.Column="1" Text="선택 경로" Classes="hint" FontSize="9"
+                               VerticalAlignment="Center" />
+                  </Grid>
+                  <TextBlock x:Name="StructureActivePath" Text="{Binding StructurePanel.ActivePath}"
+                             FontSize="10" TextWrapping="Wrap" MaxLines="3"
+                             TextTrimming="CharacterEllipsis"
+                             ToolTip.Tip="{Binding StructurePanel.ActivePath}"
+                             AutomationProperties.AutomationId="StructureActivePath"
+                             AutomationProperties.Name="현재 수식 구조 선택 경로" />
+                </StackPanel>
+                <Border x:Name="StructureClearPanel" Grid.Row="1" Classes="structure-clear-panel"
+                        Padding="8" Margin="0,0,0,7">
+                  <StackPanel Spacing="5">
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="6">
+                      <ComboBox x:Name="StructureClearScopeComboBox" MinHeight="30"
+                                ItemsSource="{Binding ClearScopeChoices}"
+                                SelectedValueBinding="{ReflectionBinding Scope}"
+                                SelectedValue="{Binding SelectedClearScope, Mode=TwoWay}"
+                                HorizontalContentAlignment="Stretch"
+                                AutomationProperties.AutomationId="StructureClearScopeComboBox"
+                                AutomationProperties.Name="비울 수식 범위">
+                        <ComboBox.ItemTemplate>
+                          <DataTemplate x:DataType="desktop:ClearScopeChoice">
+                            <TextBlock Text="{Binding DisplayName}" TextWrapping="Wrap" />
+                          </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                      </ComboBox>
+                      <Button x:Name="ClearActiveScopeButton" Grid.Column="1" Classes="library-action destructive"
+                              MinWidth="52"
+                              Command="{Binding ClearActiveScopeCommand}"
+                              IsEnabled="{Binding CanClearActiveScope}"
+                              ToolTip.Tip="{Binding ClearScopeDisabledReason}"
+                              ToolTip.ShowOnDisabled="True"
+                              AutomationProperties.AutomationId="ClearActiveScopeButton"
+                              AutomationProperties.Name="선택한 수식 범위 비우기">
+                        <TextBlock x:Name="ClearActiveScopeButtonLabel" Text="비우기" />
+                      </Button>
+                    </Grid>
+                    <TextBlock x:Name="StructureClearDescription"
+                               Text="{Binding ClearScopeDescription}"
+                               FontSize="10" TextWrapping="Wrap" MaxLines="3"
+                               TextTrimming="CharacterEllipsis"
+                               AutomationProperties.AutomationId="StructureClearDescription"
+                               AutomationProperties.Name="비울 대상과 영향 범위" />
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                      <TextBlock Text="영향 행:" Classes="hint" FontSize="9" />
+                      <TextBlock x:Name="StructureClearAffectedRows"
+                                 Text="{Binding ClearScopeAffectedRowCount}"
+                                 Classes="hint" FontSize="9"
+                                 AutomationProperties.AutomationId="StructureClearAffectedRows"
+                                 AutomationProperties.Name="비울 행 개수" />
+                    </StackPanel>
+                    <TextBlock Text="실행 취소로 복원할 수 있습니다. 그룹과 행 배치는 유지됩니다."
+                               Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                    <TextBlock x:Name="StructureClearDisabledReason"
+                               Text="{Binding ClearScopeDisabledReason}"
+                               FontSize="9" Foreground="#8A4B37" TextWrapping="Wrap"
+                               AutomationProperties.AutomationId="StructureClearDisabledReason"
+                               AutomationProperties.Name="비우기를 사용할 수 없는 이유" />
+                  </StackPanel>
+                </Border>
+                <TreeView x:Name="StructureTree" Grid.Row="2" Classes="structure-tree"
+                          ItemsSource="{Binding StructurePanel.Items}"
+                          SelectedItem="{Binding StructurePanel.SelectedItem, Mode=TwoWay}"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          SelectionChanged="OnStructureTreeSelectionChanged"
+                          AutomationProperties.AutomationId="StructureTree"
+                          AutomationProperties.Name="실제 수식 노드와 빈 슬롯 구조">
+                  <TreeView.ItemTemplate>
+                    <TreeDataTemplate x:DataType="desktop:StructurePanelItem"
+                                      ItemsSource="{Binding Children}">
+                      <Border Classes="structure-tree-entry" Padding="5,4"
+                              MinWidth="178"
+                              MaxWidth="180"
+                              HorizontalAlignment="Left"
+                              Tapped="OnStructureNodeTapped"
+                              AutomationProperties.AutomationId="{Binding Id}"
+                              AutomationProperties.Name="{Binding Label}"
+                              ToolTip.Tip="{Binding Label}">
+                        <TextBlock Text="{Binding Label}" FontSize="10" TextWrapping="Wrap"
+                                   MaxLines="3" TextTrimming="CharacterEllipsis" />
+                      </Border>
+                    </TreeDataTemplate>
+                  </TreeView.ItemTemplate>
+                </TreeView>
+              </Grid>
+            </TabItem>
+            <TabItem x:Name="WorkspaceLibraryTab" Header="작업"
+                     AutomationProperties.AutomationId="WorkspaceLibraryTab"
+                     AutomationProperties.Name="최근 작업과 복구본">
+              <ScrollViewer x:Name="WorkspaceLibraryScrollViewer"
+                            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                <StackPanel Spacing="10" Margin="0,12,8,10">
+                  <Grid x:Name="RecentWorkspacesHeader" ColumnDefinitions="*,Auto">
+                    <StackPanel Spacing="3">
+                      <TextBlock Text="최근 작업" Classes="label" FontWeight="SemiBold" />
+                      <TextBlock Text="선택은 미리보기만 바꿉니다." Classes="hint" FontSize="10"
+                                 TextWrapping="Wrap" MaxWidth="154" />
+                    </StackPanel>
+                    <Button x:Name="RefreshWorkspaceStateButton" Grid.Column="1" Classes="library-action"
+                            Command="{Binding RefreshWorkspaceStateCommand}"
+                            AutomationProperties.AutomationId="RefreshWorkspaceStateButton"
+                            AutomationProperties.Name="최근 작업과 복구본 새로 고침"
+                            ToolTip.Tip="최근 작업과 복구본 목록을 새로 고칩니다">
+                      <TextBlock Text="새로 고침" />
+                    </Button>
+                  </Grid>
+
+                  <WrapPanel x:Name="RecentWorkspaceActions" ItemSpacing="5" LineSpacing="5">
+                    <Button x:Name="OpenRecentWorkspaceButton" Classes="library-action primary"
+                            Command="{Binding OpenRecentWorkspaceCommand}"
+                            AutomationProperties.AutomationId="OpenRecentWorkspaceButton"
+                            AutomationProperties.Name="선택한 최근 작업 열기"
+                            ToolTip.Tip="선택한 작업을 열기 전에 저장 여부를 확인합니다">
+                      <TextBlock Text="열기" />
+                    </Button>
+                    <Button x:Name="PinRecentWorkspaceButton" Classes="library-action"
+                            Command="{Binding PinRecentWorkspaceCommand}"
+                            AutomationProperties.AutomationId="PinRecentWorkspaceButton"
+                            AutomationProperties.Name="최근 작업 고정"
+                            ToolTip.Tip="이 작업을 최근 목록 위에 고정합니다">
+                      <TextBlock Text="고정" />
+                    </Button>
+                    <Button x:Name="UnpinRecentWorkspaceButton" Classes="library-action"
+                            Command="{Binding UnpinRecentWorkspaceCommand}"
+                            AutomationProperties.AutomationId="UnpinRecentWorkspaceButton"
+                            AutomationProperties.Name="최근 작업 고정 해제"
+                            ToolTip.Tip="이 작업의 고정을 해제합니다">
+                      <TextBlock Text="고정 해제" />
+                    </Button>
+                    <Button x:Name="RelinkRecentWorkspaceButton" Classes="library-action"
+                            Command="{Binding RelinkRecentWorkspaceCommand}"
+                            AutomationProperties.AutomationId="RelinkRecentWorkspaceButton"
+                            AutomationProperties.Name="최근 작업 파일 다시 찾기"
+                            ToolTip.Tip="이동한 작업 파일을 새 위치에서 다시 연결합니다">
+                      <TextBlock Text="다시 찾기" />
+                    </Button>
+                    <Button x:Name="RemoveRecentWorkspaceButton" Classes="library-action destructive"
+                            Command="{Binding RemoveRecentWorkspaceCommand}"
+                            AutomationProperties.AutomationId="RemoveRecentWorkspaceButton"
+                            AutomationProperties.Name="최근 작업 목록에서 제거"
+                            ToolTip.Tip="최근 목록에서만 제거하며 원본 파일은 그대로 둡니다">
+                      <TextBlock Text="목록에서 제거" />
+                    </Button>
+                  </WrapPanel>
+
+                  <TextBlock x:Name="WorkspaceStateBusy" IsVisible="{Binding IsWorkspaceStateBusy}"
+                             Text="최근 작업과 복구본을 확인하고 있습니다."
+                             Classes="hint" AutomationProperties.AutomationId="WorkspaceStateBusy" />
+                  <TextBlock x:Name="WorkspaceStateError" Text="{Binding WorkspaceStateError}"
+                             Classes="library-error" TextWrapping="Wrap"
+                             AutomationProperties.AutomationId="WorkspaceStateError"
+                             AutomationProperties.Name="작업 목록 오류" />
+                  <TextBlock x:Name="RecentWorkspaceDiagnosticText"
+                             Text="{Binding RecentWorkspaceDiagnostic.Message}"
+                             Classes="library-error" TextWrapping="Wrap"
+                             IsVisible="False"
+                             AutomationProperties.AutomationId="RecentWorkspaceDiagnostic"
+                             AutomationProperties.Name="최근 작업 목록 진단" />
+                  <TextBlock x:Name="RecentWorkspaceReadOnlyNotice"
+                             Text="최근 작업 목록을 안전하게 변경할 수 없어 읽기 전용입니다."
+                             Classes="library-error" TextWrapping="Wrap" IsVisible="False"
+                             AutomationProperties.AutomationId="RecentWorkspaceReadOnlyNotice" />
+                  <ListBox x:Name="RecentWorkspacesList" Classes="library-list"
+                           ItemsSource="{Binding RecentWorkspaces}"
+                           SelectedItem="{Binding SelectedRecentWorkspace, Mode=TwoWay}"
+                           MaxHeight="190"
+                           AutomationProperties.AutomationId="RecentWorkspacesList"
+                           AutomationProperties.Name="최근 수식 작업 목록">
+                    <ListBox.ItemTemplate>
+                      <DataTemplate x:DataType="persistence:RecentWorkspaceEntry">
+                        <Border Classes="library-entry">
+                          <StackPanel Spacing="4">
+                            <Grid ColumnDefinitions="*,Auto">
+                              <TextBlock Text="{Binding DisplayName}" FontSize="12" FontWeight="SemiBold"
+                                         TextTrimming="CharacterEllipsis" />
+                              <Border Grid.Column="1" IsVisible="{Binding IsPinned}" Classes="library-badge">
+                                <TextBlock Text="고정" />
+                              </Border>
+                            </Grid>
+                            <TextBlock Text="{Binding FullPath}" Classes="library-path"
+                                       TextWrapping="Wrap" MaxLines="2" TextTrimming="CharacterEllipsis"
+                                       ToolTip.Tip="{Binding FullPath}" />
+                            <WrapPanel ItemSpacing="5" LineSpacing="2">
+                              <TextBlock Text="최근 사용" Classes="label" FontSize="10" />
+                              <TextBlock Text="{Binding LastUsedAtUtc, StringFormat='{}{0:yyyy-MM-dd HH:mm} UTC'}"
+                                         FontSize="10" />
+                            </WrapPanel>
+                            <WrapPanel ItemSpacing="5" LineSpacing="2">
+                              <TextBlock Text="파일 수정" Classes="label" FontSize="10" />
+                              <TextBlock Text="{Binding FileModifiedAtUtc, StringFormat='{}{0:yyyy-MM-dd HH:mm} UTC'}"
+                                         FontSize="10" />
+                            </WrapPanel>
+                            <TextBlock Text="파일을 찾을 수 없습니다. 다시 찾기를 사용하세요."
+                                       IsVisible="{Binding IsMissing}" Classes="library-error" TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding FileDiagnostic.Message}"
+                                       Classes="library-error" TextWrapping="Wrap" />
+                          </StackPanel>
+                        </Border>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <TextBlock x:Name="RecentWorkspaceEmptyState" Classes="hint"
+                             Text="최근 작업이 없습니다." IsVisible="False"
+                             AutomationProperties.AutomationId="RecentWorkspaceEmptyState" />
+                  <Border x:Name="RecentWorkspacePreview" Classes="library-preview" IsVisible="False"
+                          AutomationProperties.AutomationId="SelectedRecentWorkspacePreview"
+                          AutomationProperties.Name="선택한 최근 작업의 미리보기">
+                    <StackPanel Spacing="3">
+                      <TextBlock x:Name="SelectedRecentWorkspaceNameText"
+                                 Text="{Binding SelectedRecentWorkspace.DisplayName}"
+                                 FontSize="11" FontWeight="SemiBold" TextWrapping="NoWrap"
+                                 MaxLines="1" TextTrimming="CharacterEllipsis"
+                                 ToolTip.Tip="{Binding SelectedRecentWorkspace.DisplayName}"
+                                 Classes="library-preview-text"
+                                 AutomationProperties.AutomationId="SelectedRecentWorkspaceName"
+                                 AutomationProperties.Name="최근 작업 이름" />
+                      <TextBlock x:Name="SelectedRecentWorkspacePathText"
+                                 Text="{Binding SelectedRecentWorkspace.FullPath}"
+                                 Classes="library-path" TextWrapping="Wrap" MaxLines="3"
+                                 TextTrimming="CharacterEllipsis"
+                                 ToolTip.Tip="{Binding SelectedRecentWorkspace.FullPath}"
+                                 AutomationProperties.AutomationId="SelectedRecentWorkspacePath"
+                                 AutomationProperties.Name="최근 작업 전체 경로" />
+                      <TextBlock x:Name="SelectedRecentWorkspaceStatusText"
+                                 Text="{Binding SelectedRecentWorkspaceStatus, StringFormat='{}파일 상태: {0}'}"
+                                 Classes="hint" FontSize="10" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="SelectedRecentWorkspaceStatus"
+                                 AutomationProperties.Name="최근 작업 파일 상태" />
+                      <TextBlock x:Name="SelectedRecentWorkspaceModifiedText"
+                                 Text="{Binding SelectedRecentWorkspaceModifiedText, StringFormat='{}수정 시각: {0}'}"
+                                 Classes="hint" FontSize="10" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="SelectedRecentWorkspaceModified"
+                                 AutomationProperties.Name="최근 작업 수정 시각" />
+                    </StackPanel>
+                  </Border>
+                  <TextBlock x:Name="RecentWorkspacePreviewEmpty"
+                             Text="목록에서 작업을 선택하면 경로와 파일 상태를 미리 볼 수 있습니다."
+                             IsVisible="True" Classes="hint" TextWrapping="Wrap" />
+
+                  <Border Height="1" Background="{DynamicResource AetherBorderBrush}" Margin="0,3" />
+                  <StackPanel Spacing="3">
+                    <TextBlock Text="복구본" Classes="label" FontWeight="SemiBold" />
+                    <TextBlock Text="저장되지 않은 작업의 복구 지점입니다." Classes="hint" FontSize="10" />
+                  </StackPanel>
+                  <ItemsControl x:Name="RecoveryDiagnostics" ItemsSource="{Binding RecoveryDiagnostics}"
+                                AutomationProperties.AutomationId="RecoveryDiagnostics"
+                                AutomationProperties.Name="복구본 진단">
+                    <ItemsControl.ItemTemplate>
+                      <DataTemplate x:DataType="persistence:PersistenceDiagnostic">
+                        <Border Classes="library-diagnostic">
+                          <StackPanel Spacing="3">
+                            <TextBlock Text="{Binding Message}" Classes="library-diagnostic-text"
+                                       TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding Path}" Classes="library-path"
+                                       TextWrapping="Wrap" />
+                          </StackPanel>
+                        </Border>
+                      </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                  </ItemsControl>
+                  <TextBlock Text="복구 상태를 확인하고 있습니다."
+                             IsVisible="{Binding IsWorkspaceStateLoading}" Classes="hint" />
+                  <Border IsVisible="{Binding IsRecoverySaveRequired}" Classes="library-notice">
+                    <TextBlock Text="저장되지 않은 변경이 있습니다. 복구본 저장은 원본 저장을 대신하지 않습니다."
+                               TextWrapping="Wrap"
+                               AutomationProperties.AutomationId="RecoverySaveRequiredNotice"
+                                AutomationProperties.Name="저장되지 않은 변경과 복구본 저장 안내" />
+                  </Border>
+
+                  <ListBox x:Name="RecoveryCandidatesList" Classes="library-list"
+                           ItemsSource="{Binding RecoveryCandidates}"
+                           SelectedItem="{Binding SelectedRecovery, Mode=TwoWay}"
+                           MaxHeight="150"
+                           AutomationProperties.AutomationId="RecoveryCandidatesList"
+                           AutomationProperties.Name="복구본 목록">
+                    <ListBox.ItemTemplate>
+                      <DataTemplate x:DataType="persistence:RecoverySummary">
+                        <Border Classes="library-entry recovery-entry">
+                          <StackPanel Spacing="4">
+                            <TextBlock Text="{Binding WorkspaceName}" FontSize="12" FontWeight="SemiBold"
+                                       TextTrimming="CharacterEllipsis" />
+                            <WrapPanel ItemSpacing="5" LineSpacing="2">
+                              <TextBlock Text="복구 시각" Classes="label" FontSize="10" />
+                              <TextBlock Text="{Binding CapturedAtUtc, StringFormat='{}{0:yyyy-MM-dd HH:mm} UTC'}"
+                                         FontSize="10" />
+                            </WrapPanel>
+                            <TextBlock Text="{Binding OriginalPath}" Classes="library-path"
+                                       TextWrapping="Wrap" MaxLines="2" TextTrimming="CharacterEllipsis"
+                                       ToolTip.Tip="{Binding OriginalPath}" />
+                          </StackPanel>
+                        </Border>
+                      </DataTemplate>
+                    </ListBox.ItemTemplate>
+                  </ListBox>
+                  <TextBlock x:Name="RecoveryEmptyState" Classes="hint"
+                             Text="복구 가능한 작업이 없습니다." IsVisible="False"
+                             AutomationProperties.AutomationId="RecoveryEmptyState" />
+                  <Border Classes="library-notice">
+                    <TextBlock x:Name="RecoverySeparateSaveNoticeText"
+                               Text="복구본은 원본과 별개로 열립니다. 복원 후 새 경로에 저장하세요."
+                               TextWrapping="Wrap"
+                               AutomationProperties.AutomationId="RecoverySeparateSaveNotice"
+                               AutomationProperties.Name="복구본은 별도 작업이며 복원 후 새 경로에 저장해야 합니다" />
+                  </Border>
+                  <WrapPanel x:Name="RecoveryActions" ItemSpacing="5" LineSpacing="5">
+                    <Button x:Name="RestoreRecoveryButton" Classes="library-action primary"
+                            Command="{Binding RestoreRecoveryCommand}"
+                            AutomationProperties.AutomationId="RestoreRecoveryButton"
+                            AutomationProperties.Name="선택한 복구본 명시적으로 복원"
+                            ToolTip.Tip="복구본을 별도 작업으로 열고 현재 변경은 먼저 확인합니다">
+                      <TextBlock Text="복구본 열기" />
+                    </Button>
+                    <Button x:Name="DeleteRecoveryButton" Classes="library-action destructive"
+                            Command="{Binding DeleteRecoveryCommand}"
+                            AutomationProperties.AutomationId="DeleteRecoveryButton"
+                            AutomationProperties.Name="선택한 복구본 삭제 확인"
+                            ToolTip.Tip="삭제를 확인한 뒤 복구본을 제거합니다">
+                      <TextBlock Text="복구본 삭제" />
+                    </Button>
+                  </WrapPanel>
+
+                  <Border x:Name="RecoveryDeleteConfirmation" Classes="library-confirmation"
+                          IsVisible="{Binding IsRecoveryDeleteConfirmationVisible}"
+                          AutomationProperties.AutomationId="RecoveryDeleteConfirmation">
+                    <StackPanel Spacing="8">
+                      <TextBlock Text="복구본을 삭제할까요?" FontWeight="SemiBold" />
+                      <TextBlock Text="{Binding PendingRecoveryDeletionName}" TextWrapping="Wrap"
+                                 AutomationProperties.AutomationId="PendingRecoveryDeletionName" />
+                      <TextBlock Text="이 작업은 복구본만 삭제하며 원본 파일이나 현재 작업에는 영향을 주지 않습니다."
+                                 Classes="hint" TextWrapping="Wrap" />
+                      <WrapPanel HorizontalAlignment="Right" ItemSpacing="5">
+                        <Button x:Name="ConfirmDeleteRecoveryButton" Classes="library-action destructive"
+                                Command="{Binding ConfirmDeleteRecoveryCommand}"
+                                AutomationProperties.AutomationId="ConfirmDeleteRecoveryButton"
+                                AutomationProperties.Name="복구본 삭제 확인">
+                          <TextBlock Text="삭제" />
+                        </Button>
+                        <Button x:Name="CancelDeleteRecoveryButton" Classes="library-action"
+                                Command="{Binding CancelDeleteRecoveryCommand}"
+                                AutomationProperties.AutomationId="CancelDeleteRecoveryButton"
+                                AutomationProperties.Name="복구본 삭제 취소">
+                          <TextBlock Text="취소" />
+                        </Button>
+                      </WrapPanel>
+                    </StackPanel>
+                  </Border>
+                </StackPanel>
+              </ScrollViewer>
+            </TabItem>
+            <TabItem x:Name="OutputPreviewTab" Header="출력"
+                     AutomationProperties.AutomationId="OutputPreviewTab"
+                     AutomationProperties.Name="SVG 출력 미리보기 설정">
+              <Grid RowDefinitions="*,Auto">
+                <ScrollViewer x:Name="OutputPreviewSettingsScrollViewer" Grid.Row="0"
+                              HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                  <StackPanel Spacing="9" Margin="0,12,10,10">
+                    <TextBlock Text="출력 대상" Classes="label" FontWeight="SemiBold" />
+                    <Border Classes="output-preview-setting-card">
+                      <StackPanel Spacing="4">
+                        <TextBlock Text="SVG · 전체 작업" FontSize="12" FontWeight="SemiBold" />
+                        <TextBlock Text="모든 그룹과 행을 한 출력물로 미리 봅니다." Classes="hint" FontSize="10"
+                                   TextWrapping="Wrap" />
+                      </StackPanel>
+                    </Border>
+
+                    <Border Classes="output-preview-setting-card">
+                      <StackPanel Spacing="5">
+                        <TextBlock Text="출력 조판 모드" FontSize="11" FontWeight="SemiBold" />
+                        <ComboBox x:Name="OutputPreviewModeComboBox"
+                                  ItemsSource="{Binding OutputPreview.ModeChoices}"
+                                  SelectedItem="{Binding OutputPreview.SelectedModeChoice, Mode=TwoWay}"
+                                  AutomationProperties.AutomationId="OutputPreviewModeComboBox"
+                                  AutomationProperties.Name="SVG 출력 조판 모드">
+                          <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="desktop:MathOutputModeChoice">
+                              <StackPanel Spacing="1" ToolTip.Tip="{Binding Description}">
+                                <TextBlock Text="{Binding DisplayName}" FontSize="10" />
+                              </StackPanel>
+                            </DataTemplate>
+                          </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock Text="Display/Inline은 미리보기 출력 기준만 투영하며 저장된 수식 작업은 바꾸지 않습니다."
+                                   Classes="hint" FontSize="9" TextWrapping="Wrap" />
+                      </StackPanel>
+                    </Border>
+
+                    <Border Classes="output-preview-status-card">
+                      <StackPanel Spacing="5">
+                        <TextBlock x:Name="OutputPreviewStatusSummary" Text="{Binding OutputPreview.StateSummary}"
+                                   FontWeight="SemiBold" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="OutputPreviewStatusSummary"
+                                   AutomationProperties.Name="미리보기 상태" />
+                        <TextBlock x:Name="OutputPreviewScopeSummary" Text="{Binding OutputPreview.ScopeSummary}"
+                                   Classes="hint" FontSize="10" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="OutputPreviewScopeSummary"
+                                   AutomationProperties.Name="출력 범위" />
+                        <TextBlock Text="{Binding OutputPreview.SnapshotSummary}" Classes="hint" FontSize="10"
+                                   TextWrapping="Wrap" AutomationProperties.AutomationId="OutputPreviewSnapshotSummary" />
+                        <TextBlock x:Name="OutputPreviewCurrentRevisionSummary"
+                                   Text="{Binding OutputPreview.CurrentRevisionSummary}"
+                                   Classes="hint" FontSize="10" TextWrapping="Wrap"
+                                   AutomationProperties.AutomationId="OutputPreviewCurrentRevisionSummary"
+                                   AutomationProperties.Name="미리보기와 현재 작업 revision" />
+                      </StackPanel>
+                    </Border>
+                    <TextBlock Text="{Binding OutputPreview.LastExportSummary}"
+                               Classes="hint" FontSize="10" TextWrapping="Wrap"
+                               AutomationProperties.AutomationId="OutputPreviewLastExportSummary" />
+                  </StackPanel>
+                </ScrollViewer>
+
+                <StackPanel x:Name="OutputPreviewActionsPanel" Grid.Row="1" Spacing="5"
+                            Margin="0,4,10,10">
+                  <TextBlock x:Name="OutputPreviewStaleReason" Text="{Binding OutputPreview.Diagnostic}"
+                             IsVisible="False" MaxLines="2" TextTrimming="CharacterEllipsis"
+                             Foreground="#8A4B37" FontSize="10" TextWrapping="Wrap"
+                             ToolTip.Tip="{Binding OutputPreview.Diagnostic}"
+                             AutomationProperties.AutomationId="OutputPreviewStaleReason"
+                             AutomationProperties.Name="미리보기 새로 고침 사유" />
+                  <TextBlock x:Name="OutputPreviewDiagnostic" Text="{Binding OutputPreview.Diagnostic}"
+                             IsVisible="False" MaxLines="2" TextTrimming="CharacterEllipsis"
+                             Foreground="#9A3B34" FontSize="10" TextWrapping="Wrap"
+                             ToolTip.Tip="{Binding OutputPreview.Diagnostic}"
+                             AutomationProperties.AutomationId="OutputPreviewDiagnostic"
+                             AutomationProperties.Name="미리보기 진단" />
+                  <TextBlock x:Name="OutputPreviewExportDisabledReason" Text="{Binding OutputPreview.ExportDisabledReason}"
+                             IsVisible="False" MaxLines="2" TextTrimming="CharacterEllipsis"
+                             Classes="hint" FontSize="9" TextWrapping="Wrap"
+                             ToolTip.Tip="{Binding OutputPreview.ExportDisabledReason}"
+                             AutomationProperties.AutomationId="OutputPreviewExportDisabledReason" />
+                  <Button x:Name="OutputPreviewRefreshButton" Classes="property-action"
+                          Command="{Binding OutputPreview.RefreshPreviewCommand}"
+                          AutomationProperties.AutomationId="OutputPreviewRefreshButton"
+                          AutomationProperties.Name="SVG 미리보기 새로 고침"
+                          ToolTip.Tip="현재 작업과 출력 모드에서 새 고정 레이아웃을 만듭니다">
+                    <TextBlock Text="미리보기 새로 고침" />
+                  </Button>
+                  <Button x:Name="OutputPreviewSaveSvgButton" Classes="primary property-action"
+                          Command="{Binding SaveOutputPreviewSvgCommand}"
+                          IsEnabled="{Binding OutputPreview.CanExportSvg}"
+                          ToolTip.Tip="{Binding OutputPreview.ExportDisabledReason}"
+                          ToolTip.ShowOnDisabled="True"
+                          AutomationProperties.AutomationId="OutputPreviewSaveSvgButton"
+                          AutomationProperties.Name="고정된 최신 미리보기 SVG 저장">
+                    <TextBlock Text="SVG로 저장" />
+                  </Button>
+                </StackPanel>
+              </Grid>
+            </TabItem>
+          </TabControl>
+          <Border Grid.Row="2" Background="{DynamicResource AetherSubtleBrush}" CornerRadius="6" Padding="7,4" Margin="0,5,0,0">
+            <TextBlock Text="원본 .aethermath · 출력 .svg" Classes="hint" FontSize="10"
+                       TextWrapping="NoWrap"
+                       AutomationProperties.AutomationId="WorkspaceFormatNotice"
+                       AutomationProperties.Name="편집 가능한 원본 형식과 출력 형식" />
+          </Border>
+        </Grid>
+      </Border>
+    </Grid>
+
+    <Border Grid.Row="2" BorderBrush="{DynamicResource AetherBorderBrush}" BorderThickness="0,1,0,0"
+            Background="#F5F9FE" Padding="20,0">
+      <Grid ColumnDefinitions="*,Auto">
+        <TextBlock Text="{Binding StatusText}" FontSize="11" Foreground="{DynamicResource AetherMutedBrush}"
+                   VerticalAlignment="Center" TextTrimming="CharacterEllipsis"
+                   AutomationProperties.AutomationId="WorkspaceStatus"
+                   AutomationProperties.Name="작업 상태" />
+        <TextBlock Grid.Column="1" Text="AetherMath · 수식 전용 WYSIWYG" FontSize="10"
+                   Foreground="{DynamicResource AetherMutedBrush}" VerticalAlignment="Center" Margin="20,0,0,0" />
+      </Grid>
+    </Border>
+
+    <Grid x:Name="PendingWorkspaceActionOverlay" Grid.RowSpan="3"
+          IsVisible="{Binding IsPendingWorkspaceActionVisible}"
+          Background="#80142E4D" Panel.ZIndex="20" Focusable="True">
+      <Border x:Name="PendingWorkspaceActionDialog" Classes="lifecycle-dialog" Width="520" MaxWidth="600"
+              HorizontalAlignment="Center" VerticalAlignment="Center" Margin="24">
+        <StackPanel Spacing="14">
+          <TextBlock x:Name="PendingWorkspaceActionTitle" Text="{Binding PendingWorkspaceActionTitle}" Classes="lifecycle-title"
+                     AutomationProperties.AutomationId="PendingWorkspaceActionTitle" />
+          <TextBlock x:Name="PendingWorkspaceActionMessage" Text="{Binding PendingWorkspaceActionMessage}" Classes="lifecycle-message"
+                     AutomationProperties.AutomationId="PendingWorkspaceActionMessage" />
+          <Border x:Name="PendingWorkspaceActionTargetCard" Classes="lifecycle-target">
+            <Grid ColumnDefinitions="Auto,*">
+              <TextBlock Text="대상" Classes="label" FontWeight="SemiBold" />
+              <TextBlock x:Name="PendingWorkspaceActionTarget" Grid.Column="1" Margin="8,0,0,0"
+                         Text="{Binding PendingWorkspaceActionTarget}" Classes="lifecycle-target-name"
+                         TextWrapping="Wrap" AutomationProperties.AutomationId="PendingWorkspaceActionTarget" />
+            </Grid>
+          </Border>
+          <TextBlock x:Name="PendingWorkspaceActionBusy" IsVisible="{Binding IsPendingWorkspaceActionBusy}"
+                     Text="저장 중입니다. 계속 편집을 선택하면 저장을 취소합니다."
+                     Classes="lifecycle-busy" AutomationProperties.AutomationId="PendingWorkspaceActionBusy" />
+          <TextBlock x:Name="PendingWorkspaceActionError" Text="{Binding PendingWorkspaceActionError}" Classes="lifecycle-error"
+                     TextWrapping="Wrap" AutomationProperties.AutomationId="PendingWorkspaceActionError" />
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8" Margin="0,4,0,0">
+            <Button x:Name="SavePendingWorkspaceActionButton" Classes="primary lifecycle-choice"
+                    Command="{Binding SavePendingWorkspaceActionCommand}"
+                    AutomationProperties.AutomationId="SavePendingWorkspaceActionButton"
+                    AutomationProperties.Name="저장 후 계속" ToolTip.Tip="현재 작업을 저장한 뒤 요청을 계속합니다">
+              <TextBlock Text="저장 후 계속" />
+            </Button>
+            <Button x:Name="DiscardPendingWorkspaceActionButton" Classes="lifecycle-choice"
+                    Command="{Binding DiscardPendingWorkspaceActionCommand}"
+                    AutomationProperties.AutomationId="DiscardPendingWorkspaceActionButton"
+                    AutomationProperties.Name="변경 버리기" ToolTip.Tip="저장하지 않은 변경을 버리고 요청을 계속합니다">
+              <TextBlock Text="변경 버리기" />
+            </Button>
+            <Button x:Name="CancelPendingWorkspaceActionButton" Classes="lifecycle-choice"
+                    Command="{Binding CancelPendingWorkspaceActionCommand}"
+                    AutomationProperties.AutomationId="CancelPendingWorkspaceActionButton"
+                    AutomationProperties.Name="계속 편집" ToolTip.Tip="요청을 취소하고 현재 작업을 계속 편집합니다">
+              <TextBlock Text="계속 편집" />
+            </Button>
+          </StackPanel>
+        </StackPanel>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

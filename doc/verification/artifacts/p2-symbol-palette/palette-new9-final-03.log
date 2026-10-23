@@ -1,0 +1,13 @@
+PASS PAL-CATALOG-IDENTITY 7개 기호 분류·안정 ID·Structures 템플릿 대응
+PASS PAL-SEARCH-ALIAS 분류별 이름·alias 검색과 공유 alias 보존
+PASS PAL-UNICODE-PAGES Unicode scalar 페이지 총량·surrogate 경계·첫/마지막 page
+PASS PAL-UNICODE-LOOKUP U+ 조회·안전 placeholder·금지 scalar 삽입 거절
+PASS PAL-INSERT-REPLACE canonical 기호 삽입이 부분 선택만 교체하고 undo/redo
+PASS PAL-EMOJI-GRAPHEME ZWJ·variation selector·skin-tone 원문과 한 단계 undo
+PASS PAL-BROWSE-PURITY 탐색 불변성과 forged command 무변경
+GLYPH-OBSERVATION status=Present; family=Cambria Math; reason=요청한 글꼴의 문자표에 코드 포인트가 있습니다. 실제 shaping·fallback 표시를 보장하지는 않습니다.
+PASS PAL-ROUNDTRIP-GLYPH JSON/LaTeX 원문 보존 및 결정적 missing-glyph 대역
+PASS PALETTE-UI
+PASS PALETTE-UI 기호·Unicode·이모지 찾아보기의 세션 불변성, 명시 삽입과 undo, 두 크기 실제 셸의 Headless 검증
+RESULT 전체=9 합격=9 실패=0
+EXIT_CODE=0

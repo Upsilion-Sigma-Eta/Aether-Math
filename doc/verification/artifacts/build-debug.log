@@ -1,0 +1,13 @@
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(50,26): warning CS8765: 'glyphTypeface' 매개 변수 형식의 null 허용 여부가 재정의된 멤버와 일치하지 않습니다(null 허용 여부 특성 때문일 수 있음). [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(44,48): error CS0117: 'AvaloniaLocator'에는 'Current'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(63,39): error CS0122: '보호 수준 때문에 'IFontManagerImpl.TryCreateGlyphTypeface(string, FontStyle, FontWeight, FontStretch, out IPlatformTypeface?)'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+
+빌드하지 못했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(50,26): warning CS8765: 'glyphTypeface' 매개 변수 형식의 null 허용 여부가 재정의된 멤버와 일치하지 않습니다(null 허용 여부 특성 때문일 수 있음). [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(44,48): error CS0117: 'AvaloniaLocator'에는 'Current'에 대한 정의가 포함되어 있지 않습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\Desktop\CambriaMathTypefaceCollection.cs(63,39): error CS0122: '보호 수준 때문에 'IFontManagerImpl.TryCreateGlyphTypeface(string, FontStyle, FontWeight, FontStretch, out IPlatformTypeface?)'에 액세스할 수 없습니다. [D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\AetherMath.Desktop.csproj]
+    경고 1개
+    오류 2개
+
+경과 시간: 00:00:00.83

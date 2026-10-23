@@ -1,0 +1,15 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-preview-minimum",
+  "purpose": "\uC81C\uD488 preview\uC758 immutable layout\uC5D0\uB294 \uACF5\uBC31 bounds\uAC00 \uC788\uC9C0\uB9CC \uADF8 NodeId\uC5D0 glyph\uAC00 \uC5C6\uC74C\uC744 \uAE30\uB85D\uD569\uB2C8\uB2E4.",
+  "state": "Ready",
+  "snapshotRevision": 8,
+  "currentRevision": 8,
+  "selectedNodeId": "b0e00ebc-6c72-421e-b87e-0f6b7b3f716e",
+  "wholeNodeSelection": false,
+  "mathSpaceNodeId": "3ac88202-f061-4d6b-b9a2-fbb7b6d0883c",
+  "previewNodeBounds": "x=50.65546875; y=28.319999999999993; width=4; height=23.04",
+  "glyphPrimitiveCountForMathSpace": 0,
+  "totalPrimitiveCount": 3,
+  "exportCanProceed": true
+}

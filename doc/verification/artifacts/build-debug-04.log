@@ -1,0 +1,13 @@
+  AetherMath.Desktop -> D:\_UserLibrary\_Programming\Aether-Math\src\AetherMath.Desktop\bin\Debug\net10.0\AetherMath.Desktop.dll
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OffscreenRenderCases.cs(55,13): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\FontProbeCases.cs(133,9): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+  AetherMath.LogicQA -> D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\bin\Debug\net10.0\AetherMath.LogicQA.dll
+
+빌드했습니다.
+
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OffscreenRenderCases.cs(55,13): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\FontProbeCases.cs(133,9): warning CS0618: 'Bitmap.Save(Stream, int?)'은(는) 사용되지 않습니다. 'Use the overload accepting BitmapEncoderOptions instead.' [D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\AetherMath.LogicQA.csproj]
+    경고 2개
+    오류 0개
+
+경과 시간: 00:00:00.67

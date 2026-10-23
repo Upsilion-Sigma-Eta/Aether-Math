@@ -1,0 +1,120 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-control-click-diagnostic",
+  "expectedNodeId": "cbf0bc43-3732-4043-a711-94b9406987cf",
+  "diagnostic": {
+    "ExpectedNodeId": "cbf0bc43-3732-4043-a711-94b9406987cf",
+    "InjectedRawInputModifiers": "Control",
+    "SelectedNodeIdBefore": "cdc68f92-3a44-4f0f-bb4a-127c69639ab2",
+    "IsNodeSelectedBefore": false,
+    "InitialWindowPoint": {
+      "X": 310.71875,
+      "Y": 331.84
+    },
+    "ClickWindowPoint": {
+      "X": 310.71875,
+      "Y": 331.84
+    },
+    "ClickEditorPoint": {
+      "X": 37.71875,
+      "Y": 39.839999999999975
+    },
+    "InitialTargetBoundsInWindow": {
+      "X": 308.71875,
+      "Y": 320.32,
+      "Width": 4,
+      "Height": 23.04
+    },
+    "RefreshedTargetBoundsInWindow": {
+      "X": 308.71875,
+      "Y": 320.32,
+      "Width": 4,
+      "Height": 23.04
+    },
+    "EditorBoundsInWindow": {
+      "X": 273,
+      "Y": 292,
+      "Width": 77,
+      "Height": 360
+    },
+    "ViewportBoundsInWindow": {
+      "X": 243,
+      "Y": 292,
+      "Width": 516,
+      "Height": 257
+    },
+    "ViewportOffset": {
+      "X": 0,
+      "Y": 30
+    },
+    "ViewportSize": {
+      "Width": 516,
+      "Height": 257
+    },
+    "ExtentSize": {
+      "Width": 137,
+      "Height": 430
+    },
+    "ClickInsideEditorBounds": true,
+    "ClickInsideViewportBounds": true,
+    "WindowInputHitTestTarget": {
+      "Type": "Avalonia.Controls.Presenters.ScrollContentPresenter",
+      "Name": "PART_ContentPresenter",
+      "AutomationId": null
+    },
+    "EditorInputHitTestTarget": {
+      "Type": null,
+      "Name": null,
+      "AutomationId": null
+    },
+    "ModelHitTestNodeId": "cbf0bc43-3732-4043-a711-94b9406987cf",
+    "ModelHitTestSelectionTargetId": "cbf0bc43-3732-4043-a711-94b9406987cf",
+    "SelectedNodeIdAfter": "cdc68f92-3a44-4f0f-bb4a-127c69639ab2",
+    "IsNodeSelectedAfter": false,
+    "PointerPressedEvents": [
+      {
+        "EventSource": {
+          "Type": "Avalonia.Controls.Presenters.ScrollContentPresenter",
+          "Name": "PART_ContentPresenter",
+          "AutomationId": null
+        },
+        "KeyModifiers": "Control",
+        "WindowPosition": {
+          "X": 310.71875,
+          "Y": 331.84
+        },
+        "EditorPosition": {
+          "X": 37.71875,
+          "Y": 39.839999999999975
+        },
+        "Handled": false,
+        "SelectedNodeIdAfterRoute": "cdc68f92-3a44-4f0f-bb4a-127c69639ab2",
+        "IsNodeSelectedAfterRoute": false,
+        "EditorFocusedAfterRoute": false
+      }
+    ]
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "currentState": {
+    "sessionRevision": 3,
+    "stateId": "737e250f-6e77-4aa7-9eac-209cbebdae3b",
+    "dirty": true,
+    "caret": {
+      "NodeId": "cdc68f92-3a44-4f0f-bb4a-127c69639ab2",
+      "TextElementOffset": 1
+    },
+    "selection": null,
+    "selectedNodeId": "cdc68f92-3a44-4f0f-bb4a-127c69639ab2",
+    "isNodeSelected": false,
+    "editorFocused": false
+  },
+  "png": "main-window.png"
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-disabled-minimum-bottom",
+  "scenario": {
+    "state": "whole-node-selection",
+    "reason": "\uD14D\uC2A4\uD2B8 \uCEE4\uC11C\uB098 \uAC19\uC740 \uD14D\uC2A4\uD2B8\uC758 \uBD80\uBD84 \uC120\uD0DD\uC5D0\uC11C\uB9CC \uACF5\uBC31\uC744 \uC0BD\uC785\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 0,
+  "stateId": "d9af1121-1a89-43b1-b8ec-0139d6df69ab",
+  "dirty": false,
+  "caret": {
+    "NodeId": "38bb9175-c5f0-4a17-ba3a-cdf2a6c2f907",
+    "TextElementOffset": 1
+  },
+  "selection": null,
+  "selectedNodeId": "38bb9175-c5f0-4a17-ba3a-cdf2a6c2f907",
+  "isNodeSelected": true,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u002263ec0766-a2a0-437d-9cab-f656b2b50aa5\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uC218\\uD559 \\uACF5\\uBC31 UI fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u002239aad72a-eb62-472a-a457-ea1236b5aa94\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u00222e45bb28-31e5-43a3-9f1f-7b8d1317c923\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u0022b51ed182-e210-497e-a189-fa593ffe8033\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u002238bb9175-c5f0-4a17-ba3a-cdf2a6c2f907\u0022,\u0022Text\u0022:\u0022ab\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:1,\u0022StyleOverride\u0022:{\u0022FontSize\u0022:24,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#315477\u0022,\u0022TypesettingStyle\u0022:null}}]}}]}]}",
+  "mathSpaceIds": [],
+  "outputState": "Empty",
+  "outputRevision": null,
+  "png": "main-window.png"
+}

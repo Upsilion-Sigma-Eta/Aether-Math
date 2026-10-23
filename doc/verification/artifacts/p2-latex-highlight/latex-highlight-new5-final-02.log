@@ -1,0 +1,23 @@
+PASS LATEX-HIGHLIGHT-COVERAGE UTF-16 토큰 범위가 원문을 완전히 보존
+PASS LATEX-HIGHLIGHT-CONTEXT 제어어·기호·주석·수식 기호를 분류
+PASS LATEX-HIGHLIGHT-REFRESH 코드 변경 시 원문·토큰 스냅샷을 함께 갱신
+PASS LATEX-HIGHLIGHT-PURITY 강조 설정은 수식·진단·복사 판정을 바꾸지 않음
+RESULT 전체=5 합격=4 실패=1
+FAIL LATEX-HIGHLIGHT-UI LaTeX 한 표면의 색상 강조·선택·스크롤·전체 복사 경계를 Headless에서 검증
+System.InvalidOperationException: LaTeX 강조 UI child 실패(exit=1). stdout:
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-collapsed-minimum-1060x700-20261023T001215592Z-08f6631a260f4097b6670b80a7a00255\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-collapsed-default-1360x880-20261023T001215663Z-586556e544c54dbb9a21fa5a2be87eaf\bounds.json
+LATEX-HIGHLIGHT-UI artifact D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-latex-highlight\highlight-expanded-minimum-top-1060x700-20261023T001216042Z-d6ffdeff5fd646778d0aad5746cc3cab\bounds.json
+
+stderr:
+FAIL LATEX-HIGHLIGHT-UI
+System.InvalidOperationException: 강조 끄기 vertical scroll 보존: 기대=1322; 실제=1250; 허용오차=0.5
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.Qa.Near(Double expected, Double actual, String label, Double tolerance) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 21
+   at AetherMath.LogicQA.LatexHighlightUiInteractionCases.AssertNear(Double expected, Double actual, String label) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LatexHighlightUiInteractionCases.cs:line 436
+   at AetherMath.LogicQA.LatexHighlightUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LatexHighlightUiInteractionCases.cs:line 226
+   at AetherMath.LogicQA.LatexHighlightUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LatexHighlightUiInteractionCases.cs:line 47
+
+   at AetherMath.LogicQA.LatexHighlightUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\LatexHighlightUiInteractionCases.cs:line 104
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 274
+ACTUAL_EXIT_CODE=1

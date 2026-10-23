@@ -1,0 +1,25 @@
+PASS GRS-CORE 현재 그룹 간격 변경의 범위·유효성·변경 없음 원자성
+PASS GRS-DRAFT-STALE 행 간격 입력·지원 범위·대상 이동 뒤 오래된 초안 보존
+PASS GRS-LEGACY-PRECISION 기존 큰 값·왕복 정밀도·스타일만 편집
+PASS GRS-GEOMETRY 그룹 내부 행 간격과 그룹 사이 옵션 간격의 분리
+PASS GRS-ATOMIC-HISTORY 스타일·고정·간격 단일 적용 및 Undo/Redo/초기화
+PASS GRS-IO-CLONE 복제·실제 파일·복구의 행 간격 보존
+PASS GRS-LATEX-DIAGNOSTICS 다중 행 그룹별 LaTeX 간격 진단과 비차단 상태
+PASS GRS-PREVIEW-SVG 출력 모드 고정 레이아웃과 실제 SVG의 간격 소비
+PASS SESSION-ACTIVE-TARGET-NOTIFY 속성 알림 전에 활성 행·속성 대상 동기화
+RESULT 전체=10 합격=9 실패=1
+FAIL GROUP-ROW-SPACING-UI 현재 그룹 내부 행 간격의 실제 binding·geometry·history와 LaTeX 비보존 진단을 Headless 검증
+System.InvalidOperationException: 그룹 행 간격 UI child 실패(exit=1). stdout:
+GROUP-ROW-SPACING-UI formula evidence D:\_UserLibrary\_Programming\Aether-Math\doc\verification\artifacts\p2-group-row-spacing\equation-spacing-comparison-20261022T214013707Z-eba9360a77c3453bab6c33043df29617\equation-spacing-comparison.json
+
+stderr:
+FAIL GROUP-ROW-SPACING-UI
+System.InvalidOperationException: 속성 상단 캡처에서 스크롤 위치가 위쪽이 아닙니다: 1127.5.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureAndVerify(MainWindow window, String label, String artifactScope) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 501
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunWindowChecksAsync(TempDirectory fixtureDirectory) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 305
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 54
+
+   at AetherMath.LogicQA.GroupRowSpacingUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\GroupRowSpacingUiInteractionCases.cs:line 118
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 226
+ACTUAL_EXIT_CODE=1

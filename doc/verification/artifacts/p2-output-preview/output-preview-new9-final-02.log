@@ -1,0 +1,28 @@
+PASS OUT-PREVIEW-MODE Workspace/Display/Inline 투영과 그룹·행·노드 설정 보존
+PASS OUT-PREVIEW-PURITY 미리보기와 Main VM 연결이 편집 상태를 변경하지 않음
+PASS OUT-PREVIEW-REFRESH 탐색·편집·모드·Session별 stale 및 명시 새로고침
+PASS OUT-PREVIEW-INCOMPLETE 필수 슬롯 미완성 미리보기의 SVG 저장 차단
+PASS OUT-SVG-EXACT 동일 frozen LayoutResult의 SVG 실제 파일 내보내기
+PASS OUT-SVG-RACE busy 재진입과 오래된 내보내기 완료의 현재 상태 비침범
+PASS OUT-SVG-CANCEL-FAIL 취소·실패 파일 보존과 취소 무시 실제 성공 구분
+PASS OUT-SVG-STALE-START stale preview와 picker 대기 중 낡은 snapshot의 I/O 차단
+RESULT 전체=9 합격=8 실패=1
+FAIL OUTPUT-PREVIEW-UI 전체 작업 SVG 미리보기의 출력 모드·고정 snapshot·탭 복귀를 실제 App Headless에서 검증
+System.InvalidOperationException: 출력 미리보기 UI child 실패(exit=1). stdout:
+INFO editorScrollOffsetProbe=0, 14; max=0, 173; nonzero=True
+
+stderr:
+FAIL OUTPUT-PREVIEW-UI
+System.InvalidOperationException: preview control이 고정 Layout의 자연 DIP 크기를 사용하지 않습니다: control=293, 233; layout=292.18330078125×232.43359375.
+   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
+   at AetherMath.LogicQA.RowShellVisualCases.CaptureOutputPreviewAndVerify(MainWindow window, String label) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\RowShellVisualCases.cs:line 1125
+   at AetherMath.LogicQA.OutputPreviewUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OutputPreviewUiInteractionCases.cs:line 182
+   at AetherMath.LogicQA.OutputPreviewUiInteractionCases.RunWindowChecksAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OutputPreviewUiInteractionCases.cs:line 317
+   at AetherMath.LogicQA.OutputPreviewUiInteractionCases.RunHeadlessChildAsync(String caseId) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OutputPreviewUiInteractionCases.cs:line 45
+
+   at AetherMath.LogicQA.OutputPreviewUiInteractionCases.RunHeadlessProcessAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\OutputPreviewUiInteractionCases.cs:line 102
+   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 190
+
+ACTUAL_EXIT_CODE=1
+PASS_COUNT=8
+FAIL_COUNT=1

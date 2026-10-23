@@ -1,0 +1,2 @@
+PASS FONT-OFFSCREEN 수식 컨트롤과 같은 레이아웃의 화면 외 PNG·SVG 생성
+RESULT 전체=1 합격=1 실패=0

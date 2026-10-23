@@ -1,0 +1,38 @@
+{
+  "caseId": "THIN-MATH-SPACE-UI",
+  "label": "thin-space-incomplete-minimum",
+  "scenario": {
+    "previewState": "Incomplete",
+    "canExport": false,
+    "exportStatus": "Incomplete",
+    "emptySlot": "ae209527-23bc-4626-9569-2a406f7297df",
+    "spaceNodeId": "237966d8-1f03-4b34-8e61-bb8286ffc0c9",
+    "associatedGlyphs": 0
+  },
+  "window": {
+    "width": 1060,
+    "height": 700
+  },
+  "handle": {
+    "descriptor": "STUB",
+    "value": "0x0",
+    "isStubZero": true
+  },
+  "sessionRevision": 1,
+  "stateId": "d2c79c35-9410-4c89-98f0-25b73a3fe08f",
+  "dirty": true,
+  "caret": {
+    "NodeId": "ae209527-23bc-4626-9569-2a406f7297df",
+    "TextElementOffset": 0
+  },
+  "selection": null,
+  "selectedNodeId": "ae209527-23bc-4626-9569-2a406f7297df",
+  "isNodeSelected": false,
+  "workspaceFingerprint": "{\u0022Id\u0022:\u002265107ae3-f7e0-4b70-8306-7e42fc10f1fd\u0022,\u0022SchemaVersion\u0022:1,\u0022Name\u0022:\u0022\\uBE48 \\uBD84\\uC790 \\uC2AC\\uB86F \\uC218\\uD559 \\uACF5\\uBC31 fixture\u0022,\u0022Style\u0022:{\u0022FontSize\u0022:30,\u0022FontFamily\u0022:\u0022Cambria Math\u0022,\u0022Foreground\u0022:\u0022#25364D\u0022,\u0022TypesettingStyle\u0022:0},\u0022Groups\u0022:[{\u0022Id\u0022:\u00224173fcfc-ad46-413a-beed-f6669b3287af\u0022,\u0022Alignment\u0022:0,\u0022RowSpacing\u0022:28,\u0022StyleOverride\u0022:null,\u0022Rows\u0022:[{\u0022Id\u0022:\u0022b2c92ef4-5b34-4d24-a088-1288cd116cfc\u0022,\u0022StyleOverride\u0022:null,\u0022Root\u0022:{\u0022Kind\u0022:\u0022fraction\u0022,\u0022Id\u0022:\u002278310fc2-c1da-4cbb-8e23-33349c1043e3\u0022,\u0022StyleOverride\u0022:null,\u0022Numerator\u0022:{\u0022Kind\u0022:\u0022sequence\u0022,\u0022Id\u0022:\u002258556b4d-ec37-49d7-8780-8dd3da3db058\u0022,\u0022StyleOverride\u0022:null,\u0022Children\u0022:[{\u0022Kind\u0022:\u0022mathSpace\u0022,\u0022Id\u0022:\u0022237966d8-1f03-4b34-8e61-bb8286ffc0c9\u0022,\u0022SpaceKind\u0022:0,\u0022StyleOverride\u0022:null},{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022ae209527-23bc-4626-9569-2a406f7297df\u0022,\u0022Text\u0022:\u0022\u0022,\u0022IsEmptySlot\u0022:true,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}]},\u0022Denominator\u0022:{\u0022Kind\u0022:\u0022text\u0022,\u0022Id\u0022:\u0022516f3fe7-1725-4119-8cdc-1a17e8aee259\u0022,\u0022Text\u0022:\u0022b\u0022,\u0022IsEmptySlot\u0022:false,\u0022Role\u0022:0,\u0022StyleOverride\u0022:null}}}]}]}",
+  "mathSpaceIds": [
+    "237966d8-1f03-4b34-8e61-bb8286ffc0c9"
+  ],
+  "outputState": "Incomplete",
+  "outputRevision": 1,
+  "png": "main-window.png"
+}
