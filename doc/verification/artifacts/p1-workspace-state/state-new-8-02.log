@@ -1,9 +1,0 @@
-PASS STATE-RECENT-INDEX 최근 경로 정규화·대소문자 중복 통합·표시명과 UTC 최근 사용 갱신
-PASS STATE-RECENT-BOUNDS 고정 항목 보존·정렬·고정되지 않은 항목 20개 제한
-PASS STATE-RECENT-METADATA 최근 사용 시각과 실제 파일 수정 시각 및 누락 상태 분리
-PASS STATE-RECENT-MUTATION 고정·고정 해제·삭제의 무변경 및 없는 경로 no-op
-PASS STATE-INDEX-PROTECTION 손상·미래 버전 인덱스 진단, 쓰기 차단, 원본 보존
-PASS STATE-RECOVERY-ROUNDTRIP 중첩 Unicode snapshot 복구 저장·목록·열기·삭제 왕복
-PASS STATE-RECOVERY-PROTECTION 복구 ID·버전·AST 손상 진단, 파일 보존 및 비정상 입력 거부
-PASS STATE-CONCURRENCY 서비스 인스턴스 간 RMW 직렬화·루트 격리·잠금 및 취소 보존
-RESULT 전체=8 합격=8 실패=0

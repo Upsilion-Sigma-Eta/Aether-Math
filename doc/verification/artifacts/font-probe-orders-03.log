@@ -1,7 +1,0 @@
-RESULT 전체=1 합격=0 실패=1
-FAIL FONT-PROBE-ORDERS 신선한 프로세스의 글꼴 resolve·shaping 순서 비교
-System.InvalidOperationException: 요청 순서에 따른 제품 경로 face·glyph 윤곽 변화 italic-first/ProductResolver/Normal: 기대=EC01E06A0DD7391850CE7291A4CA186D5F1B8E88E5350EE04E5E12AC8C5F7E59; 실제=F6A6538937EF2F4C615D22191700599958B0BACDEC625F800B876E13AD36A4DC
-   at AetherMath.LogicQA.Qa.Check(Boolean condition, String message) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 13
-   at AetherMath.LogicQA.Qa.Equal[T](T expected, T actual, String label) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Qa.cs:line 17
-   at AetherMath.LogicQA.FontProbeCases.VerifyOrdersAsync() in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\FontProbeCases.cs:line 189
-   at AetherMath.LogicQA.Program.RunCasesAsync(String[] args) in D:\_UserLibrary\_Programming\Aether-Math\tests\AetherMath.LogicQA\Program.cs:line 68

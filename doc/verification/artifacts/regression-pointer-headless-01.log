@@ -1,5 +1,0 @@
-PASS PTR-01 headless visual tree의 합성 Ctrl+클릭으로 구조 선택 후 삭제·undo
-PASS PTR-02 headless visual tree의 합성 포인터 누름·놓기에서 caret와 캡처 수명주기
-PASS PTR-03 headless visual tree의 합성 capture-loss 이벤트가 드래그 상태를 정리
-PASS PTR-04 visual-tree detach·재부착과 Session 교체가 잡힌 포인터를 해제
-RESULT 전체=4 합격=4 실패=0

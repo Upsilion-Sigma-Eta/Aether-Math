@@ -1,4 +1,0 @@
-PASS THIN-MATH-SPACE-UI
-PASS THIN-MATH-SPACE-UI 얇은 수학 공백의 삽입·선택·삭제·간격·SVG 경계를 실제 App Headless에서 확인
-RESULT 전체=1 합격=1 실패=0
-ACTUAL_EXIT_CODE=0

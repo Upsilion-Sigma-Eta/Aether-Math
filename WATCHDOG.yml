@@ -1,3 +1,0 @@
-advisors:
-  - name: default
-    model: openai-siwc/gpt-6-astra:max
